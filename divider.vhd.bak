@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use WORK.divider_const.all;
+--Additional standard or custom libraries go here
+
+entity divider is
+	port(
+		--Inputs
+		clk : in std_logic;
+		--COMMENT OUT clk signal for Part A.
+		
+		start : in std_logic;
+		dividend : in std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
+		divisor : in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
+		
+		--Outputs
+		quotient : out std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
+		remainder : out std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
+		overflow : out std_logic
+	 );
+end entity divider;
+
+architecture structural_combinational of divider is
+--Signals and components go here
+
+
+begin
+--Structural design goes here
+
+
+end architecture structural_combinational;
