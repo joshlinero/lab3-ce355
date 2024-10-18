@@ -4,7 +4,7 @@ use WORK.divider_const.all;
 
 entity divider is
 	generic (
-		DATA_WIDTH : natural := 4
+		DATA_WIDTH : natural := 16
     );
     port(
         -- Inputs
@@ -24,7 +24,7 @@ architecture structural_combinational of divider is
 
 	component comparator
 		generic(
-        DATA_WIDTH : natural := 4 
+        DATA_WIDTH : natural := 16 
 		);
 		port(
 			DINL				:	in std_logic_vector (DATA_WIDTH downto 0);
