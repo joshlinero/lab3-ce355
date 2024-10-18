@@ -23,7 +23,7 @@ begin
     begin
         -- Convert inputs to unsigned for proper comparison
         DINL_ext := unsigned(DINL);
-        DINR_ext := unsigned('0' & DINR); 
+        DINR_ext := unsigned('0' & DINR);
         
         -- Perform the comparison
         if DINL_ext >= DINR_ext then
