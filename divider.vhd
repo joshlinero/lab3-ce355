@@ -4,7 +4,7 @@ use WORK.divider_const.all;
 
 entity divider is
 	generic (
-		DATA_WIDTH : natural := 16
+		DATA_WIDTH : natural := 4
     );
     port(
         -- Inputs
@@ -24,7 +24,7 @@ architecture structural_combinational of divider is
 
 	component comparator
 		generic(
-        DATA_WIDTH : natural := 16 
+        DATA_WIDTH : natural := 4 
 		);
 		port(
 			DINL				:	in std_logic_vector (DATA_WIDTH downto 0);
@@ -38,8 +38,11 @@ architecture structural_combinational of divider is
 	signal temp_DOUT		:	temp_DOUT_array;
 	signal temp_quotient	:	std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
 	signal div_start     : std_logic := '0';
+	signal slice_dividend: std_logic_vector(8 downto 0);
 	
 begin
+
+	slice_dividend <= dividend(DIVIDEND_WIDTH - 1 downto DIVIDEND_WIDTH - 9);
 
 	-- Comparator instantiations
 	comparator_gen : for i in 0 to (DATA_WIDTH + 1) * 2 generate
@@ -52,7 +55,7 @@ begin
 				DATA_WIDTH => DATA_WIDTH
 			)
 			port map (
-				DINL => dividend,
+				DINL => slice_dividend,
 				DINR => divisor,
 				DOUT => temp_DOUT(i),
 				isGreaterEq => temp_quotient(i)
@@ -66,7 +69,7 @@ begin
 				DATA_WIDTH => DATA_WIDTH
 			)
 			port map (
-				DINL => temp_DOUT(i-1),
+				DINL => '0' & temp_DOUT(i-1),
 				DINR => divisor,
 				DOUT => temp_DOUT(i),
 				isGreaterEq => temp_quotient(i)
@@ -80,7 +83,7 @@ begin
 				DATA_WIDTH => DATA_WIDTH
 			)
 			port map (
-				DINL => temp_DOUT(i-1),
+				DINL => '0' & temp_DOUT(i-1),
 				DINR => divisor,
 				DOUT => remainder,
 				isGreaterEq => temp_quotient(i)

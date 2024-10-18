@@ -21,15 +21,6 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Compiling architecture behavioral of comparator
 End time: 01:33:19 on Oct 18,2024, Elapsed time: 0:00:00
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator_tb.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity comparator_tb
--- Compiling architecture testbench of comparator_tb
-
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator_tb.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 Start time: 15:06:30 on Oct 18,2024
@@ -54,13 +45,14 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Loading package decoder
 End time: 15:06:29 on Oct 18,2024, Elapsed time: 0:00:00
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/leddcd.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/leddcd.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/comparator_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/comparator_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity leddcd
--- Compiling architecture data_flow of leddcd
+-- Loading package NUMERIC_STD
+-- Compiling entity comparator_tb
+-- Compiling architecture testbench of comparator_tb
 
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/leddcd.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/leddcd.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -82,24 +74,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling package body decoder
 -- Loading package decoder
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_tb.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/leddcd.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\joshu\OneDrive\Documents\Masters-Northwestern\Masters_Fall\CE-355\lab3-ce355\lab3-ce355\simulation\leddcd.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_textio
--- Loading package NUMERIC_STD
--- Loading package divider_const
--- Compiling entity divider_tb
--- Compiling architecture behavior of divider_tb
-
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/display_divider.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/display_divider.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity display_divider
--- Compiling architecture structural of display_divider
+-- Compiling entity leddcd
+-- Compiling architecture data_flow of leddcd
 
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_tb.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -115,15 +96,6 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Compiling architecture behavior of divider_tb
 End time: 15:06:30 on Oct 18,2024, Elapsed time: 0:00:01
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_const.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_const.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package divider_const
--- Compiling package body divider_const
--- Loading package divider_const
-
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_const.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider_const.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 Start time: 15:06:29 on Oct 18,2024
@@ -136,23 +108,33 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Loading package divider_const
 End time: 15:06:29 on Oct 18,2024, Elapsed time: 0:00:00
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/decoder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/decoder.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/divider_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/divider_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling package decoder
--- Compiling package body decoder
--- Loading package decoder
-
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
 -- Loading package divider_const
--- Compiling entity divider
--- Compiling architecture structural_combinational of divider
+-- Compiling entity divider_tb
+-- Compiling architecture behavior of divider_tb
+
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/display_divider.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/display_divider.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity display_divider
+-- Compiling architecture structural of display_divider
+
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/divider_const.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/divider_const.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package divider_const
+-- Compiling package body divider_const
+-- Loading package divider_const
 
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/divider.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -166,26 +148,14 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Compiling architecture structural_combinational of divider
 End time: 15:06:30 on Oct 18,2024, Elapsed time: 0:00:00
 
-} {} {}} {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity comparator
--- Compiling architecture behavioral of comparator
-
-} {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-Start time: 15:06:28 on Oct 18,2024
-vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd 
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity comparator
--- Compiling architecture behavioral of comparator
-End time: 15:06:29 on Oct 18,2024, Elapsed time: 0:00:01
+-- Compiling package decoder
+-- Compiling package body decoder
+-- Loading package decoder
 
 } {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd}} {0 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -209,7 +179,28 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 ** Note: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd(90): VHDL Compiler exiting
 End time: 01:33:19 on Oct 18,2024, Elapsed time: 0:00:00
 
-} {13.0 20.0} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd}
+} {13.0 20.0} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 15:06:28 on Oct 18,2024
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/simulation/comparator.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity comparator
+-- Compiling architecture behavioral of comparator
+End time: 15:06:29 on Oct 18,2024, Elapsed time: 0:00:01
+
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/divider.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\joshu\OneDrive\Documents\Masters-Northwestern\Masters_Fall\CE-355\lab3-ce355\lab3-ce355\simulation\divider.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package divider_const
+-- Compiling entity divider
+-- Compiling architecture structural_combinational of divider
+
+} {} {}} {{C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 Start time: 01:33:19 on Oct 18,2024
 vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd 
@@ -220,6 +211,15 @@ vcom -reportprogress 300 -work work -2002 -explicit C:/Users/antb2/Desktop/Schoo
 -- Compiling package body divider_const
 -- Loading package divider_const
 End time: 01:33:19 on Oct 18,2024, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/simulation/comparator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity comparator
+-- Compiling architecture behavioral of comparator
 
 } {} {}} C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

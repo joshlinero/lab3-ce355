@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity comparator is
     generic(
-        DATA_WIDTH : natural := 4 
+        DATA_WIDTH : natural := 4
     );
     port(
         DINL : in std_logic_vector (DATA_WIDTH downto 0);
