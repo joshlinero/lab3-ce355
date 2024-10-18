@@ -1,6 +1,6 @@
 Analysis & Synthesis report for display_divider
-Fri Oct 18 01:40:44 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Fri Oct 18 12:52:56 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
 ---------------------
@@ -40,24 +40,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 18 01:40:44 2024          ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                      ; display_divider                                ;
-; Top-level Entity Name              ; display_divider                                ;
-; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 0                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 2                                              ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                            ;
++------------------------------------+----------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 18 12:52:56 2024              ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
+; Revision Name                      ; display_divider                                    ;
+; Top-level Entity Name              ; display_divider                                    ;
+; Family                             ; Cyclone IV E                                       ;
+; Total logic elements               ; 0                                                  ;
+;     Total combinational functions  ; 0                                                  ;
+;     Dedicated logic registers      ; 0                                                  ;
+; Total registers                    ; 0                                                  ;
+; Total pins                         ; 2                                                  ;
+; Total virtual pins                 ; 0                                                  ;
+; Total memory bits                  ; 0                                                  ;
+; Embedded Multiplier 9-bit elements ; 0                                                  ;
+; Total PLLs                         ; 0                                                  ;
++------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -151,8 +151,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,13 +162,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; display_divider.vhd              ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; display_divider.vhd              ; yes             ; User VHDL File  ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -256,50 +256,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Oct 18 01:40:37 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
+    Info: Processing started: Fri Oct 18 12:52:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file leddcd.vhd
-    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/leddcd.vhd Line: 10
-    Info (12023): Found entity 1: leddcd File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/leddcd.vhd Line: 4
+    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/leddcd.vhd Line: 10
+    Info (12023): Found entity 1: leddcd File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/leddcd.vhd Line: 4
 Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: decoder File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/decoder.vhd Line: 4
-    Info (12022): Found design unit 2: decoder-body File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/decoder.vhd Line: 16
+    Info (12022): Found design unit 1: decoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/decoder.vhd Line: 4
+    Info (12022): Found design unit 2: decoder-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/decoder.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file display_divider.vhd
-    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 13
-    Info (12023): Found entity 1: display_divider File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 5
+    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd Line: 13
+    Info (12023): Found entity 1: display_divider File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
-    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator.vhd Line: 17
-    Info (12023): Found entity 1: comparator File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator.vhd Line: 5
+    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/comparator.vhd Line: 17
+    Info (12023): Found entity 1: comparator File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/comparator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparator_tb.vhd
-    Info (12022): Found design unit 1: comparator_tb-testbench File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator_tb.vhd Line: 8
-    Info (12023): Found entity 1: comparator_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator_tb.vhd Line: 5
+    Info (12022): Found design unit 1: comparator_tb-testbench File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/comparator_tb.vhd Line: 8
+    Info (12023): Found entity 1: comparator_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/comparator_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 0 entities, in source file divider_const.vhd
-    Info (12022): Found design unit 1: divider_const File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd Line: 5
-    Info (12022): Found design unit 2: divider_const-body File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd Line: 14
+    Info (12022): Found design unit 1: divider_const File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider_const.vhd Line: 5
+    Info (12022): Found design unit 2: divider_const-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider_const.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-structural_combinational File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd Line: 20
-    Info (12023): Found entity 1: divider File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd Line: 5
+    Info (12022): Found design unit 1: divider-structural_combinational File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider.vhd Line: 20
+    Info (12023): Found entity 1: divider File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file divider_tb.vhd
-    Info (12022): Found design unit 1: divider_tb-behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd Line: 11
-    Info (12023): Found entity 1: divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd Line: 8
+    Info (12022): Found design unit 1: divider_tb-behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider_tb.vhd Line: 11
+    Info (12023): Found entity 1: divider_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/divider_tb.vhd Line: 8
 Info (12127): Elaborating entity "display_divider" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(9): used implicit default value for signal "outputs" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 9
+Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(9): used implicit default value for signal "outputs" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd Line: 9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "outputs" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 9
+    Warning (13410): Pin "outputs" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd Line: 9
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "inputs" File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 8
+    Warning (15610): No output dependent on input pin "inputs" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/display_divider.vhd Line: 8
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 1 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Fri Oct 18 01:40:44 2024
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Fri Oct 18 12:52:56 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 
 

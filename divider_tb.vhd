@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_textio.all;
-use IEEE.std_logic_arith.all;
+use IEEE.numeric_std.all;
 use std.textio.all;
 use WORK.divider_const.all;
 
@@ -49,25 +49,33 @@ begin
     process
         variable inline   : line;
         variable outline  : line;
+        variable dividend_int : integer;
+        variable divisor_int  : integer;
         variable dividend_var : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0);
         variable divisor_var  : std_logic_vector(DIVISOR_WIDTH - 1 downto 0);
-        variable quotient_var : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0);
-        variable remainder_var : std_logic_vector(DIVISOR_WIDTH - 1 downto 0);
     begin
         -- Read input data from file
         while not endfile(infile) loop
-            -- Read the dividend
+            -- Read the dividend (integer from file)
             readline(infile, inline);
-            hread(inline, dividend_var);  -- Read as hex from input file
+            read(inline, dividend_int);  -- Read integer
+
+            -- Convert integer to std_logic_vector
+            dividend_var := std_logic_vector(to_unsigned(dividend_int, DIVIDEND_WIDTH));
             dividend <= dividend_var;
 
-            -- Read the divisor
+            -- Read the divisor (integer from file)
             readline(infile, inline);
-            hread(inline, divisor_var);  -- Read as hex from input file
+            read(inline, divisor_int);  -- Read integer
+
+            -- Convert integer to std_logic_vector
+            divisor_var := std_logic_vector(to_unsigned(divisor_int, DIVISOR_WIDTH));
             divisor <= divisor_var;
 
             -- Apply the test case
             start <= '1';  -- Start division
+            wait for 10 ns;  -- Simulate some delay for the operation to complete
+            start <= '0';
 
             -- Write results to output file
             write(outline, dividend_var);
@@ -78,8 +86,6 @@ begin
             write(outline, string'(" -- "));
             write(outline, remainder);
             writeline(outfile, outline);  -- Output result
-				
-				start <= '0';
 
         end loop;
         wait;
