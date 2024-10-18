@@ -15,6 +15,6 @@ package body divider_const is
 
     --Subroutine declarations go here
     -- you will not have any need for it now, this package is only for defining
-    -- some useful constants
+    -- some useful constants  
 	 
 end package body divider_const;

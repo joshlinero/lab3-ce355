@@ -1,0 +1,50 @@
+# Compile of divider_tb.vhd failed with 3 errors.
+# Compile of divider.vhd failed with 3 errors.
+# Compile of divider_const.vhd was successful.
+# Compile of comparator.vhd was successful.
+# 4 compiles, 2 failed with 6 errors.
+# Errors: 0, Warnings: 0
+# Compile of comparator.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_const.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider.vhd was successful.
+# Errors: 7, Warnings: 0
+# Errors: 7, Warnings: 0
+# Errors: 7, Warnings: 0
+# Compile of divider_tb.vhd failed.
+# Compile of divider.vhd was successful.
+# Compile of divider.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of divider_const.vhd was successful.
+# Compile of divider.vhd was successful.
+# Compile of divider_tb.vhd failed with 7 errors.
+# 4 compiles, 1 failed with 7 errors.
+# Compile of divider_tb.vhd failed with 7 errors.
+# Compile of divider_tb.vhd was successful.
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 01:38:39 on Oct 18,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(structural_combinational)
+# Loading ieee.numeric_std(body)
+# Loading work.comparator(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /divider_tb/uut/overflow has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -r sim:/divider_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: joshu  Hostname: DESKTOP-EE5CPGQ  ProcessID: 424
+#           Attempting to use alternate WLF file "./wlft4y0ct3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4y0ct3
+run
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /divider_tb/uut/comparator_inst
+# End time: 01:40:51 on Oct 18,2024, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 18

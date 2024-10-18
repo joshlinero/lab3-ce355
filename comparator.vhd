@@ -7,9 +7,9 @@ entity comparator is
         DATA_WIDTH : natural := 4 
     );
     port(
-        DINL : in std_logic_vector (DATA_WIDTH downto 0); 
-        DINR : in std_logic_vector (DATA_WIDTH - 1 downto 0); 
-        DOUT : out std_logic_vector (DATA_WIDTH - 1 downto 0); 
+        DINL : in std_logic_vector (DATA_WIDTH downto 0);
+        DINR : in std_logic_vector (DATA_WIDTH - 1 downto 0);
+        DOUT : out std_logic_vector (DATA_WIDTH - 1 downto 0);
         isGreaterEq : out std_logic -- '1' if DINL >= DINR, '0' otherwise
     );
 end entity comparator;
