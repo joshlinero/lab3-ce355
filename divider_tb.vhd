@@ -31,7 +31,7 @@ architecture behavior of divider_tb is
 
     -- File input/output
     file infile  : text open read_mode is "divider16.in";
-    file outfile : text open write_mode is "divider16.out";
+    file outfile : text open write_mode is "divider16out";
     
 begin
     -- Instantiate the divider component (UUT)
@@ -53,6 +53,8 @@ begin
         variable divisor_int  : integer;
         variable dividend_var : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0);
         variable divisor_var  : std_logic_vector(DIVISOR_WIDTH - 1 downto 0);
+		  variable quotient_int : integer;
+		  variable remainder_int: integer;
     begin
         -- Read input data from file
         while not endfile(infile) loop
@@ -73,18 +75,22 @@ begin
             divisor <= divisor_var;
 
             -- Apply the test case
+				wait for 20 ns;
             start <= '1';  -- Start division
-            wait for 10 ns;  -- Simulate some delay for the operation to complete
+            wait for 20 ns;  -- Simulate some delay for the operation to complete
             start <= '0';
+				
+				quotient_int := to_integer(unsigned(quotient));
+				remainder_int:= to_integer(unsigned(remainder));
 
             -- Write results to output file
-            write(outline, dividend_var);
+            write(outline, dividend_int);
             write(outline, string'("/"));
-            write(outline, divisor_var);
+            write(outline, divisor_int);
             write(outline, string'(" = "));
-            write(outline, quotient);
+            write(outline, quotient_int);
             write(outline, string'(" -- "));
-            write(outline, remainder);
+            write(outline, remainder_int);
             writeline(outfile, outline);  -- Output result
 
         end loop;

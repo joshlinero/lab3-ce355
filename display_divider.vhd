@@ -12,8 +12,6 @@ entity display_divider is
       divisor 		: in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
         
       -- Outputs
-      quotient 	: out std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
-      remainder 	: out std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
       overflow 	: out std_logic;
 		output_display : out std_logic_vector((DIVIDEND_WIDTH/4 * 7) + (DIVISOR_WIDTH/4 * 7) - 1 downto 0)
 	 );
@@ -31,8 +29,8 @@ architecture structural of display_divider is
    signal temp_remainder 	: std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
    signal temp_overflow 	: std_logic;
 	
-   signal decoded_quotient : std_logic_vector(DIVIDEND_WIDTH / 4 * 7 downto 0);
-	signal decoded_remainder : std_logic_vector(DIVISOR_WIDTH / 4 * 7 downto 0);
+   signal decoded_quotient : std_logic_vector(DIVIDEND_WIDTH / 4 * 7 - 1 downto 0);
+	signal decoded_remainder : std_logic_vector(DIVISOR_WIDTH / 4 * 7 - 1 downto 0);
 
 	component divider is
         port(
@@ -83,18 +81,10 @@ begin
 			  );
 	 end generate g2;
 	 
-	 process(temp_start, temp_overflow, decoded_quotient, decoded_remainder)
-    begin
-        if temp_start = '1' then
-				if temp_overflow = '1' then
-					output_display <= (others => '0');  -- we have to implement thiiiiiiisssss
-
-				else 
-					output_display <= decoded_quotient & decoded_remainder;
-				end if;
-        else
-            output_display <= (others => '0');
-        end if;
-    end process;
+	 temp_start <= start;
+	 temp_dividend <= dividend;
+	 temp_divisor <= divisor;
+	 output_display <= decoded_quotient & decoded_remainder;
+	 overflow <= temp_overflow;
 
 end architecture structural;

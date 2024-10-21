@@ -1,6 +1,6 @@
 Analysis & Synthesis report for display_divider
-Fri Oct 18 15:45:06 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
+Mon Oct 21 05:39:21 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -10,7 +10,31 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:0:firstslice:comp_first
+ 12. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:1:middleslice:comp_middle
+ 13. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:2:middleslice:comp_middle
+ 14. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:3:middleslice:comp_middle
+ 15. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:4:middleslice:comp_middle
+ 16. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:5:middleslice:comp_middle
+ 17. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:6:middleslice:comp_middle
+ 18. Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:7:lastslice:comp_last
+ 19. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:7:lastslice:comp_last"
+ 20. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:6:middleslice:comp_middle"
+ 21. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:5:middleslice:comp_middle"
+ 22. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:4:middleslice:comp_middle"
+ 23. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:3:middleslice:comp_middle"
+ 24. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:2:middleslice:comp_middle"
+ 25. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:1:middleslice:comp_middle"
+ 26. Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:0:firstslice:comp_first"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -34,24 +58,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                            ;
-+------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Oct 18 15:45:06 2024                  ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
-; Revision Name                      ; display_divider                                    ;
-; Top-level Entity Name              ; display_divider                                    ;
-; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; N/A until Partition Merge                          ;
-;     Total combinational functions  ; N/A until Partition Merge                          ;
-;     Dedicated logic registers      ; N/A until Partition Merge                          ;
-; Total registers                    ; N/A until Partition Merge                          ;
-; Total pins                         ; N/A until Partition Merge                          ;
-; Total virtual pins                 ; N/A until Partition Merge                          ;
-; Total memory bits                  ; N/A until Partition Merge                          ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                          ;
-; Total PLLs                         ; N/A until Partition Merge                          ;
-+------------------------------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 21 05:39:21 2024          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                      ; display_divider                                ;
+; Top-level Entity Name              ; display_divider                                ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 181                                            ;
+;     Total combinational functions  ; 181                                            ;
+;     Dedicated logic registers      ; 11                                             ;
+; Total registers                    ; 11                                             ;
+; Total pins                         ; 35                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -145,8 +169,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -156,59 +180,352 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; leddcd.vhd                       ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/leddcd.vhd          ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/decoder.vhd         ;         ;
+; display_divider.vhd              ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd ;         ;
+; comparator.vhd                   ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator.vhd      ;         ;
+; divider_const.vhd                ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd   ;         ;
+; divider.vhd                      ; yes             ; User VHDL File  ; C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd         ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 181              ;
+;                                             ;                  ;
+; Total combinational functions               ; 181              ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 63               ;
+;     -- 3 input functions                    ; 93               ;
+;     -- <=2 input functions                  ; 25               ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 120              ;
+;     -- arithmetic mode                      ; 61               ;
+;                                             ;                  ;
+; Total registers                             ; 11               ;
+;     -- Dedicated logic registers            ; 11               ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 35               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; divisor[2]~input ;
+; Maximum fan-out                             ; 22               ;
+; Total fan-out                               ; 666              ;
+; Average fan-out                             ; 2.54             ;
++---------------------------------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+; |display_divider                                             ; 181 (0)             ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_divider                                                                  ; display_divider ; work         ;
+;    |divider:dut|                                             ; 163 (32)            ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut                                                      ; divider         ; work         ;
+;       |comparator:\comparator_gen:0:firstslice:comp_first|   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:0:firstslice:comp_first   ; comparator      ; work         ;
+;       |comparator:\comparator_gen:1:middleslice:comp_middle| ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:1:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:2:middleslice:comp_middle| ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:2:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:3:middleslice:comp_middle| ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:3:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:4:middleslice:comp_middle| ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:4:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:5:middleslice:comp_middle| ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:5:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:6:middleslice:comp_middle| ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:6:middleslice:comp_middle ; comparator      ; work         ;
+;       |comparator:\comparator_gen:7:lastslice:comp_last|     ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:\comparator_gen:7:lastslice:comp_last     ; comparator      ; work         ;
+;    |leddcd:\g1:0:nth_display|                                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display                                         ; leddcd          ; work         ;
+;    |leddcd:\g1:1:nth_display|                                ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display                                         ; leddcd          ; work         ;
+;    |leddcd:\g2:0:mth_display|                                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:0:mth_display                                         ; leddcd          ; work         ;
++--------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; divider:dut|quotient[6,7]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 11    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |display_divider|divider:dut|remainder[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:0:firstslice:comp_first ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:1:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:2:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:3:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:4:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:5:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:6:middleslice:comp_middle ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:dut|comparator:\comparator_gen:7:lastslice:comp_last ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; data_width     ; 8     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:7:lastslice:comp_last"                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; dinl[8]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dinr[7..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dout[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:6:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:5:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:4:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:3:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:2:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:1:middleslice:comp_middle" ;
++------------+-------+----------+--------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                      ;
++------------+-------+----------+--------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                                 ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                                 ;
++------------+-------+----------+--------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:dut|comparator:\comparator_gen:0:firstslice:comp_first" ;
++------------+-------+----------+------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                    ;
++------------+-------+----------+------------------------------------------------------------+
+; dinl[8]    ; Input ; Info     ; Stuck at GND                                               ;
+; dinr[7..4] ; Input ; Info     ; Stuck at GND                                               ;
++------------+-------+----------+------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 11                          ;
+;     SCLR SLD          ; 4                           ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 185                         ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 50                          ;
+;     normal            ; 124                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 63                          ;
+;                       ;                             ;
+; Max LUT depth         ; 32.00                       ;
+; Average LUT depth     ; 26.28                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Fri Oct 18 15:44:58 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Mon Oct 21 05:39:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file leddcd.vhd
-    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd Line: 10
-    Info (12023): Found entity 1: leddcd File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd Line: 4
+    Info (12022): Found design unit 1: leddcd-data_flow File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/leddcd.vhd Line: 10
+    Info (12023): Found entity 1: leddcd File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/leddcd.vhd Line: 4
 Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: decoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/decoder.vhd Line: 4
-    Info (12022): Found design unit 2: decoder-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/decoder.vhd Line: 16
+    Info (12022): Found design unit 1: decoder File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/decoder.vhd Line: 4
+    Info (12022): Found design unit 2: decoder-body File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/decoder.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file display_divider.vhd
-    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 22
-    Info (12023): Found entity 1: display_divider File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 7
+    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 20
+    Info (12023): Found entity 1: display_divider File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
-    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator.vhd Line: 17
-    Info (12023): Found entity 1: comparator File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator.vhd Line: 5
+    Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator.vhd Line: 17
+    Info (12023): Found entity 1: comparator File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparator_tb.vhd
-    Info (12022): Found design unit 1: comparator_tb-testbench File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator_tb.vhd Line: 8
-    Info (12023): Found entity 1: comparator_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator_tb.vhd Line: 5
+    Info (12022): Found design unit 1: comparator_tb-testbench File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator_tb.vhd Line: 8
+    Info (12023): Found entity 1: comparator_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/comparator_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 0 entities, in source file divider_const.vhd
-    Info (12022): Found design unit 1: divider_const File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd Line: 5
-    Info (12022): Found design unit 2: divider_const-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd Line: 14
+    Info (12022): Found design unit 1: divider_const File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd Line: 5
+    Info (12022): Found design unit 2: divider_const-body File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_const.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-structural_combinational File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 23
-    Info (12023): Found entity 1: divider File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 5
+    Info (12022): Found design unit 1: divider-structural_combinational File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd Line: 21
+    Info (12023): Found entity 1: divider File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file divider_tb.vhd
-    Info (12022): Found design unit 1: divider_tb-behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd Line: 11
-    Info (12023): Found entity 1: divider_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd Line: 8
+    Info (12022): Found design unit 1: divider_tb-behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd Line: 11
+    Info (12023): Found entity 1: divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider_tb.vhd Line: 8
 Info (12127): Elaborating entity "display_divider" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(15): used implicit default value for signal "quotient" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(16): used implicit default value for signal "remainder" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(17): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 17
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(27): used implicit default value for signal "temp_start" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 27
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(28): used implicit default value for signal "temp_dividend" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 28
-Warning (10541): VHDL Signal Declaration warning at display_divider.vhd(29): used implicit default value for signal "temp_divisor" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 29
-Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 59
-Warning (10036): Verilog HDL or VHDL warning at divider.vhd(39): object "temp_quotient" assigned a value but never read File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 39
-Warning (10036): Verilog HDL or VHDL warning at divider.vhd(40): object "div_start" assigned a value but never read File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 40
-Error (10344): VHDL expression error at divider.vhd(58): expression has 9 elements, but must have 5 elements File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 58
-Error (10344): VHDL expression error at divider.vhd(59): expression has 8 elements, but must have 4 elements File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 59
-Error (10346): VHDL error at divider.vhd(53): formal port or parameter "DINL" must have actual or default value File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 53
-Error (10346): VHDL error at divider.vhd(53): formal port or parameter "DINR" must have actual or default value File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 53
-Error (12152): Can't elaborate user hierarchy "divider:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 59
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 9 warnings
-    Error: Peak virtual memory: 4780 megabytes
-    Error: Processing ended: Fri Oct 18 15:45:06 2024
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:17
+Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 57
+Info (12128): Elaborating entity "comparator" for hierarchy "divider:dut|comparator:\comparator_gen:0:firstslice:comp_first" File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/divider.vhd Line: 51
+Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_display" File: C:/Users/antb2/Desktop/School/CE 355/Lab 3 Combinational Division/lab3-ce355/display_divider.vhd Line: 69
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 217 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Mon Oct 21 05:39:21 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
