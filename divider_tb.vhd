@@ -12,6 +12,7 @@ architecture behavior of divider_tb is
     -- Component declaration of the unit under test (UUT)
     component divider
         port(
+				clk       : in std_logic;
             start     : in std_logic;
             dividend  : in std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
             divisor   : in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
@@ -20,8 +21,10 @@ architecture behavior of divider_tb is
             overflow  : out std_logic
         );
     end component;
+	 for all : divider use entity WORK.divider (behavioral_sequential);
 
     -- Signals for inputs and outputs
+	 signal clk        : std_logic := '0';
     signal start      : std_logic := '0';
     signal dividend   : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0) := (others => '0');
     signal divisor    : std_logic_vector(DIVISOR_WIDTH - 1 downto 0) := (others => '0');
@@ -31,12 +34,13 @@ architecture behavior of divider_tb is
 
     -- File input/output
     file infile  : text open read_mode is "divider16.in";
-    file outfile : text open write_mode is "divider16out";
+    file outfile : text open write_mode is "divider16.out";
     
 begin
     -- Instantiate the divider component (UUT)
     uut: divider
         port map (
+				clk        => clk,
             start      => start,
             dividend   => dividend,
             divisor    => divisor,
@@ -44,6 +48,16 @@ begin
             remainder  => remainder,
             overflow   => overflow
         );
+	 
+	 clock_process : process
+    begin
+        while true loop
+            clk <= '0';
+            wait for 2 ns;  -- Half period of 10ns for a 20ns clock period
+            clk <= '1';
+            wait for 2 ns;
+        end loop;
+    end process clock_process;
 
     -- Test process to read inputs and apply them to the divider
     process
@@ -75,10 +89,13 @@ begin
             divisor <= divisor_var;
 
             -- Apply the test case
-				wait for 20 ns;
+				wait for 10 ns;
             start <= '1';  -- Start division
-            wait for 20 ns;  -- Simulate some delay for the operation to complete
+            wait for 10 ns;  -- Simulate some delay for the operation to complete
             start <= '0';
+				wait for 50 ns;
+				
+				wait until clk = '1' and clk'event;
 				
 				quotient_int := to_integer(unsigned(quotient));
 				remainder_int:= to_integer(unsigned(remainder));
@@ -94,7 +111,9 @@ begin
             writeline(outfile, outline);  -- Output result
 
         end loop;
-        wait;
+		  
+        wait for 10 ns;
+		  --std.env.stop;
     end process;
 
 end architecture;

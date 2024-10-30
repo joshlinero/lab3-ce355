@@ -6,7 +6,7 @@ use WORK.divider_const.all;
 entity divider is
     port(
         -- Inputs
---		  clk			: 	in std_logic;
+ 		  clk			: 	in std_logic;
         start 		: 	in std_logic;
         dividend 	: 	in std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
         divisor 	: 	in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
@@ -121,3 +121,77 @@ begin
 		 end if;
 	end process division_process;
 end architecture structural_combinational;
+
+architecture behavioral_sequential of divider is
+
+	component comparator
+		generic(
+        DATA_WIDTH : natural
+		);
+		port(
+			DINL				:	in std_logic_vector (DATA_WIDTH downto 0);
+			DINR				:	in std_logic_vector (DATA_WIDTH - 1 downto 0);
+			DOUT				:	out std_logic_vector (DATA_WIDTH - 1 downto 0);
+			isGreaterEq		:	out std_logic
+		);
+	end component;
+	
+	signal zext_divisor : std_logic_vector (DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0);
+	signal zext_dividend : std_logic_vector (DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0);
+	signal temp_DOUT : std_logic_vector (DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0);
+	signal temp_quotient : std_logic;
+	signal quotient_out : std_logic_vector (DIVIDEND_WIDTH - 1 downto 0); 
+	signal counter : unsigned(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0); 
+	
+begin	
+
+	looping_comparator : comparator
+		generic map (
+			DATA_WIDTH => DIVIDEND_WIDTH + DIVISOR_WIDTH
+		)
+		port map (
+			DINL(DIVIDEND_WIDTH + DIVISOR_WIDTH) => '0',
+			DINL(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0) => zext_dividend,
+			DINR => zext_divisor,
+			DOUT => temp_DOUT,
+			isGreaterEq => temp_quotient
+	);
+	
+		
+	looping_process : process (start, clk)
+	begin 
+		if (start = '1') then
+			 counter <= (others => '0');
+			 zext_dividend(DIVIDEND_WIDTH - 1 downto 0) <= dividend;
+			 zext_dividend(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= (others => '0');
+			 zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0) <= (others => '0');
+			 zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= divisor; 
+			 quotient <= (others => '0');
+			 remainder <= (others => '0');
+			 overflow <= '0';
+			 quotient_out <= (others => '0');
+			 
+		elsif ( rising_edge(clk) ) then
+				counter <= counter + 1;
+
+				zext_dividend <= temp_DOUT;
+				zext_divisor <= std_logic_vector(unsigned(zext_divisor) SRL 1);
+        
+				quotient_out((DIVIDEND_WIDTH - 1) - to_integer(counter)) <= temp_quotient;
+				remainder <= std_logic_vector(resize(unsigned(temp_DOUT), 4));
+				
+				--counter <= counter + 1;
+				
+				if counter = DIVIDEND_WIDTH - 1 then
+					quotient <= quotient_out;
+				end if;
+		
+		end if;
+		
+		--quotient <= quotient_out;
+		
+	end process looping_process;
+	
+	
+end architecture behavioral_sequential;
+
