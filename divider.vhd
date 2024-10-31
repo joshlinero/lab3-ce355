@@ -140,8 +140,14 @@ architecture behavioral_sequential of divider is
 	signal zext_dividend : std_logic_vector (DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0);
 	signal temp_DOUT : std_logic_vector (DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0);
 	signal temp_quotient : std_logic;
-	signal quotient_out : std_logic_vector (DIVIDEND_WIDTH - 1 downto 0); 
-	signal counter : unsigned(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0); 
+	signal quotient_out : std_logic_vector (DIVIDEND_WIDTH downto 0); 
+	--signal counter : unsigned(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0); 
+	signal shift_position : std_logic_vector(DIVIDEND_WIDTH downto 0);
+	constant ZERO_VECTOR : std_logic_vector(DIVISOR_WIDTH - 1 downto 0) := (others => '0');
+	constant ZERO_VECTOR2 : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0) := (others => '0');
+	constant ONE_VECTOR : std_logic_vector(DIVIDEND_WIDTH downto 0) := "1" & (DIVIDEND_WIDTH - 1 downto 0 => '0');
+	signal done : std_logic := '0';
+	
 	
 begin	
 
@@ -158,37 +164,59 @@ begin
 	);
 	
 		
-	looping_process : process (start, clk)
+	looping_process : process (divisor, start, clk)
 	begin 
 		if (start = '1') then
-			 counter <= (others => '0');
-			 zext_dividend(DIVIDEND_WIDTH - 1 downto 0) <= dividend;
-			 zext_dividend(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= (others => '0');
-			 zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0) <= (others => '0');
-			 zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= divisor; 
-			 quotient <= (others => '0');
-			 remainder <= (others => '0');
-			 overflow <= '0';
-			 quotient_out <= (others => '0');
-			 
-		elsif ( rising_edge(clk) ) then
-				counter <= counter + 1;
-
-				zext_dividend <= temp_DOUT;
-				zext_divisor <= std_logic_vector(unsigned(zext_divisor) SRL 1);
-        
-				quotient_out((DIVIDEND_WIDTH - 1) - to_integer(counter)) <= temp_quotient;
-				remainder <= std_logic_vector(resize(unsigned(temp_DOUT), 4));
-				
+				done <= '0';
+				overflow <= '0';
+				quotient <= (others => '0');
+				remainder <= (others => '0');
+			
+				if divisor = ZERO_VECTOR then
+					overflow <= '1';
+					quotient <= (others => '0');
+					remainder <= (others => '0');
+					done <= '1';
+				else
+					zext_dividend(DIVIDEND_WIDTH - 1 downto 0) <= dividend;
+					zext_dividend(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= (others => '0');
+					zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto 0) <= (others => '0');
+					zext_divisor(DIVIDEND_WIDTH + DIVISOR_WIDTH - 1 downto DIVIDEND_WIDTH) <= divisor; 
+					quotient_out <= (others => '0');
+					shift_position <= ONE_VECTOR;
+				end if;
+			
+		elsif (rising_edge(clk)) and done = '0' then
 				--counter <= counter + 1;
 				
-				if counter = DIVIDEND_WIDTH - 1 then
-					quotient <= quotient_out;
+				zext_dividend <= temp_DOUT;
+				zext_divisor <= std_logic_vector(unsigned(zext_divisor) SRL 1);
+
+				--quotient_out((DIVIDEND_WIDTH - 1) - to_integer(counter)) <= temp_quotient;
+				--remainder <= std_logic_vector(resize(unsigned(temp_DOUT), 4));
+				
+				if temp_quotient = '1' then
+					quotient_out <= quotient_out or shift_position;
 				end if;
+		
+				-- Shift the position for the next bit
+				shift_position <= std_logic_vector(unsigned(shift_position) SRL 1);
+				
+				if (unsigned(temp_DOUT) < resize(unsigned(divisor), DIVIDEND_WIDTH + DIVISOR_WIDTH - 1)) or (shift_position = ZERO_VECTOR2) then
+					-- Stop division as remainder is now less than divisor
+					--quotient <= std_logic_vector(resize(unsigned(quotient_out), DIVIDEND_WIDTH));
+					remainder <= std_logic_vector(resize(unsigned(temp_DOUT), DIVISOR_WIDTH));
+					done <= '1';
+				end if;
+
 		
 		end if;
 		
-		--quotient <= quotient_out;
+		if done = '1' and divisor /= ZERO_VECTOR then
+			quotient <= std_logic_vector(resize(unsigned(quotient_out), DIVIDEND_WIDTH));
+			--remainder <= std_logic_vector(resize(unsigned(temp_DOUT), DIVISOR_WIDTH));
+		end if;
+		
 		
 	end process looping_process;
 	

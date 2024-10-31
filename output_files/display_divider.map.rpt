@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Wed Oct 30 18:47:09 2024
+Wed Oct 30 22:55:51 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -13,15 +13,16 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: divider:dut|comparator:looping_comparator
- 12. Port Connectivity Checks: "divider:dut|comparator:looping_comparator"
- 13. Port Connectivity Checks: "divider:dut"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: divider:dut|comparator:looping_comparator
+ 13. Port Connectivity Checks: "divider:dut|comparator:looping_comparator"
+ 14. Port Connectivity Checks: "divider:dut"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -48,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 30 18:47:09 2024              ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 30 22:55:51 2024              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; display_divider                                    ;
 ; Top-level Entity Name              ; display_divider                                    ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 0                                                  ;
-;     Total combinational functions  ; 0                                                  ;
+; Total logic elements               ; 9                                                  ;
+;     Total combinational functions  ; 9                                                  ;
 ;     Dedicated logic registers      ; 0                                                  ;
 ; Total registers                    ; 0                                                  ;
 ; Total pins                         ; 35                                                 ;
@@ -160,10 +161,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,90 +183,106 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 35    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; start ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 35    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 9                       ;
+;                                             ;                         ;
+; Total combinational functions               ; 9                       ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 1                       ;
+;     -- 3 input functions                    ; 7                       ;
+;     -- <=2 input functions                  ; 1                       ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 9                       ;
+;     -- arithmetic mode                      ; 0                       ;
+;                                             ;                         ;
+; Total registers                             ; 0                       ;
+;     -- Dedicated logic registers            ; 0                       ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 35                      ;
+;                                             ;                         ;
+; Embedded Multiplier 9-bit elements          ; 0                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; divider:dut|quotient[2] ;
+; Maximum fan-out                             ; 9                       ;
+; Total fan-out                               ; 71                      ;
+; Average fan-out                             ; 0.90                    ;
++---------------------------------------------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
-; |display_divider           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_divider    ; display_divider ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
+; |display_divider           ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_divider             ; display_divider ; work         ;
+;    |divider:dut|           ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut ; divider         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; divider:dut|quotient_out[0]            ; Stuck at GND due to stuck port clock ;
-; divider:dut|counter[0..11]             ; Stuck at GND due to stuck port clock ;
-; divider:dut|zext_dividend[8..11]       ; Stuck at GND due to stuck port clock ;
-; divider:dut|zext_divisor[0..7]         ; Stuck at GND due to stuck port clock ;
-; divider:dut|quotient[0..7]             ; Stuck at GND due to stuck port clock ;
-; divider:dut|remainder[1..3]            ; Stuck at GND due to stuck port clock ;
-; divider:dut|quotient_out[1..7]         ; Stuck at GND due to stuck port clock ;
-; divider:dut|remainder[0]               ; Stuck at GND due to stuck port clock ;
-; divider:dut|zext_dividend[0..7]        ; Lost fanout                          ;
-; divider:dut|zext_divisor[8..11]        ; Lost fanout                          ;
-; Total Number of Removed Registers = 56 ;                                      ;
-+----------------------------------------+--------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------+------------------------+
+; divider:dut|overflow                               ; start                   ; yes                    ;
+; divider:dut|quotient[2]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[0]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[1]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[3]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[6]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[5]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[4]                            ; divider:dut|quotient[7] ; yes                    ;
+; divider:dut|quotient[7]                            ; divider:dut|quotient[7] ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                         ;                        ;
++----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                 ;
-+-------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-; Register name                 ; Reason for Removal      ; Registers Removed due to This Register                                            ;
-+-------------------------------+-------------------------+-----------------------------------------------------------------------------------+
-; divider:dut|zext_divisor[7]   ; Stuck at GND            ; divider:dut|zext_divisor[6], divider:dut|zext_divisor[5],                         ;
-;                               ; due to stuck port clock ; divider:dut|zext_divisor[4], divider:dut|zext_divisor[3],                         ;
-;                               ;                         ; divider:dut|zext_divisor[2], divider:dut|zext_divisor[1],                         ;
-;                               ;                         ; divider:dut|zext_divisor[0], divider:dut|remainder[3], divider:dut|remainder[2],  ;
-;                               ;                         ; divider:dut|remainder[1], divider:dut|remainder[0], divider:dut|zext_dividend[3], ;
-;                               ;                         ; divider:dut|zext_dividend[2], divider:dut|zext_dividend[1],                       ;
-;                               ;                         ; divider:dut|zext_dividend[0]                                                      ;
-; divider:dut|counter[11]       ; Stuck at GND            ; divider:dut|quotient[7], divider:dut|quotient[6], divider:dut|quotient[5],        ;
-;                               ; due to stuck port clock ; divider:dut|quotient[4], divider:dut|quotient[3], divider:dut|quotient[2],        ;
-;                               ;                         ; divider:dut|quotient[1]                                                           ;
-; divider:dut|counter[2]        ; Stuck at GND            ; divider:dut|quotient_out[7], divider:dut|quotient_out[6],                         ;
-;                               ; due to stuck port clock ; divider:dut|quotient_out[5], divider:dut|quotient_out[4],                         ;
-;                               ;                         ; divider:dut|quotient_out[3], divider:dut|quotient_out[2],                         ;
-;                               ;                         ; divider:dut|quotient_out[1]                                                       ;
-; divider:dut|zext_dividend[11] ; Stuck at GND            ; divider:dut|zext_divisor[11], divider:dut|zext_divisor[10],                       ;
-;                               ; due to stuck port clock ; divider:dut|zext_divisor[9], divider:dut|zext_divisor[8]                          ;
-; divider:dut|quotient_out[0]   ; Stuck at GND            ; divider:dut|quotient[0]                                                           ;
-;                               ; due to stuck port clock ;                                                                                   ;
-+-------------------------------+-------------------------+-----------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++----------------------------------------+-----------------------------------------+
+; Register name                          ; Reason for Removal                      ;
++----------------------------------------+-----------------------------------------+
+; divider:dut|remainder[0..3]            ; Stuck at GND due to stuck port clock    ;
+; divider:dut|shift_position[0..8]       ; Lost fanout                             ;
+; divider:dut|quotient_out[1..7]         ; Merged with divider:dut|quotient_out[0] ;
+; divider:dut|zext_dividend[0..11]       ; Lost fanout                             ;
+; divider:dut|zext_divisor[0..11]        ; Lost fanout                             ;
+; divider:dut|done~_emulated             ; Stuck at GND due to stuck port clock    ;
+; divider:dut|quotient_out[0]~_emulated  ; Stuck at GND due to stuck port clock    ;
+; Total Number of Removed Registers = 46 ;                                         ;
++----------------------------------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++-------------------------------+-------------------------+---------------------------------------------------------------+
+; Register name                 ; Reason for Removal      ; Registers Removed due to This Register                        ;
++-------------------------------+-------------------------+---------------------------------------------------------------+
+; divider:dut|shift_position[0] ; Lost Fanouts            ; divider:dut|shift_position[1], divider:dut|shift_position[2], ;
+;                               ;                         ; divider:dut|shift_position[3], divider:dut|shift_position[4], ;
+;                               ;                         ; divider:dut|shift_position[5], divider:dut|shift_position[6], ;
+;                               ;                         ; divider:dut|shift_position[7], divider:dut|shift_position[8]  ;
+; divider:dut|remainder[0]      ; Stuck at GND            ; divider:dut|zext_dividend[0], divider:dut|zext_dividend[11],  ;
+;                               ; due to stuck port clock ; divider:dut|zext_divisor[11], divider:dut|zext_divisor[9],    ;
+;                               ;                         ; divider:dut|zext_divisor[10]                                  ;
+; divider:dut|zext_divisor[3]   ; Lost Fanouts            ; divider:dut|zext_divisor[4], divider:dut|zext_divisor[5],     ;
+;                               ;                         ; divider:dut|zext_divisor[6], divider:dut|zext_divisor[7],     ;
+;                               ;                         ; divider:dut|zext_divisor[8]                                   ;
+; divider:dut|remainder[3]      ; Stuck at GND            ; divider:dut|zext_dividend[3], divider:dut|zext_dividend[10]   ;
+;                               ; due to stuck port clock ;                                                               ;
+; divider:dut|remainder[1]      ; Stuck at GND            ; divider:dut|zext_dividend[1]                                  ;
+;                               ; due to stuck port clock ;                                                               ;
+; divider:dut|remainder[2]      ; Stuck at GND            ; divider:dut|zext_dividend[2]                                  ;
+;                               ; due to stuck port clock ;                                                               ;
++-------------------------------+-------------------------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -316,12 +334,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 35                          ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; cycloneiii_lcell_comb ; 12                          ;
+;     normal            ; 12                          ;
 ;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -340,7 +362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Wed Oct 30 18:47:00 2024
+    Info: Processing started: Wed Oct 30 22:55:43 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -371,15 +393,41 @@ Info (12021): Found 2 design units, including 1 entities, in source file divider
     Info (12023): Found entity 1: divider_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd Line: 8
 Info (12127): Elaborating entity "display_divider" for the top level hierarchy
 Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at divider.vhd(165): signal "dividend" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 165
-Warning (10492): VHDL Process Statement warning at divider.vhd(168): signal "divisor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 168
-Warning (10631): VHDL Process Statement warning at divider.vhd(161): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 161
-Info (10041): Inferred latch for "overflow" at divider.vhd(161) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 161
-Info (12128): Elaborating entity "comparator" for hierarchy "divider:dut|comparator:looping_comparator" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at divider.vhd(181): signal "dividend" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at divider.vhd(189): signal "done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 189
+Warning (10620): VHDL warning at divider.vhd(205): comparison between unequal length operands always returns FALSE File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 205
+Warning (10492): VHDL Process Statement warning at divider.vhd(215): signal "done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 215
+Warning (10492): VHDL Process Statement warning at divider.vhd(216): signal "quotient_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 216
+Warning (10631): VHDL Process Statement warning at divider.vhd(167): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Warning (10631): VHDL Process Statement warning at divider.vhd(167): inferring latch(es) for signal or variable "quotient", which holds its previous value in one or more paths through the process File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[0]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[1]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[2]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[3]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[4]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[5]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[6]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "quotient[7]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (10041): Inferred latch for "overflow" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (12128): Elaborating entity "comparator" for hierarchy "divider:dut|comparator:looping_comparator" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 154
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 69
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[0]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[1]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[3]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[4]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[5]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[6]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[7]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Warning (13012): Latch divider:dut|quotient[2] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "divider:dut|done" is converted into an equivalent circuit using register "divider:dut|done~_emulated" and latch "divider:dut|done~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+    Warning (13310): Register "divider:dut|quotient_out[0]" is converted into an equivalent circuit using register "divider:dut|quotient_out[0]~_emulated" and latch "divider:dut|quotient_out[0]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "divider:dut|done~1" merged with LATCH primitive "divider:dut|overflow" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "overflow" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 15
     Warning (13410): Pin "output_display[0]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[1]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[2]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
@@ -388,43 +436,32 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "output_display[5]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[6]" is stuck at VCC File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[7]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[8]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[9]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[10]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[11]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[12]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[13]" is stuck at VCC File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[14]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[15]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[16]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[17]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[18]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
     Warning (13410): Pin "output_display[19]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[20]" is stuck at VCC File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "start" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 10
-    Warning (15610): No output dependent on input pin "dividend[0]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[1]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dividend[3]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
+    Warning (15610): No output dependent on input pin "dividend[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
+    Warning (15610): No output dependent on input pin "dividend[1]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
+    Warning (15610): No output dependent on input pin "dividend[0]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
     Warning (15610): No output dependent on input pin "dividend[4]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
     Warning (15610): No output dependent on input pin "dividend[5]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
     Warning (15610): No output dependent on input pin "dividend[6]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
     Warning (15610): No output dependent on input pin "dividend[7]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "divisor[0]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 12
-    Warning (15610): No output dependent on input pin "divisor[1]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 12
-    Warning (15610): No output dependent on input pin "divisor[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 12
-    Warning (15610): No output dependent on input pin "divisor[3]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 12
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 22 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Wed Oct 30 18:47:09 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Wed Oct 30 22:55:51 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

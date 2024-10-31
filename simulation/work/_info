@@ -23,9 +23,9 @@ V8BLV>a7o9iaOKkdh@PkI=2
 !s100 D?JUW`CT]nG]]M]?9X3PL1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1730332431
+Z8 !s110 1730346958
 !i10b 1
-Z9 !s108 1730332431.000000
+Z9 !s108 1730346958.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator.vhd|
 Z11 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator.vhd|
 !i113 1
@@ -174,7 +174,7 @@ R29
 R12
 R13
 Edivider
-Z30 w1730332420
+Z30 w1730346940
 R25
 R1
 R2
@@ -188,11 +188,11 @@ VXLnFIUl2mTiC_HGWIz?<=0
 !s100 >ROe?LWd0DcSQGJUB`KTd3
 R7
 32
-Z33 !s110 1730332432
+Z33 !s110 1730346959
 !i10b 1
-R9
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd|
-Z35 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd|
+Z34 !s108 1730346959.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd|
+Z36 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd|
 !i113 1
 R12
 R13
@@ -201,18 +201,18 @@ R25
 R1
 R2
 R3
-Z36 DEx4 work 7 divider 0 22 XLnFIUl2mTiC_HGWIz?<=0
-l146
+Z37 DEx4 work 7 divider 0 22 XLnFIUl2mTiC_HGWIz?<=0
+l152
 L125
-V>>_oLhe_TI_@Jeo>kaVRm1
-!s100 nT@UCE6f9KBSOFaODz4243
+VG3X;jS_@I6MD2jDOC8e241
+!s100 Cj[2D96Pj:RbLD6J?I?EK0
 R7
 32
 R33
 !i10b 1
-R9
 R34
 R35
+R36
 !i113 1
 R12
 R13
@@ -221,18 +221,18 @@ R25
 R1
 R2
 R3
-R36
+R37
 l42
 L21
-V996RGMQKEFaUcnaJB2m7`1
-!s100 ;=GZL`F^MR`H1O^o7R=8?0
+Z38 V996RGMQKEFaUcnaJB2m7`1
+Z39 !s100 ;=GZL`F^MR`H1O^o7R=8?0
 R7
 32
 R33
 !i10b 1
-R9
 R34
 R35
+R36
 !i113 1
 R12
 R13
@@ -241,8 +241,8 @@ R2
 R3
 R24
 R4
-Z37 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd
-Z38 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd
+Z40 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd
+Z41 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd
 l0
 L5
 VdmVWGN:C?:zjE1a1LCIPj1
@@ -251,9 +251,9 @@ R7
 32
 R33
 !i10b 1
-Z39 !s108 1730332432.000000
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd|
-Z41 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd|
+R9
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd|
+Z43 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_const.vhd|
 !i113 1
 R12
 R13
@@ -269,22 +269,22 @@ R7
 32
 R33
 !i10b 1
-R39
-R40
-R41
+R9
+R42
+R43
 !i113 1
 R12
 R13
 Edivider_tb
-Z42 w1730328899
+Z44 w1730328899
 R25
 R1
-Z43 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z45 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R3
 R4
-Z44 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd
-Z45 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd
+Z46 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd
+Z47 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd
 l0
 L8
 Vb4^1ihImPfETCb]]^0Hi42
@@ -293,17 +293,17 @@ R7
 32
 R33
 !i10b 1
-R39
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd|
-Z47 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd|
+R34
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd|
+Z49 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd|
 !i113 1
 R12
 R13
 Abehavior
-R36
+R37
 R25
 R1
-R43
+R45
 R2
 R3
 DEx4 work 10 divider_tb 0 22 b4^1ihImPfETCb]]^0Hi42
@@ -315,9 +315,9 @@ R7
 32
 R33
 !i10b 1
-R39
-R46
-R47
+R34
+R48
+R49
 !i113 1
 R12
 R13
@@ -326,8 +326,8 @@ R14
 R2
 R3
 R4
-Z48 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd
-Z49 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd
+Z50 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd
+Z51 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd
 l0
 L4
 V13?7=ZoRjQ4zJP<H4ndZG2
@@ -336,48 +336,48 @@ R7
 32
 R33
 !i10b 1
-R39
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd|
-Z51 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd|
+R34
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd|
+Z53 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/leddcd.vhd|
 !i113 1
 R12
 R13
 Adata_flow
 R2
 R3
-Z52 DEx4 work 6 leddcd 0 22 13?7=ZoRjQ4zJP<H4ndZG2
+DEx4 work 6 leddcd 0 22 13?7=ZoRjQ4zJP<H4ndZG2
 l12
 L10
-Z53 VOLoRMzzNXZcXgXH^OnWWV0
-Z54 !s100 X4MhSaeE8M@WmzdN99bP[0
+VOLoRMzzNXZcXgXH^OnWWV0
+!s100 X4MhSaeE8M@WmzdN99bP[0
 R7
 32
 R33
 !i10b 1
-R39
-R50
-R51
+R34
+R52
+R53
 !i113 1
 R12
 R13
 Eleddecoder
-Z55 w1728524982
+Z54 w1728524982
 R2
 R3
-Z56 dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/simulation
-Z57 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd
-Z58 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd
+Z55 dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/simulation
+Z56 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd
+Z57 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd
 l0
 L6
 V2zl@@5`FIhLjD5b2foCce0
 !s100 1b:VT84cO=<P]OYT:[U@L0
 R7
 32
-Z59 !s110 1729116908
+Z58 !s110 1729116908
 !i10b 1
-Z60 !s108 1729116908.000000
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
-Z62 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
+Z59 !s108 1729116908.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
+Z61 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
 !i113 1
 R12
 R13
@@ -391,11 +391,11 @@ V8<86f>=:NA[`nXSdfg9[o0
 !s100 nhWTAh=f^oT[Y>[6X0Tbn2
 R7
 32
-R59
+R58
 !i10b 1
+R59
 R60
 R61
-R62
 !i113 1
 R12
 R13
