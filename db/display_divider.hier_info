@@ -1,4 +1,5 @@
 |display_divider
+clk => divider:dut.clk
 start => divider:dut.start
 dividend[0] => divider:dut.dividend[0]
 dividend[1] => divider:dut.dividend[1]

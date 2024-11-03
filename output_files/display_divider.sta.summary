@@ -2,16 +2,100 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'start'
+Slack : -6.162
+TNS   : -189.517
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.635
+TNS   : -231.937
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.474
+TNS   : -0.616
+
+Type  : Slow 1200mV 85C Model Hold 'start'
+Slack : 0.600
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -2.052
+TNS   : -58.410
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.644
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -62.110
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'start'
 Slack : -3.000
-TNS   : -17.135
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'start'
+Slack : -5.681
+TNS   : -171.359
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.984
+TNS   : -210.189
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.376
+TNS   : -0.480
+
+Type  : Slow 1200mV 0C Model Hold 'start'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.779
+TNS   : -49.816
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.705
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -62.110
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'start'
 Slack : -3.000
-TNS   : -17.135
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'start'
+Slack : -2.680
+TNS   : -69.488
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.352
+TNS   : -103.116
+
+Type  : Fast 1200mV 0C Model Hold 'start'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -1.249
+TNS   : -35.463
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.017
+TNS   : -0.017
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -51.795
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'start'
 Slack : -3.000
-TNS   : -14.836
+TNS   : -3.946
 
 ------------------------------------------------------------

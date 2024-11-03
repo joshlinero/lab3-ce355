@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Wed Oct 30 22:55:51 2024
+Fri Nov  1 15:10:20 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -14,15 +14,12 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: divider:dut|comparator:looping_comparator
- 13. Port Connectivity Checks: "divider:dut|comparator:looping_comparator"
- 14. Port Connectivity Checks: "divider:dut"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: divider:dut|comparator:looping_comparator
+ 11. Port Connectivity Checks: "divider:dut|comparator:looping_comparator"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 30 22:55:51 2024              ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov  1 15:10:20 2024              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; display_divider                                    ;
 ; Top-level Entity Name              ; display_divider                                    ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 9                                                  ;
-;     Total combinational functions  ; 9                                                  ;
-;     Dedicated logic registers      ; 0                                                  ;
-; Total registers                    ; 0                                                  ;
-; Total pins                         ; 35                                                 ;
+; Total logic elements               ; 248                                                ;
+;     Total combinational functions  ; 248                                                ;
+;     Dedicated logic registers      ; 46                                                 ;
+; Total registers                    ; 46                                                 ;
+; Total pins                         ; 36                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -183,46 +180,50 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 9                       ;
-;                                             ;                         ;
-; Total combinational functions               ; 9                       ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 1                       ;
-;     -- 3 input functions                    ; 7                       ;
-;     -- <=2 input functions                  ; 1                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 9                       ;
-;     -- arithmetic mode                      ; 0                       ;
-;                                             ;                         ;
-; Total registers                             ; 0                       ;
-;     -- Dedicated logic registers            ; 0                       ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 35                      ;
-;                                             ;                         ;
-; Embedded Multiplier 9-bit elements          ; 0                       ;
-;                                             ;                         ;
-; Maximum fan-out node                        ; divider:dut|quotient[2] ;
-; Maximum fan-out                             ; 9                       ;
-; Total fan-out                               ; 71                      ;
-; Average fan-out                             ; 0.90                    ;
-+---------------------------------------------+-------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 248         ;
+;                                             ;             ;
+; Total combinational functions               ; 248         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 95          ;
+;     -- 3 input functions                    ; 101         ;
+;     -- <=2 input functions                  ; 52          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 226         ;
+;     -- arithmetic mode                      ; 22          ;
+;                                             ;             ;
+; Total registers                             ; 46          ;
+;     -- Dedicated logic registers            ; 46          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 36          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; start~input ;
+; Maximum fan-out                             ; 131         ;
+; Total fan-out                               ; 1020        ;
+; Average fan-out                             ; 2.79        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
-; |display_divider           ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_divider             ; display_divider ; work         ;
-;    |divider:dut|           ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut ; divider         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name     ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
+; |display_divider                      ; 248 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |display_divider                                           ; display_divider ; work         ;
+;    |divider:dut|                      ; 227 (199)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut                               ; divider         ; work         ;
+;       |comparator:looping_comparator| ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut|comparator:looping_comparator ; comparator      ; work         ;
+;    |leddcd:\g1:0:nth_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display                  ; leddcd          ; work         ;
+;    |leddcd:\g1:1:nth_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display                  ; leddcd          ; work         ;
+;    |leddcd:\g2:0:mth_display|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:0:mth_display                  ; leddcd          ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -245,57 +246,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+----------------------------------------+-----------------------------------------+
-; Register name                          ; Reason for Removal                      ;
-+----------------------------------------+-----------------------------------------+
-; divider:dut|remainder[0..3]            ; Stuck at GND due to stuck port clock    ;
-; divider:dut|shift_position[0..8]       ; Lost fanout                             ;
-; divider:dut|quotient_out[1..7]         ; Merged with divider:dut|quotient_out[0] ;
-; divider:dut|zext_dividend[0..11]       ; Lost fanout                             ;
-; divider:dut|zext_divisor[0..11]        ; Lost fanout                             ;
-; divider:dut|done~_emulated             ; Stuck at GND due to stuck port clock    ;
-; divider:dut|quotient_out[0]~_emulated  ; Stuck at GND due to stuck port clock    ;
-; Total Number of Removed Registers = 46 ;                                         ;
-+----------------------------------------+-----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                             ;
-+-------------------------------+-------------------------+---------------------------------------------------------------+
-; Register name                 ; Reason for Removal      ; Registers Removed due to This Register                        ;
-+-------------------------------+-------------------------+---------------------------------------------------------------+
-; divider:dut|shift_position[0] ; Lost Fanouts            ; divider:dut|shift_position[1], divider:dut|shift_position[2], ;
-;                               ;                         ; divider:dut|shift_position[3], divider:dut|shift_position[4], ;
-;                               ;                         ; divider:dut|shift_position[5], divider:dut|shift_position[6], ;
-;                               ;                         ; divider:dut|shift_position[7], divider:dut|shift_position[8]  ;
-; divider:dut|remainder[0]      ; Stuck at GND            ; divider:dut|zext_dividend[0], divider:dut|zext_dividend[11],  ;
-;                               ; due to stuck port clock ; divider:dut|zext_divisor[11], divider:dut|zext_divisor[9],    ;
-;                               ;                         ; divider:dut|zext_divisor[10]                                  ;
-; divider:dut|zext_divisor[3]   ; Lost Fanouts            ; divider:dut|zext_divisor[4], divider:dut|zext_divisor[5],     ;
-;                               ;                         ; divider:dut|zext_divisor[6], divider:dut|zext_divisor[7],     ;
-;                               ;                         ; divider:dut|zext_divisor[8]                                   ;
-; divider:dut|remainder[3]      ; Stuck at GND            ; divider:dut|zext_dividend[3], divider:dut|zext_dividend[10]   ;
-;                               ; due to stuck port clock ;                                                               ;
-; divider:dut|remainder[1]      ; Stuck at GND            ; divider:dut|zext_dividend[1]                                  ;
-;                               ; due to stuck port clock ;                                                               ;
-; divider:dut|remainder[2]      ; Stuck at GND            ; divider:dut|zext_dividend[2]                                  ;
-;                               ; due to stuck port clock ;                                                               ;
-+-------------------------------+-------------------------+---------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 37    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -319,31 +280,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "divider:dut"                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 1                           ;
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 46                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 37                          ;
+; cycloneiii_lcell_comb ; 253                         ;
+;     arith             ; 22                          ;
+;         3 data inputs ; 22                          ;
+;     normal            ; 231                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 95                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 3.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -362,7 +318,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Wed Oct 30 22:55:43 2024
+    Info: Processing started: Fri Nov  1 15:10:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -373,7 +329,7 @@ Info (12021): Found 2 design units, including 0 entities, in source file decoder
     Info (12022): Found design unit 1: decoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/decoder.vhd Line: 4
     Info (12022): Found design unit 2: decoder-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/decoder.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file display_divider.vhd
-    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 20
+    Info (12022): Found design unit 1: display_divider-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 21
     Info (12023): Found entity 1: display_divider File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
     Info (12022): Found design unit 1: comparator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/comparator.vhd Line: 17
@@ -392,7 +348,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file divider
     Info (12022): Found design unit 1: divider_tb-behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd Line: 11
     Info (12023): Found entity 1: divider_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider_tb.vhd Line: 8
 Info (12127): Elaborating entity "display_divider" for the top level hierarchy
-Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 57
+Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 60
 Warning (10492): VHDL Process Statement warning at divider.vhd(181): signal "dividend" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 181
 Warning (10492): VHDL Process Statement warning at divider.vhd(189): signal "done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 189
 Warning (10620): VHDL warning at divider.vhd(205): comparison between unequal length operands always returns FALSE File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 205
@@ -410,58 +366,79 @@ Info (10041): Inferred latch for "quotient[6]" at divider.vhd(167) File: C:/User
 Info (10041): Inferred latch for "quotient[7]" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
 Info (10041): Inferred latch for "overflow" at divider.vhd(167) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
 Info (12128): Elaborating entity "comparator" for hierarchy "divider:dut|comparator:looping_comparator" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 154
-Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 69
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[0]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[1]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[3]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[4]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[5]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[6]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
-    Info (13026): Duplicate LATCH primitive "divider:dut|quotient[7]" merged with LATCH primitive "divider:dut|quotient[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 73
 Warning (13012): Latch divider:dut|quotient[2] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
     Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[0] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[1] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[3] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[6] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[5] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[4] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
+Warning (13012): Latch divider:dut|quotient[7] has unsafe behavior File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|done File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "divider:dut|zext_dividend[2]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[2]~_emulated" and latch "divider:dut|zext_dividend[2]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[2]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[2]~_emulated" and latch "divider:dut|zext_divisor[2]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[1]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[1]~_emulated" and latch "divider:dut|zext_dividend[1]~5" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[1]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[1]~_emulated" and latch "divider:dut|zext_divisor[1]~5" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[0]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[0]~_emulated" and latch "divider:dut|zext_dividend[0]~9" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[0]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[0]~_emulated" and latch "divider:dut|zext_divisor[0]~9" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[11]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[11]~_emulated" and latch "divider:dut|zext_dividend[11]~13" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[11]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[11]~_emulated" and latch "divider:dut|zext_divisor[11]~13" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[10]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[10]~_emulated" and latch "divider:dut|zext_dividend[10]~17" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[10]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[10]~_emulated" and latch "divider:dut|zext_divisor[10]~17" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[9]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[9]~_emulated" and latch "divider:dut|zext_dividend[9]~21" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[9]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[9]~_emulated" and latch "divider:dut|zext_divisor[9]~21" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[8]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[8]~_emulated" and latch "divider:dut|zext_dividend[8]~25" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[8]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[8]~_emulated" and latch "divider:dut|zext_divisor[8]~25" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[7]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[7]~_emulated" and latch "divider:dut|zext_dividend[7]~29" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[7]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[7]~_emulated" and latch "divider:dut|zext_divisor[7]~29" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[6]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[6]~_emulated" and latch "divider:dut|zext_dividend[6]~33" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[6]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[6]~_emulated" and latch "divider:dut|zext_divisor[6]~33" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[5]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[5]~_emulated" and latch "divider:dut|zext_dividend[5]~37" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[5]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[5]~_emulated" and latch "divider:dut|zext_divisor[5]~37" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[4]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[4]~_emulated" and latch "divider:dut|zext_dividend[4]~41" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[4]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[4]~_emulated" and latch "divider:dut|zext_divisor[4]~41" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_dividend[3]" is converted into an equivalent circuit using register "divider:dut|zext_dividend[3]~_emulated" and latch "divider:dut|zext_dividend[3]~45" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|zext_divisor[3]" is converted into an equivalent circuit using register "divider:dut|zext_divisor[3]~_emulated" and latch "divider:dut|zext_divisor[3]~45" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
     Warning (13310): Register "divider:dut|done" is converted into an equivalent circuit using register "divider:dut|done~_emulated" and latch "divider:dut|done~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
-    Warning (13310): Register "divider:dut|quotient_out[0]" is converted into an equivalent circuit using register "divider:dut|quotient_out[0]~_emulated" and latch "divider:dut|quotient_out[0]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[2]" is converted into an equivalent circuit using register "divider:dut|quotient_out[2]~_emulated" and latch "divider:dut|quotient_out[2]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[0]" is converted into an equivalent circuit using register "divider:dut|quotient_out[0]~_emulated" and latch "divider:dut|quotient_out[0]~5" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[1]" is converted into an equivalent circuit using register "divider:dut|quotient_out[1]~_emulated" and latch "divider:dut|quotient_out[1]~9" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[3]" is converted into an equivalent circuit using register "divider:dut|quotient_out[3]~_emulated" and latch "divider:dut|quotient_out[3]~13" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[6]" is converted into an equivalent circuit using register "divider:dut|quotient_out[6]~_emulated" and latch "divider:dut|quotient_out[6]~17" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[5]" is converted into an equivalent circuit using register "divider:dut|quotient_out[5]~_emulated" and latch "divider:dut|quotient_out[5]~21" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[4]" is converted into an equivalent circuit using register "divider:dut|quotient_out[4]~_emulated" and latch "divider:dut|quotient_out[4]~25" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|quotient_out[7]" is converted into an equivalent circuit using register "divider:dut|quotient_out[7]~_emulated" and latch "divider:dut|quotient_out[7]~29" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[2]" is converted into an equivalent circuit using register "divider:dut|shift_position[2]~_emulated" and latch "divider:dut|shift_position[2]~1" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[0]" is converted into an equivalent circuit using register "divider:dut|shift_position[0]~_emulated" and latch "divider:dut|shift_position[0]~5" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[1]" is converted into an equivalent circuit using register "divider:dut|shift_position[1]~_emulated" and latch "divider:dut|shift_position[1]~9" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[3]" is converted into an equivalent circuit using register "divider:dut|shift_position[3]~_emulated" and latch "divider:dut|shift_position[3]~13" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[6]" is converted into an equivalent circuit using register "divider:dut|shift_position[6]~_emulated" and latch "divider:dut|shift_position[6]~17" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[5]" is converted into an equivalent circuit using register "divider:dut|shift_position[5]~_emulated" and latch "divider:dut|shift_position[5]~21" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[4]" is converted into an equivalent circuit using register "divider:dut|shift_position[4]~_emulated" and latch "divider:dut|shift_position[4]~25" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[7]" is converted into an equivalent circuit using register "divider:dut|shift_position[7]~_emulated" and latch "divider:dut|shift_position[7]~29" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
+    Warning (13310): Register "divider:dut|shift_position[8]" is converted into an equivalent circuit using register "divider:dut|shift_position[8]~_emulated" and latch "divider:dut|shift_position[8]~33" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "divider:dut|done~1" merged with LATCH primitive "divider:dut|overflow" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_display[0]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[1]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[2]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[3]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[4]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[5]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[6]" is stuck at VCC File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[7]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[11]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[12]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[14]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[18]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
-    Warning (13410): Pin "output_display[19]" is stuck at GND File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "dividend[3]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[2]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[1]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[0]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[4]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[5]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[6]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-    Warning (15610): No output dependent on input pin "dividend[7]" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 11
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 288 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Wed Oct 30 22:55:51 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 252 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Fri Nov  1 15:10:20 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 

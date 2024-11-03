@@ -33,8 +33,8 @@ architecture behavior of divider_tb is
     signal overflow   : std_logic;
 
     -- File input/output
-    file infile  : text open read_mode is "divider16.in";
-    file outfile : text open write_mode is "divider16.out";
+    file infile  : text open read_mode is "divider32.in";
+    file outfile : text open write_mode is "divider32.out";
     
 begin
     -- Instantiate the divider component (UUT)
@@ -93,7 +93,7 @@ begin
             start <= '1';  -- Start division
             wait for 10 ns;  -- Simulate some delay for the operation to complete
             start <= '0';
-				wait for 50 ns;
+				wait for 100 ns;
 				
 				wait until clk = '1' and clk'event;
 				

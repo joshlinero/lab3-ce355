@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Oct 30 22:55:51 2024
+Analysis & Synthesis Status : Successful - Fri Nov  1 15:10:20 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 Revision Name : display_divider
 Top-level Entity Name : display_divider
 Family : Cyclone IV E
-Total logic elements : 9
-    Total combinational functions : 9
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 35
+Total logic elements : 248
+    Total combinational functions : 248
+    Dedicated logic registers : 46
+Total registers : 46
+Total pins : 36
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

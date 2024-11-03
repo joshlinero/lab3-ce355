@@ -7,6 +7,7 @@ use WORK.divider_const.all;
 entity display_divider is
 	port(
 		--You will replace these with your actual inputs and outputs
+		clk   		: in std_logic;
 		start 		: in std_logic;
       dividend 	: in std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
       divisor 		: in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
@@ -22,6 +23,7 @@ architecture structural of display_divider is
 	constant decoder_quotient : integer := DIVIDEND_WIDTH / 4;
 	constant decoder_remainder : integer := DIVISOR_WIDTH / 4;
 
+	signal temp_clk 		   : std_logic;
    signal temp_start 		: std_logic;
 	signal temp_dividend 	: std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
 	signal temp_divisor 	   : std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
@@ -34,6 +36,7 @@ architecture structural of display_divider is
 
 	component divider is
         port(
+				clk			: in std_logic;
             start 		: in std_logic;
 				dividend 	: in std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
 				divisor 		: in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
@@ -56,6 +59,7 @@ begin
 --Structural design goes here
 	dut : divider
         port map(
+				clk			=> temp_clk,
             start 		=> temp_start,
 				dividend 	=> temp_dividend,
 				divisor 		=> temp_divisor,
@@ -81,6 +85,8 @@ begin
 			  );
 	 end generate g2;
 	 
+	 
+	 temp_clk <= clk;
 	 temp_start <= start;
 	 temp_dividend <= dividend;
 	 temp_divisor <= divisor;
