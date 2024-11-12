@@ -14,7 +14,8 @@ entity divider is
         -- Outputs
         quotient 	:	out std_logic_vector (DIVIDEND_WIDTH - 1 downto 0) := (others => '0');
         remainder :	out std_logic_vector (DIVISOR_WIDTH - 1 downto 0) := (others => '0');
-        overflow 	:	out std_logic := '0'
+        overflow 	:	out std_logic := '0';
+		  sign		:	out std_logic := '0'
     );
 end entity divider;
 
@@ -223,3 +224,86 @@ begin
 	
 end architecture behavioral_sequential;
 
+architecture fsm_behavioral of divider is
+
+	function get_msb_pos(vec_in: std_logic_vector) return unsigned is
+		variable msb: unsigned;
+	begin
+		
+	end function get_msb_pos;
+	
+	signal N :	unsigned;
+	signal a	:	signed;
+	signal b	:	signed;
+	signal p :	unsigned;
+	signal q :	unsigned;
+	
+	type states is (idle, init, div_by_1, loop_state, done);
+	signal state	:	states;
+	signal next_state : states;
+	
+begin
+	
+	state_reg: process (clk, start)
+	begin
+		-- Clocked process for state updates
+		if(start = '1') then
+			-- Reset logic
+			state <= idle;
+		elsif (rising_edge(clk)) then
+			-- Start and continue logic
+			state <= next_state;
+		end if;
+	end process;
+
+	output_and_next_state_logic: process (state, dividend, divisor)
+	begin
+		-- Default assignements
+		next_state <= state;
+		-- State logic
+		case (state) is
+			when init =>
+				N <= DIVIDEND_WIDTH;
+				a <= signed(dividend);
+				b <= signed(divisor);
+				p <= 0;
+				q <= 0;
+				if (b = 1) then
+					next_state <= div_by_1;
+				else
+					next_state <= loop_state;
+				end if;
+			when div_by_1 =>
+				q <= a;
+				a <= 0;
+				next_state <= done;
+			when loop_state =>
+				if (b /= 0 AND b < a) then
+					p <= get_msb_pos(a) - get_msb_pos(b);
+					if ((b SLL p) > a ) then
+						p <= p - 1;
+					end if;
+					q <= q + (1 SLL p);
+					a <= a - ( b SLL p);
+					next_state <= loop_state;
+				else
+					next_state <= done;
+				end if;
+			when done =>
+				sign <= (dividend SRL (N-1)) XOR (divisor SRL (N-1));
+				if (sign = 1) then
+					quotient <= -q;
+				else
+					quotient <= q;
+				end if;
+				if (dividend SRL (N-1) = 1) then
+					remainder <= -a;
+				else
+					remainder <= a;
+				end if;
+				next_state <= idle;
+			when others =>
+				next_state <= idle;
+		end case;
+	end process;
+end architecture fsm_behavioral;

@@ -18,10 +18,11 @@ architecture behavior of divider_tb is
             divisor   : in std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
             quotient  : out std_logic_vector (DIVIDEND_WIDTH - 1 downto 0);
             remainder : out std_logic_vector (DIVISOR_WIDTH - 1 downto 0);
-            overflow  : out std_logic
+            overflow  : out std_logic;
+				sign		 : out std_logic
         );
     end component;
-	 for all : divider use entity WORK.divider (behavioral_sequential);
+	 for all : divider use entity WORK.divider (fsm_behavioral);
 
     -- Signals for inputs and outputs
 	 signal clk        : std_logic := '0';
@@ -31,6 +32,7 @@ architecture behavior of divider_tb is
     signal quotient   : std_logic_vector(DIVIDEND_WIDTH - 1 downto 0);
     signal remainder  : std_logic_vector(DIVISOR_WIDTH - 1 downto 0);
     signal overflow   : std_logic;
+	 signal sign		 : std_logic;
 
     -- File input/output
     file infile  : text open read_mode is "divider32.in";
@@ -46,7 +48,8 @@ begin
             divisor    => divisor,
             quotient   => quotient,
             remainder  => remainder,
-            overflow   => overflow
+            overflow   => overflow,
+				sign		  => sign
         );
 	 
 	 clock_process : process
@@ -108,6 +111,8 @@ begin
             write(outline, quotient_int);
             write(outline, string'(" -- "));
             write(outline, remainder_int);
+				write(outline, string'("sign: "));
+				write(outline, sign);
             writeline(outfile, outline);  -- Output result
 
         end loop;
