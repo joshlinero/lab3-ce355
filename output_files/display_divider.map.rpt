@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Wed Nov 13 03:10:59 2024
+Wed Nov 13 15:41:22 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 13 03:10:59 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 15:41:22 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; display_divider                                ;
 ; Top-level Entity Name              ; display_divider                                ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 202                                            ;
-;     Total combinational functions  ; 188                                            ;
+; Total logic elements               ; 201                                            ;
+;     Total combinational functions  ; 187                                            ;
 ;     Dedicated logic registers      ; 46                                             ;
 ; Total registers                    ; 46                                             ;
 ; Total pins                         ; 37                                             ;
@@ -185,16 +185,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 202       ;
+; Estimated Total logic elements              ; 201       ;
 ;                                             ;           ;
-; Total combinational functions               ; 188       ;
+; Total combinational functions               ; 187       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 104       ;
+;     -- 4 input functions                    ; 103       ;
 ;     -- 3 input functions                    ; 49        ;
 ;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 158       ;
+;     -- normal mode                          ; 157       ;
 ;     -- arithmetic mode                      ; 30        ;
 ;                                             ;           ;
 ; Total registers                             ; 46        ;
@@ -207,8 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 46        ;
-; Total fan-out                               ; 834       ;
-; Average fan-out                             ; 2.71      ;
+; Total fan-out                               ; 830       ;
+; Average fan-out                             ; 2.70      ;
 +---------------------------------------------+-----------+
 
 
@@ -217,8 +217,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name     ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
-; |display_divider              ; 188 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |display_divider                          ; display_divider ; work         ;
-;    |divider:dut|              ; 167 (167)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
+; |display_divider              ; 187 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |display_divider                          ; display_divider ; work         ;
+;    |divider:dut|              ; 166 (166)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
 ;    |leddcd:\g1:0:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g1:1:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g2:0:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:0:mth_display ; leddcd          ; work         ;
@@ -320,18 +320,18 @@ Encoding Type:  One-Hot
 ;     ENA               ; 26                          ;
 ;     ENA SCLR SLD      ; 6                           ;
 ;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 191                         ;
+; cycloneiii_lcell_comb ; 190                         ;
 ;     arith             ; 30                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 15                          ;
-;     normal            ; 161                         ;
+;     normal            ; 160                         ;
 ;         1 data inputs ; 8                           ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 34                          ;
-;         4 data inputs ; 104                         ;
+;         4 data inputs ; 103                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 19.10                       ;
-; Average LUT depth     ; 10.95                       ;
+; Average LUT depth     ; 10.98                       ;
 +-----------------------+-----------------------------+
 
 
@@ -350,7 +350,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Nov 13 03:10:52 2024
+    Info: Processing started: Wed Nov 13 15:41:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -386,14 +386,14 @@ Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_displa
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 240 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 204 logic cells
+    Info (21061): Implemented 203 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Wed Nov 13 03:10:59 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Processing ended: Wed Nov 13 15:41:22 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 

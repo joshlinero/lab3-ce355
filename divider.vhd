@@ -360,7 +360,7 @@ begin
 					else
 						temp_remainder := std_logic_vector(resize(a, DIVISOR_WIDTH));
 					end if;
-					if (to_integer(unsigned(divisor)) = 1) then
+					if (to_integer(unsigned(divisor)) = 1 OR to_integer(signed(divisor)) = -1) then
 						temp_remainder := (others => '0');
 					end if;
 					next_state <= idle;
