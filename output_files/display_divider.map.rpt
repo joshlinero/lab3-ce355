@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Wed Nov 13 01:53:27 2024
+Wed Nov 13 02:10:50 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 13 01:53:27 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 02:10:50 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; display_divider                                ;
 ; Top-level Entity Name              ; display_divider                                ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 848                                            ;
-;     Total combinational functions  ; 810                                            ;
+; Total logic elements               ; 851                                            ;
+;     Total combinational functions  ; 813                                            ;
 ;     Dedicated logic registers      ; 142                                            ;
 ; Total registers                    ; 142                                            ;
 ; Total pins                         ; 136                                            ;
@@ -192,17 +192,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 848       ;
+; Estimated Total logic elements              ; 851       ;
 ;                                             ;           ;
-; Total combinational functions               ; 810       ;
+; Total combinational functions               ; 813       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 430       ;
-;     -- 3 input functions                    ; 263       ;
-;     -- <=2 input functions                  ; 117       ;
+;     -- 4 input functions                    ; 419       ;
+;     -- 3 input functions                    ; 272       ;
+;     -- <=2 input functions                  ; 122       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 637       ;
-;     -- arithmetic mode                      ; 173       ;
+;     -- normal mode                          ; 632       ;
+;     -- arithmetic mode                      ; 181       ;
 ;                                             ;           ;
 ; Total registers                             ; 142       ;
 ;     -- Dedicated logic registers            ; 142       ;
@@ -214,8 +214,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 142       ;
-; Total fan-out                               ; 3372      ;
-; Average fan-out                             ; 2.75      ;
+; Total fan-out                               ; 3366      ;
+; Average fan-out                             ; 2.74      ;
 +---------------------------------------------+-----------+
 
 
@@ -224,8 +224,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name     ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
-; |display_divider              ; 810 (0)             ; 142 (0)                   ; 0           ; 0            ; 0       ; 0         ; 136  ; 0            ; |display_divider                          ; display_divider ; work         ;
-;    |divider:dut|              ; 726 (726)           ; 142 (142)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
+; |display_divider              ; 813 (0)             ; 142 (0)                   ; 0           ; 0            ; 0       ; 0         ; 136  ; 0            ; |display_divider                          ; display_divider ; work         ;
+;    |divider:dut|              ; 729 (729)           ; 142 (142)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
 ;    |leddcd:\g1:0:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g1:1:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g1:2:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:2:nth_display ; leddcd          ; work         ;
@@ -349,9 +349,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |display_divider|divider:dut|\output_and_next_state_logic:temp_remainder[15] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |display_divider|divider:dut|sq[12]                                          ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |display_divider|divider:dut|sa[3]                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |display_divider|divider:dut|\output_and_next_state_logic:temp_remainder[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |display_divider|divider:dut|sq[19]                                          ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |display_divider|divider:dut|sa[15]                                          ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |display_divider|divider:dut|q                                               ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |display_divider|divider:dut|q                                               ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
@@ -379,19 +379,18 @@ Encoding Type:  One-Hot
 ;     CLR               ; 5                           ;
 ;     ENA               ; 128                         ;
 ;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 826                         ;
-;     arith             ; 173                         ;
-;         2 data inputs ; 76                          ;
-;         3 data inputs ; 97                          ;
-;     normal            ; 653                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 166                         ;
-;         4 data inputs ; 430                         ;
+; cycloneiii_lcell_comb ; 829                         ;
+;     arith             ; 181                         ;
+;         2 data inputs ; 83                          ;
+;         3 data inputs ; 98                          ;
+;     normal            ; 648                         ;
+;         1 data inputs ; 24                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 174                         ;
+;         4 data inputs ; 419                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 30.00                       ;
-; Average LUT depth     ; 17.83                       ;
+; Max LUT depth         ; 26.90                       ;
+; Average LUT depth     ; 16.52                       ;
 +-----------------------+-----------------------------+
 
 
@@ -410,7 +409,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Nov 13 01:53:19 2024
+    Info: Processing started: Wed Nov 13 02:10:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -446,13 +445,13 @@ Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_displa
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 986 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 989 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 86 output pins
-    Info (21061): Implemented 850 logic cells
+    Info (21061): Implemented 853 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Wed Nov 13 01:53:27 2024
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Wed Nov 13 02:10:50 2024
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 

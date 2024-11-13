@@ -1,5 +1,5 @@
 Flow report for display_divider
-Wed Nov 13 01:53:52 2024
+Wed Nov 13 02:11:17 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 13 01:53:50 2024          ;
+; Flow Status                        ; Successful - Wed Nov 13 02:11:14 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; display_divider                                ;
 ; Top-level Entity Name              ; display_divider                                ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE115F29C7                                  ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 815 / 114,480 ( < 1 % )                        ;
-;     Total combinational functions  ; 811 / 114,480 ( < 1 % )                        ;
+; Total logic elements               ; 833 / 114,480 ( < 1 % )                        ;
+;     Total combinational functions  ; 814 / 114,480 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 142 / 114,480 ( < 1 % )                        ;
 ; Total registers                    ; 142                                            ;
 ; Total pins                         ; 136 / 529 ( 26 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2024 01:53:20 ;
+; Start date & time ; 11/13/2024 02:10:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; display_divider     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 277302806905695.173148440020864        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 277302806905695.173148544227816        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; None                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
@@ -95,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4873 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:19     ; 1.1                     ; 6708 MB             ; 00:00:49                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4881 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 6708 MB             ; 00:00:52                           ;
 ; Assembler            ; 00:00:02     ; 1.0                     ; 4699 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 5000 MB             ; 00:00:02                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:01:11                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.2                     ; 5007 MB             ; 00:00:02                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:01:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

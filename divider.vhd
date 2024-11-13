@@ -226,37 +226,39 @@ end architecture behavioral_sequential;
 
 architecture fsm_behavioral of divider is
 
---	function get_msb_pos(vec_in: std_logic_vector) return integer is
---		variable left_pos, right_pos, mid: integer;
---		variable result: integer;
---	begin
---		left_pos := vec_in'left;
---		right_pos := vec_in'right;
---		
---		while left_pos >= right_pos loop
---			mid := (left_pos + right_pos) / 2;
---			if (unsigned(std_logic_vector(vec_in(left_pos downto mid + 1))) > 0) then
---				right_pos := mid + 1;
---			else
---				left_pos := mid;
---			end if;
---			if (vec_in(left_pos) = '1') then
---				result := left_pos;
---				exit;
---			end if;
---		end loop;
---		return result;
---	end function get_msb_pos;
+	function get_msb_pos(vec : std_logic_vector; low_pos : integer; high_pos : integer) return integer is
+        variable mid : integer;
+    begin
+        if low_pos > high_pos then
+            return -1;  -- No '1' found
+        end if;
 
-	function get_msb_pos(vec_in: std_logic_vector) return integer is
-	  variable result	: 	integer;
-	begin
-	  result := vec_in'left;
-	  while vec_in(result) = '0' and result > 1 loop
-		 result := result - 1;
-	  end loop;
-	  return result;
-	end function get_msb_pos;
+        if low_pos = high_pos then
+            if vec(low_pos) = '1' then
+                return low_pos;
+            else
+                return -1;
+            end if;
+        end if;
+
+        mid := (low_pos + high_pos) / 2;
+
+        if vec(high_pos downto mid+1) /= (high_pos-mid-1 downto 0 => '0') then
+            return get_msb_pos(vec, mid+1, high_pos);
+        else
+            return get_msb_pos(vec, low_pos, mid);
+        end if;
+    end function;
+
+--	function get_msb_pos(vec_in: std_logic_vector) return integer is
+--	  variable result	: 	integer;
+--	begin
+--	  result := vec_in'left;
+--	  while vec_in(result) = '0' and result > 1 loop
+--		 result := result - 1;
+--	  end loop;
+--	  return result;
+--	end function get_msb_pos;
 	
 	signal sN :	unsigned(31 downto 0) := to_unsigned(0, 32);
 	signal sa	:	unsigned(DIVIDEND_WIDTH - 1 downto 0) := to_unsigned(0, DIVIDEND_WIDTH);
@@ -331,7 +333,7 @@ begin
 					next_state <= done;
 				when loop_state =>
 					if (b /= to_unsigned(0, DIVISOR_WIDTH) AND b <= a) then
-						p := get_msb_pos(std_logic_vector(a)) - get_msb_pos(std_logic_vector(b));
+						p := get_msb_pos(std_logic_vector(a), a'right, a'left) - get_msb_pos(std_logic_vector(b), b'right, b'left);
 						if ((b SLL p) > a ) then
 							p := p - 1;
 						end if;

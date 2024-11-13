@@ -603,3 +603,23 @@ add wave sim:/divider_tb/uut/*
 run -all
 # Break key hit
 # Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
