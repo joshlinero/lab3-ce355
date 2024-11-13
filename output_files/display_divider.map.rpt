@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Tue Nov 12 21:04:02 2024
+Tue Nov 12 21:47:09 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |display_divider|divider:dut|state
   9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 12 21:04:02 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 21:47:09 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; display_divider                                ;
 ; Top-level Entity Name              ; display_divider                                ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 333                                            ;
-;     Total combinational functions  ; 332                                            ;
-;     Dedicated logic registers      ; 5                                              ;
-; Total registers                    ; 5                                              ;
+; Total logic elements               ; 7                                              ;
+;     Total combinational functions  ; 5                                              ;
+;     Dedicated logic registers      ; 3                                              ;
+; Total registers                    ; 3                                              ;
 ; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -162,8 +163,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,49 +180,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 333                          ;
-;                                             ;                              ;
-; Total combinational functions               ; 332                          ;
-; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 134                          ;
-;     -- 3 input functions                    ; 108                          ;
-;     -- <=2 input functions                  ; 90                           ;
-;                                             ;                              ;
-; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 238                          ;
-;     -- arithmetic mode                      ; 94                           ;
-;                                             ;                              ;
-; Total registers                             ; 5                            ;
-;     -- Dedicated logic registers            ; 5                            ;
-;     -- I/O registers                        ; 0                            ;
-;                                             ;                              ;
-; I/O pins                                    ; 37                           ;
-;                                             ;                              ;
-; Embedded Multiplier 9-bit elements          ; 0                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; divider:dut|state.loop_state ;
-; Maximum fan-out                             ; 53                           ;
-; Total fan-out                               ; 1107                         ;
-; Average fan-out                             ; 2.69                         ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 7         ;
+;                                             ;           ;
+; Total combinational functions               ; 5         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1         ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 5         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 3         ;
+;     -- Dedicated logic registers            ; 3         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 37        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 3         ;
+; Total fan-out                               ; 60        ;
+; Average fan-out                             ; 0.73      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name     ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
-; |display_divider              ; 332 (0)             ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |display_divider                          ; display_divider ; work         ;
-;    |divider:dut|              ; 311 (311)           ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
-;    |leddcd:\g1:0:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:1:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g2:0:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:0:mth_display ; leddcd          ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
+; |display_divider           ; 5 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |display_divider             ; display_divider ; work         ;
+;    |divider:dut|           ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut ; divider         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -240,80 +237,27 @@ Encoding Type:  One-Hot
 +------------------+------------+------------------+----------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                   ;
-+-----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
-+-----------------------------------------------------+------------------------+------------------------+
-; divider:dut|remainder[2]                            ; divider:dut|state.done ; yes                    ;
-; divider:dut|remainder[1]                            ; divider:dut|state.done ; yes                    ;
-; divider:dut|remainder[0]                            ; divider:dut|state.done ; yes                    ;
-; divider:dut|remainder[3]                            ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[2]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[1]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[0]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[3]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[6]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[5]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[4]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|quotient[7]                             ; divider:dut|state.done ; yes                    ;
-; divider:dut|sign                                    ; divider:dut|state.done ; yes                    ;
-; divider:dut|a[2]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|a[0]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|a[1]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|N[3]                                    ; divider:dut|WideOr0    ; yes                    ;
-; divider:dut|a[3]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[2]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[1]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[0]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[3]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[6]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[5]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[4]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|q[7]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|b[1]                                    ; divider:dut|WideOr0    ; yes                    ;
-; divider:dut|b[2]                                    ; divider:dut|WideOr0    ; yes                    ;
-; divider:dut|p[1]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[2]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[3]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[4]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[5]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[6]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[7]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[8]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[9]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[10]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[11]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[12]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[13]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[14]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[15]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[16]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[17]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[18]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[19]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[20]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[21]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[22]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[23]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[24]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[25]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[26]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[27]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[28]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[29]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[30]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|p[31]                                   ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|b[3]                                    ; divider:dut|WideOr0    ; yes                    ;
-; divider:dut|p[0]                                    ; divider:dut|Selector12 ; yes                    ;
-; divider:dut|b[0]                                    ; divider:dut|WideOr0    ; yes                    ;
-; divider:dut|a[4]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|a[5]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|a[6]                                    ; divider:dut|Selector50 ; yes                    ;
-; divider:dut|a[7]                                    ; divider:dut|Selector50 ; yes                    ;
-; Number of user-specified and inferred latches = 66  ;                        ;                        ;
-+-----------------------------------------------------+------------------------+------------------------+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; divider:dut|temp_overflow                          ; divider:dut|state.done ; yes                    ;
+; divider:dut|temp_sign                              ; divider:dut|state.done ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; divider:dut|state.div_by_1            ; Stuck at GND due to stuck port data_in ;
+; divider:dut|state.idle                ; Lost fanout                            ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -321,28 +265,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 3     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |display_divider|divider:dut|q                           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |display_divider|divider:dut|q                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |display_divider|divider:dut|Selector10                  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |display_divider|divider:dut|Selector53                  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -351,21 +281,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 37                          ;
-; cycloneiii_ff         ; 5                           ;
-;     CLR               ; 5                           ;
-; cycloneiii_lcell_comb ; 336                         ;
-;     arith             ; 94                          ;
-;         2 data inputs ; 73                          ;
-;         3 data inputs ; 21                          ;
-;     normal            ; 242                         ;
+; cycloneiii_ff         ; 3                           ;
+;     CLR               ; 3                           ;
+; cycloneiii_lcell_comb ; 7                           ;
+;     normal            ; 7                           ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 87                          ;
-;         4 data inputs ; 134                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.10                       ;
-; Average LUT depth     ; 8.98                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -384,7 +311,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Nov 12 21:03:55 2024
+    Info: Processing started: Tue Nov 12 21:47:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -416,251 +343,78 @@ Info (12021): Found 2 design units, including 1 entities, in source file divider
     Info (12023): Found entity 1: divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd Line: 8
 Info (12127): Elaborating entity "display_divider" for the top level hierarchy
 Info (12128): Elaborating entity "divider" for hierarchy "divider:dut" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at divider.vhd(308): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 308
-Warning (10492): VHDL Process Statement warning at divider.vhd(314): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 314
-Warning (10492): VHDL Process Statement warning at divider.vhd(318): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at divider.vhd(318): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at divider.vhd(319): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 319
-Warning (10492): VHDL Process Statement warning at divider.vhd(319): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 319
-Warning (10492): VHDL Process Statement warning at divider.vhd(320): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 320
-Warning (10492): VHDL Process Statement warning at divider.vhd(320): signal "p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 320
-Warning (10492): VHDL Process Statement warning at divider.vhd(320): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 320
-Warning (10492): VHDL Process Statement warning at divider.vhd(321): signal "p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 321
-Warning (10492): VHDL Process Statement warning at divider.vhd(323): signal "q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 323
-Warning (10492): VHDL Process Statement warning at divider.vhd(323): signal "p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 323
-Warning (10492): VHDL Process Statement warning at divider.vhd(324): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at divider.vhd(324): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at divider.vhd(324): signal "p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at divider.vhd(332): signal "q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 332
-Warning (10492): VHDL Process Statement warning at divider.vhd(334): signal "q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 334
-Warning (10492): VHDL Process Statement warning at divider.vhd(336): signal "N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 336
-Warning (10492): VHDL Process Statement warning at divider.vhd(337): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 337
-Warning (10492): VHDL Process Statement warning at divider.vhd(339): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 339
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "N", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "a", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "b", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "p", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "sign", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "quotient", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Warning (10631): VHDL Process Statement warning at divider.vhd(288): inferring latch(es) for signal or variable "remainder", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "remainder[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "remainder[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "remainder[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "remainder[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[4]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[5]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[6]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "quotient[7]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "sign" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[4]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[5]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[6]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "q[7]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[4]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[5]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[6]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[7]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[8]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[9]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[10]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[11]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[12]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[13]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[14]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[15]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[16]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[17]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[18]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[19]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[20]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[21]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[22]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[23]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[24]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[25]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[26]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[27]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[28]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[29]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[30]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "p[31]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "b[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "b[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "b[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "b[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[4]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[5]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[6]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "a[7]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[0]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[1]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[2]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[3]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[4]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[5]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[6]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[7]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[8]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[9]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[10]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[11]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[12]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[13]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[14]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[15]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[16]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[17]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[18]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[19]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[20]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[21]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[22]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[23]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[24]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[25]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[26]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[27]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[28]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[29]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[30]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-Info (10041): Inferred latch for "N[31]" at divider.vhd(288) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+Warning (10631): VHDL Process Statement warning at divider.vhd(293): inferring latch(es) for signal or variable "temp_sign", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Warning (10631): VHDL Process Statement warning at divider.vhd(293): inferring latch(es) for signal or variable "temp_overflow", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Warning (10631): VHDL Process Statement warning at divider.vhd(293): inferring latch(es) for signal or variable "temp_quotient", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Warning (10631): VHDL Process Statement warning at divider.vhd(293): inferring latch(es) for signal or variable "temp_remainder", which holds its previous value in one or more paths through the process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Warning (10873): Using initial value X (don't care) for net "N" at divider.vhd(264) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 264
+Warning (10873): Using initial value X (don't care) for net "a" at divider.vhd(265) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 265
+Warning (10873): Using initial value X (don't care) for net "b" at divider.vhd(266) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 266
+Warning (10873): Using initial value X (don't care) for net "q" at divider.vhd(268) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 268
+Info (10041): Inferred latch for "temp_remainder[0]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_remainder[1]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_remainder[2]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_remainder[3]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[0]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[1]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[2]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[3]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[4]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[5]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[6]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_quotient[7]" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_overflow" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+Info (10041): Inferred latch for "temp_sign" at divider.vhd(293) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_display" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 77
-Warning (13012): Latch divider:dut|a[2] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[0] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[1] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|N[3] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[3] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[2] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[1] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[0] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[3] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[6] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[5] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[4] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|q[7] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|b[1] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|b[2] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[1] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[2] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[3] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[4] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[5] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[6] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[7] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[8] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[9] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[10] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[11] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[12] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[13] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[14] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[15] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[16] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[17] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[18] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[19] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[20] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[21] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[22] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[23] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[24] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[25] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[26] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[27] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[28] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[29] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[30] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[31] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|b[3] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|p[0] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|b[0] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[4] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[5] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[6] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
-Warning (13012): Latch divider:dut|a[7] has unsafe behavior File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "overflow" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 16
+    Warning (13410): Pin "output_display[0]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[1]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[2]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[3]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[4]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[5]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[6]" is stuck at VCC File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[7]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[8]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[9]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[10]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[11]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[12]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[13]" is stuck at VCC File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[14]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[15]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[16]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[17]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[18]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[19]" is stuck at GND File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
+    Warning (13410): Pin "output_display[20]" is stuck at VCC File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/output_files/display_divider.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 370 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dividend[0]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[1]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[2]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[3]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[4]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[5]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+    Warning (15610): No output dependent on input pin "dividend[6]" File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 12
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 333 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Tue Nov 12 21:04:02 2024
+    Info (21061): Implemented 7 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4876 megabytes
+    Info: Processing ended: Tue Nov 12 21:47:09 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/output_files/display_divider.map.smsg.
 
 

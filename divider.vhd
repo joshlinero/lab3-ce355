@@ -267,6 +267,11 @@ architecture fsm_behavioral of divider is
 	signal p :	integer;
 	signal q :	unsigned(DIVIDEND_WIDTH - 1 downto 0);
 	
+	signal temp_quotient 	: std_logic_vector (DIVIDEND_WIDTH - 1 downto 0) := (others => '0');
+	signal temp_remainder 	: std_logic_vector (DIVISOR_WIDTH - 1 downto 0) := (others => '0');
+	signal temp_overflow 	: std_logic := '0';
+	signal temp_sign			: std_logic := '0';
+	
 	type states is (idle, init, div_by_1, loop_state, done);
 	signal state	:	states;
 	signal next_state : states;
@@ -293,11 +298,13 @@ begin
 		case (state) is
 			when init =>
 				N <= to_unsigned(DIVIDEND_WIDTH, 32);
+				a <= (others => '0');
 				if (signed(dividend) < 0) then
 					a <= (unsigned(not dividend) + 1);
 				else
 					a <= unsigned(dividend);
 				end if;
+				b <= (others => '0');
 				if (signed(divisor) < 0) then
 					b <= (unsigned(not divisor) + 1);
 				else
@@ -305,7 +312,7 @@ begin
 				end if;
 				p <= 0;
 				q <= (others => '0');
-				if (b = 1) then
+				if (b = to_unsigned(1, DIVISOR_WIDTH)) then
 					next_state <= div_by_1;
 				else
 					next_state <= loop_state;
@@ -315,7 +322,7 @@ begin
 				a <= (others => '0');
 				next_state <= done;
 			when loop_state =>
-				if (b /= 0 AND b < a) then
+				if (b /= to_unsigned(0, DIVISOR_WIDTH) AND b < a) then
 					p <= get_msb_pos(std_logic_vector(a)) - get_msb_pos(std_logic_vector(b));
 					if ((b SLL p) > a ) then
 						p <= p - 1;
@@ -327,18 +334,24 @@ begin
 					next_state <= done;
 				end if;
 			when done =>
-				sign <= dividend(dividend'left) XOR divisor(divisor'left);
-				if (dividend(dividend'left) XOR divisor(divisor'left)) = '1' then
-					quotient <= std_logic_vector(unsigned(not q) + 1);
+				temp_sign <= dividend(dividend'left) XOR divisor(divisor'left);
+				if (to_integer(unsigned(divisor)) = 0) then
+					temp_overflow <= '1';
 				else
-					quotient <= std_logic_vector(q);
+					temp_overflow <= '0';
+				end if;
+				if (dividend(dividend'left) XOR divisor(divisor'left)) = '1' then
+					temp_quotient <= std_logic_vector(unsigned(not q) + 1);
+				else
+					temp_quotient <= std_logic_vector(q);
 				end if;
 				if ((unsigned(dividend) SRL to_integer(N-1)) = 1) then
-					remainder <= std_logic_vector(resize((unsigned(not a) + 1), DIVISOR_WIDTH));
+					temp_remainder <= std_logic_vector(resize((unsigned(not a) + 1), DIVISOR_WIDTH));
 				else
-					remainder <= std_logic_vector(resize(a, DIVISOR_WIDTH));
+					temp_remainder <= std_logic_vector(resize(a, DIVISOR_WIDTH));
 				end if;
 				next_state <= idle;
+				temp_quotient <= std_logic_vector(q);
 			when others =>
 				N <= (others => '0');
 				a <= (others => '0');
@@ -347,5 +360,14 @@ begin
 				q <= (others => '0');
 				next_state <= idle;
 		end case;
+		N <= N;
+		a <= a;
+		b <= b;
+		p <= p;
+		q <= q;
+		quotient <= temp_quotient;
+		remainder <= temp_remainder;
+		overflow <= temp_overflow;
+		sign <= temp_sign;
 	end process;
 end architecture fsm_behavioral;

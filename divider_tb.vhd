@@ -33,6 +33,8 @@ architecture behavior of divider_tb is
     signal remainder  : std_logic_vector(DIVISOR_WIDTH - 1 downto 0);
     signal overflow   : std_logic;
 	 signal sign		 : std_logic;
+	 
+	 signal done : std_logic := '0';
 
     -- File input/output
     file infile  : text open read_mode is "divider32.in";
@@ -54,7 +56,7 @@ begin
 	 
 	 clock_process : process
     begin
-        while true loop
+        while done = '0' loop
             clk <= '0';
             wait for 2 ns;  -- Half period of 10ns for a 20ns clock period
             clk <= '1';
@@ -118,6 +120,7 @@ begin
         end loop;
 		  
         wait for 10 ns;
+		  done <= '1';
 		  --std.env.stop;
     end process read_process;
 

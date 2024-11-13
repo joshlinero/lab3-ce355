@@ -4,87 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "output_display[0]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[1]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[2]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[3]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[4]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[5]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[6]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[7]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[8]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[9]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[10]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[11]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[12]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[13]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[14]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[15]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[16]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[17]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[18]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[19]",
-					"strict" : false
-				},
-				{
-					"name" : "output_display[20]",
+					"name" : "overflow",
 					"strict" : false
 				},
 				{
@@ -92,7 +12,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "dividend[7]",
+					"name" : "divisor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[2]",
 					"strict" : false
 				},
 				{
@@ -100,7 +28,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "dividend[0]",
+					"name" : "dividend[7]",
 					"strict" : false
 				},
 				{
@@ -109,42 +37,6 @@
 				},
 				{
 					"name" : "start",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[2]",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[1]",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[3]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[1]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[0]",
-					"strict" : false
-				},
-				{
-					"name" : "divisor[2]",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[6]",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[5]",
-					"strict" : false
-				},
-				{
-					"name" : "dividend[4]",
 					"strict" : false
 				}
 			]
