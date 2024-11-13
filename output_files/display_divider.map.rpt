@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_divider
-Wed Nov 13 02:35:00 2024
+Wed Nov 13 03:10:59 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -47,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 13 02:35:00 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 03:10:59 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; display_divider                                ;
 ; Top-level Entity Name              ; display_divider                                ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 855                                            ;
-;     Total combinational functions  ; 817                                            ;
-;     Dedicated logic registers      ; 142                                            ;
-; Total registers                    ; 142                                            ;
-; Total pins                         ; 136                                            ;
+; Total logic elements               ; 202                                            ;
+;     Total combinational functions  ; 188                                            ;
+;     Dedicated logic registers      ; 46                                             ;
+; Total registers                    ; 46                                             ;
+; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -163,14 +163,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -192,30 +185,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 855       ;
+; Estimated Total logic elements              ; 202       ;
 ;                                             ;           ;
-; Total combinational functions               ; 817       ;
+; Total combinational functions               ; 188       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 426       ;
-;     -- 3 input functions                    ; 268       ;
-;     -- <=2 input functions                  ; 123       ;
+;     -- 4 input functions                    ; 104       ;
+;     -- 3 input functions                    ; 49        ;
+;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 636       ;
-;     -- arithmetic mode                      ; 181       ;
+;     -- normal mode                          ; 158       ;
+;     -- arithmetic mode                      ; 30        ;
 ;                                             ;           ;
-; Total registers                             ; 142       ;
-;     -- Dedicated logic registers            ; 142       ;
+; Total registers                             ; 46        ;
+;     -- Dedicated logic registers            ; 46        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 136       ;
+; I/O pins                                    ; 37        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 142       ;
-; Total fan-out                               ; 3431      ;
-; Average fan-out                             ; 2.79      ;
+; Maximum fan-out                             ; 46        ;
+; Total fan-out                               ; 834       ;
+; Average fan-out                             ; 2.71      ;
 +---------------------------------------------+-----------+
 
 
@@ -224,20 +217,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name     ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
-; |display_divider              ; 817 (0)             ; 142 (0)                   ; 0           ; 0            ; 0       ; 0         ; 136  ; 0            ; |display_divider                          ; display_divider ; work         ;
-;    |divider:dut|              ; 733 (733)           ; 142 (142)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
+; |display_divider              ; 188 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |display_divider                          ; display_divider ; work         ;
+;    |divider:dut|              ; 167 (167)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|divider:dut              ; divider         ; work         ;
 ;    |leddcd:\g1:0:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:0:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g1:1:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:1:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:2:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:2:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:3:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:3:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:4:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:4:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:5:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:5:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:6:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:6:nth_display ; leddcd          ; work         ;
-;    |leddcd:\g1:7:nth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g1:7:nth_display ; leddcd          ; work         ;
 ;    |leddcd:\g2:0:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:0:mth_display ; leddcd          ; work         ;
-;    |leddcd:\g2:1:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:1:mth_display ; leddcd          ; work         ;
-;    |leddcd:\g2:2:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:2:mth_display ; leddcd          ; work         ;
-;    |leddcd:\g2:3:mth_display| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_divider|leddcd:\g2:3:mth_display ; leddcd          ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -270,63 +254,27 @@ Encoding Type:  One-Hot
 +------------------+------------+------------------+----------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                   ;
-+------------------------------------------------------------+-------------------------------------------------------------------------+
-; Register name                                              ; Reason for Removal                                                      ;
-+------------------------------------------------------------+-------------------------------------------------------------------------+
-; divider:dut|sN[0..4,6..31]                                 ; Stuck at GND due to stuck port data_in                                  ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[31] ; Merged with divider:dut|quotient[31]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[30] ; Merged with divider:dut|quotient[30]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[29] ; Merged with divider:dut|quotient[29]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[28] ; Merged with divider:dut|quotient[28]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[27] ; Merged with divider:dut|quotient[27]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[26] ; Merged with divider:dut|quotient[26]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[25] ; Merged with divider:dut|quotient[25]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[24] ; Merged with divider:dut|quotient[24]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[23] ; Merged with divider:dut|quotient[23]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[22] ; Merged with divider:dut|quotient[22]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[21] ; Merged with divider:dut|quotient[21]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[20] ; Merged with divider:dut|quotient[20]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[19] ; Merged with divider:dut|quotient[19]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[18] ; Merged with divider:dut|quotient[18]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[17] ; Merged with divider:dut|quotient[17]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[16] ; Merged with divider:dut|quotient[16]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[15] ; Merged with divider:dut|quotient[15]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[14] ; Merged with divider:dut|quotient[14]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[13] ; Merged with divider:dut|quotient[13]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[12] ; Merged with divider:dut|quotient[12]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[11] ; Merged with divider:dut|quotient[11]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[10] ; Merged with divider:dut|quotient[10]                                    ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[9]  ; Merged with divider:dut|quotient[9]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[8]  ; Merged with divider:dut|quotient[8]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[7]  ; Merged with divider:dut|quotient[7]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[6]  ; Merged with divider:dut|quotient[6]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[5]  ; Merged with divider:dut|quotient[5]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[4]  ; Merged with divider:dut|quotient[4]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[3]  ; Merged with divider:dut|quotient[3]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[2]  ; Merged with divider:dut|quotient[2]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[1]  ; Merged with divider:dut|quotient[1]                                     ;
-; divider:dut|\output_and_next_state_logic:temp_quotient[0]  ; Merged with divider:dut|quotient[0]                                     ;
-; divider:dut|remainder[1]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[1]  ;
-; divider:dut|remainder[3]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[3]  ;
-; divider:dut|remainder[2]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[2]  ;
-; divider:dut|remainder[0]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[0]  ;
-; divider:dut|remainder[5]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[5]  ;
-; divider:dut|remainder[7]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[7]  ;
-; divider:dut|remainder[6]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[6]  ;
-; divider:dut|remainder[4]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[4]  ;
-; divider:dut|remainder[9]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[9]  ;
-; divider:dut|remainder[11]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[11] ;
-; divider:dut|remainder[10]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[10] ;
-; divider:dut|remainder[8]                                   ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[8]  ;
-; divider:dut|remainder[13]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[13] ;
-; divider:dut|remainder[15]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[15] ;
-; divider:dut|remainder[14]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[14] ;
-; divider:dut|remainder[12]                                  ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[12] ;
-; divider:dut|next_state.init                                ; Stuck at GND due to stuck port data_in                                  ;
-; Total Number of Removed Registers = 80                     ;                                                                         ;
-+------------------------------------------------------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                              ;
++----------------------------------------+------------------------------------------------------------------------+
+; Register name                          ; Reason for Removal                                                     ;
++----------------------------------------+------------------------------------------------------------------------+
+; divider:dut|sN[0..2,4..31]             ; Stuck at GND due to stuck port data_in                                 ;
+; divider:dut|quotient[7]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[7]  ;
+; divider:dut|quotient[6]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[6]  ;
+; divider:dut|quotient[5]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[5]  ;
+; divider:dut|quotient[4]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[4]  ;
+; divider:dut|quotient[3]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[3]  ;
+; divider:dut|quotient[2]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[2]  ;
+; divider:dut|quotient[1]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[1]  ;
+; divider:dut|quotient[0]                ; Merged with divider:dut|\output_and_next_state_logic:temp_quotient[0]  ;
+; divider:dut|remainder[1]               ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[1] ;
+; divider:dut|remainder[3]               ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[3] ;
+; divider:dut|remainder[2]               ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[2] ;
+; divider:dut|remainder[0]               ; Merged with divider:dut|\output_and_next_state_logic:temp_remainder[0] ;
+; divider:dut|next_state.init            ; Stuck at GND due to stuck port data_in                                 ;
+; Total Number of Removed Registers = 44 ;                                                                        ;
++----------------------------------------+------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -334,39 +282,31 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 142   ;
-; Number of registers using Synchronous Clear  ; 47    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |display_divider|divider:dut|\output_and_next_state_logic:temp_remainder[14] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |display_divider|divider:dut|sq[19]                                          ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |display_divider|divider:dut|sa[15]                                          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |display_divider|divider:dut|q                                               ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |display_divider|divider:dut|q                                               ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                     ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |display_divider|divider:dut|\output_and_next_state_logic:temp_remainder[1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |display_divider|divider:dut|sq[2]                                          ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |display_divider|divider:dut|sa[0]                                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |display_divider|divider:dut|q                                              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |display_divider|divider:dut|q                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|output_and_next_state_logic                    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |display_divider|divider:dut|a                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -374,24 +314,24 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 136                         ;
-; cycloneiii_ff         ; 142                         ;
+; boundary_port         ; 37                          ;
+; cycloneiii_ff         ; 46                          ;
 ;     CLR               ; 5                           ;
-;     ENA               ; 81                          ;
-;     ENA SCLR          ; 47                          ;
+;     ENA               ; 26                          ;
+;     ENA SCLR SLD      ; 6                           ;
 ;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 833                         ;
-;     arith             ; 181                         ;
-;         2 data inputs ; 83                          ;
-;         3 data inputs ; 98                          ;
-;     normal            ; 652                         ;
-;         1 data inputs ; 24                          ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 170                         ;
-;         4 data inputs ; 426                         ;
+; cycloneiii_lcell_comb ; 191                         ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 161                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 104                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 28.70                       ;
-; Average LUT depth     ; 17.25                       ;
+; Max LUT depth         ; 19.10                       ;
+; Average LUT depth     ; 10.95                       ;
 +-----------------------+-----------------------------+
 
 
@@ -400,7 +340,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -410,7 +350,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Nov 13 02:34:52 2024
+    Info: Processing started: Wed Nov 13 03:10:52 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_divider -c display_divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -446,14 +386,14 @@ Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\g1:0:nth_displa
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 993 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 50 input pins
-    Info (21059): Implemented 86 output pins
-    Info (21061): Implemented 857 logic cells
+Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 204 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Wed Nov 13 02:35:00 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Wed Nov 13 03:10:59 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

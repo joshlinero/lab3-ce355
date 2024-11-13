@@ -333,6 +333,7 @@ begin
 				when loop_state =>
 					if (b /= to_unsigned(0, DIVISOR_WIDTH) AND b <= a) then
 						p := get_msb_pos(std_logic_vector(a), a'right, a'left) - get_msb_pos(std_logic_vector(b), b'right, b'left);
+						--p := get_msb_pos(std_logic_vector(a)) - get_msb_pos(std_logic_vector(b));
 						if ((b SLL p) > a ) then
 							p := p - 1;
 						end if;
