@@ -63,7 +63,7 @@ begin
     end process clock_process;
 
     -- Test process to read inputs and apply them to the divider
-    process
+    read_process : process
         variable inline   : line;
         variable outline  : line;
         variable dividend_int : integer;
@@ -111,14 +111,14 @@ begin
             write(outline, quotient_int);
             write(outline, string'(" -- "));
             write(outline, remainder_int);
-				write(outline, string'("sign: "));
-				write(outline, sign);
+				--write(outline, string'("sign: "));
+				--write(outline, sign);
             writeline(outfile, outline);  -- Output result
 
         end loop;
 		  
         wait for 10 ns;
 		  --std.env.stop;
-    end process;
+    end process read_process;
 
 end architecture;

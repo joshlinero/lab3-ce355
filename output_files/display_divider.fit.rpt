@@ -1,6 +1,6 @@
 Fitter report for display_divider
-Fri Nov  1 15:10:35 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
+Tue Nov 12 20:42:52 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -65,26 +65,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------------------+
-; Fitter Summary                                                                          ;
-+------------------------------------+----------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov  1 15:10:35 2024              ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
-; Revision Name                      ; display_divider                                    ;
-; Top-level Entity Name              ; display_divider                                    ;
-; Family                             ; Cyclone IV E                                       ;
-; Device                             ; EP4CE115F29C7                                      ;
-; Timing Models                      ; Final                                              ;
-; Total logic elements               ; 248 / 114,480 ( < 1 % )                            ;
-;     Total combinational functions  ; 248 / 114,480 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 46 / 114,480 ( < 1 % )                             ;
-; Total registers                    ; 46                                                 ;
-; Total pins                         ; 36 / 529 ( 7 % )                                   ;
-; Total virtual pins                 ; 0                                                  ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                              ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                    ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                      ;
-+------------------------------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Fitter Summary                                                                      ;
++------------------------------------+------------------------------------------------+
+; Fitter Status                      ; Successful - Tue Nov 12 20:42:52 2024          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                      ; display_divider                                ;
+; Top-level Entity Name              ; display_divider                                ;
+; Family                             ; Cyclone IV E                                   ;
+; Device                             ; EP4CE115F29C7                                  ;
+; Timing Models                      ; Final                                          ;
+; Total logic elements               ; 327 / 114,480 ( < 1 % )                        ;
+;     Total combinational functions  ; 327 / 114,480 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 5 / 114,480 ( < 1 % )                          ;
+; Total registers                    ; 5                                              ;
+; Total pins                         ; 37 / 529 ( 7 % )                               ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
++------------------------------------+------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -152,16 +152,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.07        ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processors 3-6         ;   0.5%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processors 4-16        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -171,8 +172,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 379 ) ; 0.00 % ( 0 / 379 )         ; 0.00 % ( 0 / 379 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 379 ) ; 0.00 % ( 0 / 379 )         ; 0.00 % ( 0 / 379 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 420 ) ; 0.00 % ( 0 / 420 )         ; 0.00 % ( 0 / 420 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 420 ) ; 0.00 % ( 0 / 420 )         ; 0.00 % ( 0 / 420 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -195,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 369 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 410 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -203,7 +204,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/output_files/display_divider.pin.
+The pin-out file can be found in C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/output_files/display_divider.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -211,28 +212,28 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 248 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 202                     ;
+; Total logic elements                        ; 327 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 322                     ;
 ;     -- Register only                        ; 0                       ;
-;     -- Combinational with a register        ; 46                      ;
+;     -- Combinational with a register        ; 5                       ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 95                      ;
-;     -- 3 input functions                    ; 101                     ;
-;     -- <=2 input functions                  ; 52                      ;
+;     -- 4 input functions                    ; 131                     ;
+;     -- 3 input functions                    ; 108                     ;
+;     -- <=2 input functions                  ; 88                      ;
 ;     -- Register only                        ; 0                       ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 226                     ;
-;     -- arithmetic mode                      ; 22                      ;
+;     -- normal mode                          ; 233                     ;
+;     -- arithmetic mode                      ; 94                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 46 / 117,053 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 46 / 114,480 ( < 1 % )  ;
+; Total registers*                            ; 5 / 117,053 ( < 1 % )   ;
+;     -- Dedicated logic registers            ; 5 / 114,480 ( < 1 % )   ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 19 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 27 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
-; I/O pins                                    ; 36 / 529 ( 7 % )        ;
+; I/O pins                                    ; 37 / 529 ( 7 % )        ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )           ;
 ;                                             ;                         ;
@@ -241,19 +242,19 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ; Total block memory implementation bits      ; 0 / 3,981,312 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )         ;
 ; PLLs                                        ; 0 / 4 ( 0 % )           ;
-; Global signals                              ; 2                       ;
-;     -- Global clocks                        ; 2 / 20 ( 10 % )         ;
+; Global signals                              ; 4                       ;
+;     -- Global clocks                        ; 4 / 20 ( 20 % )         ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.3%      ;
-; Peak interconnect usage (total/H/V)         ; 7.7% / 6.1% / 10.3%     ;
-; Maximum fan-out                             ; 131                     ;
-; Highest non-global fan-out                  ; 131                     ;
-; Total fan-out                               ; 1027                    ;
-; Average fan-out                             ; 2.72                    ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%      ;
+; Peak interconnect usage (total/H/V)         ; 7.4% / 6.4% / 8.9%      ;
+; Maximum fan-out                             ; 52                      ;
+; Highest non-global fan-out                  ; 52                      ;
+; Total fan-out                               ; 1099                    ;
+; Average fan-out                             ; 2.62                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -266,33 +267,33 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 248 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 202                    ; 0                              ;
+; Total logic elements                        ; 327 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 322                    ; 0                              ;
 ;     -- Register only                        ; 0                      ; 0                              ;
-;     -- Combinational with a register        ; 46                     ; 0                              ;
+;     -- Combinational with a register        ; 5                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 95                     ; 0                              ;
-;     -- 3 input functions                    ; 101                    ; 0                              ;
-;     -- <=2 input functions                  ; 52                     ; 0                              ;
+;     -- 4 input functions                    ; 131                    ; 0                              ;
+;     -- 3 input functions                    ; 108                    ; 0                              ;
+;     -- <=2 input functions                  ; 88                     ; 0                              ;
 ;     -- Register only                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 226                    ; 0                              ;
-;     -- arithmetic mode                      ; 22                     ; 0                              ;
+;     -- normal mode                          ; 233                    ; 0                              ;
+;     -- arithmetic mode                      ; 94                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 46                     ; 0                              ;
-;     -- Dedicated logic registers            ; 46 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 5                      ; 0                              ;
+;     -- Dedicated logic registers            ; 5 / 114480 ( < 1 % )   ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 19 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 27 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
-; I/O pins                                    ; 36                     ; 0                              ;
+; I/O pins                                    ; 37                     ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )        ; 0 / 532 ( 0 % )                ;
 ; Total memory bits                           ; 0                      ; 0                              ;
 ; Total RAM block bits                        ; 0                      ; 0                              ;
-; Clock control block                         ; 2 / 24 ( 8 % )         ; 0 / 24 ( 0 % )                 ;
+; Clock control block                         ; 4 / 24 ( 16 % )        ; 0 / 24 ( 0 % )                 ;
 ;                                             ;                        ;                                ;
 ; Connections                                 ;                        ;                                ;
 ;     -- Input Connections                    ; 0                      ; 0                              ;
@@ -301,8 +302,8 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1022                   ; 5                              ;
-;     -- Registered Connections               ; 70                     ; 0                              ;
+;     -- Total Connections                    ; 1094                   ; 5                              ;
+;     -- Registered Connections               ; 79                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -310,7 +311,7 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ;                                             ;                        ;                                ;
 ; Partition Interface                         ;                        ;                                ;
 ;     -- Input Ports                          ; 14                     ; 0                              ;
-;     -- Output Ports                         ; 22                     ; 0                              ;
+;     -- Output Ports                         ; 23                     ; 0                              ;
 ;     -- Bidir Ports                          ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Registered Ports                            ;                        ;                                ;
@@ -334,20 +335,20 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk         ; Y2    ; 2        ; 0            ; 36           ; 14           ; 46                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[0] ; AB28  ; 5        ; 115          ; 17           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[1] ; AC28  ; 5        ; 115          ; 14           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[2] ; AC27  ; 5        ; 115          ; 15           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[3] ; AD27  ; 5        ; 115          ; 13           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[4] ; AB27  ; 5        ; 115          ; 18           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[5] ; AC26  ; 5        ; 115          ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[6] ; AD26  ; 5        ; 115          ; 10           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; dividend[7] ; AB26  ; 5        ; 115          ; 15           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; divisor[0]  ; AB25  ; 5        ; 115          ; 16           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; clk         ; Y2    ; 2        ; 0            ; 36           ; 14           ; 5                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[0] ; AB28  ; 5        ; 115          ; 17           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[1] ; AC28  ; 5        ; 115          ; 14           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[2] ; AC27  ; 5        ; 115          ; 15           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[3] ; AD27  ; 5        ; 115          ; 13           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[4] ; AB27  ; 5        ; 115          ; 18           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[5] ; AC26  ; 5        ; 115          ; 11           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[6] ; AD26  ; 5        ; 115          ; 10           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; dividend[7] ; AB26  ; 5        ; 115          ; 15           ; 0            ; 13                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; divisor[0]  ; AB25  ; 5        ; 115          ; 16           ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; divisor[1]  ; AC24  ; 5        ; 115          ; 4            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; divisor[2]  ; AB24  ; 5        ; 115          ; 5            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; divisor[3]  ; AB23  ; 5        ; 115          ; 7            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; start       ; Y23   ; 5        ; 115          ; 14           ; 7            ; 131                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; divisor[2]  ; AB24  ; 5        ; 115          ; 5            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; divisor[3]  ; AB23  ; 5        ; 115          ; 7            ; 14           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; start       ; Y23   ; 5        ; 115          ; 14           ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -378,6 +379,7 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ; output_display[8]  ; F22   ; 7        ; 107          ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; output_display[9]  ; E17   ; 7        ; 67           ; 73           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; overflow           ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; sign               ; AA26  ; 5        ; 115          ; 16           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +--------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -411,7 +413,7 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ; 2        ; 1 / 63 ( 2 % )   ; 2.5V          ; --           ;
 ; 3        ; 0 / 73 ( 0 % )   ; 2.5V          ; --           ;
 ; 4        ; 5 / 71 ( 7 % )   ; 2.5V          ; --           ;
-; 5        ; 21 / 65 ( 32 % ) ; 2.5V          ; --           ;
+; 5        ; 22 / 65 ( 34 % ) ; 2.5V          ; --           ;
 ; 6        ; 6 / 58 ( 10 % )  ; 2.5V          ; --           ;
 ; 7        ; 4 / 72 ( 6 % )   ; 2.5V          ; --           ;
 ; 8        ; 0 / 71 ( 0 % )   ; 2.5V          ; --           ;
@@ -474,7 +476,7 @@ The pin-out file can be found in C:/Users/joshu/OneDrive/Documents/Masters-North
 ; AA23     ; 280        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA24     ; 279        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; AA25     ; 294        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AA26     ; 293        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AA26     ; 293        ; 5        ; sign                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AA27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AB1      ; 86         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1234,35 +1236,36 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; output_display[18] ; Incomplete set of assignments ;
 ; output_display[19] ; Incomplete set of assignments ;
 ; output_display[20] ; Incomplete set of assignments ;
-; start              ; Incomplete set of assignments ;
-; clk                ; Incomplete set of assignments ;
-; divisor[2]         ; Incomplete set of assignments ;
-; divisor[1]         ; Incomplete set of assignments ;
-; divisor[0]         ; Incomplete set of assignments ;
+; sign               ; Incomplete set of assignments ;
+; dividend[7]        ; Incomplete set of assignments ;
 ; divisor[3]         ; Incomplete set of assignments ;
+; dividend[0]        ; Incomplete set of assignments ;
+; clk                ; Incomplete set of assignments ;
+; start              ; Incomplete set of assignments ;
 ; dividend[2]        ; Incomplete set of assignments ;
 ; dividend[1]        ; Incomplete set of assignments ;
-; dividend[0]        ; Incomplete set of assignments ;
-; dividend[7]        ; Incomplete set of assignments ;
+; dividend[3]        ; Incomplete set of assignments ;
+; divisor[1]         ; Incomplete set of assignments ;
+; divisor[0]         ; Incomplete set of assignments ;
+; divisor[2]         ; Incomplete set of assignments ;
 ; dividend[6]        ; Incomplete set of assignments ;
 ; dividend[5]        ; Incomplete set of assignments ;
 ; dividend[4]        ; Incomplete set of assignments ;
-; dividend[3]        ; Incomplete set of assignments ;
+; sign               ; Missing location assignment   ;
 +--------------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                        ; Entity Name     ; Library Name ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
-; |display_divider                      ; 248 (0)     ; 46 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 36   ; 0            ; 202 (0)      ; 0 (0)             ; 46 (0)           ; |display_divider                                           ; display_divider ; work         ;
-;    |divider:dut|                      ; 227 (201)   ; 46 (46)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 181 (155)    ; 0 (0)             ; 46 (44)          ; |display_divider|divider:dut                               ; divider         ; work         ;
-;       |comparator:looping_comparator| ; 28 (28)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 2 (2)            ; |display_divider|divider:dut|comparator:looping_comparator ; comparator      ; work         ;
-;    |leddcd:\g1:0:nth_display|         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g1:0:nth_display                  ; leddcd          ; work         ;
-;    |leddcd:\g1:1:nth_display|         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g1:1:nth_display                  ; leddcd          ; work         ;
-;    |leddcd:\g2:0:mth_display|         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g2:0:mth_display                  ; leddcd          ; work         ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                       ; Entity Name     ; Library Name ;
++-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+-----------------+--------------+
+; |display_divider              ; 327 (0)     ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 37   ; 0            ; 322 (0)      ; 0 (0)             ; 5 (0)            ; |display_divider                          ; display_divider ; work         ;
+;    |divider:dut|              ; 306 (306)   ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 301 (301)    ; 0 (0)             ; 5 (5)            ; |display_divider|divider:dut              ; divider         ; work         ;
+;    |leddcd:\g1:0:nth_display| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g1:0:nth_display ; leddcd          ; work         ;
+;    |leddcd:\g1:1:nth_display| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g1:1:nth_display ; leddcd          ; work         ;
+;    |leddcd:\g2:0:mth_display| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display_divider|leddcd:\g2:0:mth_display ; leddcd          ; work         ;
++-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1293,219 +1296,118 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; output_display[18] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; output_display[19] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; output_display[20] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; start              ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
-; clk                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; divisor[2]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; divisor[1]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; divisor[0]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; divisor[3]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; dividend[2]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; dividend[1]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; sign               ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; dividend[7]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; divisor[3]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; dividend[0]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; dividend[7]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; dividend[6]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; dividend[5]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; dividend[4]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; clk                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; start              ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; dividend[2]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; dividend[1]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; dividend[3]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; divisor[1]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; divisor[0]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; divisor[2]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; dividend[6]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; dividend[5]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; dividend[4]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +--------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                               ;
-+------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
-+------------------------------------------------+-------------------+---------+
-; start                                          ;                   ;         ;
-;      - divider:dut|remainder[0]                ; 0                 ; 0       ;
-;      - divider:dut|remainder[1]                ; 0                 ; 0       ;
-;      - divider:dut|remainder[2]                ; 0                 ; 0       ;
-;      - divider:dut|remainder[3]                ; 0                 ; 0       ;
-;      - divider:dut|quotient[7]~1               ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[2]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[2]~2          ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[2]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[2]~2           ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[1]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[1]~6          ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[1]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[1]~6           ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[0]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[0]~10         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[0]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[0]~10          ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[11]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[11]~14        ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[11]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[11]~14         ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[10]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[10]~18        ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[10]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[10]~18         ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[9]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[9]~22         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[9]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[9]~22          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[8]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[8]~26         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[8]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[8]~26          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[7]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[7]~30         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[7]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[7]~30          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[6]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[6]~34         ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[6]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[6]~34          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[5]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[5]~38         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[5]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[5]~38          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[4]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[4]~42         ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[4]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[4]~42          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[3]~_emulated  ; 0                 ; 0       ;
-;      - divider:dut|zext_dividend[3]~46         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[3]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|zext_divisor[3]~46          ; 1                 ; 0       ;
-;      - divider:dut|done~_emulated              ; 0                 ; 0       ;
-;      - divider:dut|done~2                      ; 1                 ; 0       ;
-;      - divider:dut|quotient_out[2]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[2]~2           ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[0]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[0]~6           ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[1]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[1]~10          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[3]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[3]~14          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[6]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[6]~18          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[5]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[5]~22          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[4]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[4]~26          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[7]~_emulated   ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[7]~30          ; 0                 ; 0       ;
-;      - divider:dut|shift_position[2]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[2]~2         ; 1                 ; 0       ;
-;      - divider:dut|shift_position[0]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[0]~6         ; 0                 ; 0       ;
-;      - divider:dut|shift_position[1]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[1]~10        ; 0                 ; 0       ;
-;      - divider:dut|shift_position[3]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[3]~14        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[6]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[6]~18        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[5]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[5]~22        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[4]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[4]~26        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[7]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[7]~30        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[8]~_emulated ; 0                 ; 0       ;
-;      - divider:dut|shift_position[8]~34        ; 1                 ; 0       ;
-;      - divider:dut|overflow                    ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[2]~1          ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[2]~1           ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[1]~5          ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[1]~5           ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[0]~9          ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[0]~9           ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[11]~13        ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[11]~13         ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[10]~17        ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[10]~17         ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[9]~21         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[9]~21          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[8]~25         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[8]~25          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[7]~29         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[7]~29          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[6]~33         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[6]~33          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[5]~37         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[5]~37          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[4]~41         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[4]~41          ; 1                 ; 0       ;
-;      - divider:dut|zext_dividend[3]~45         ; 1                 ; 0       ;
-;      - divider:dut|zext_divisor[3]~45          ; 1                 ; 0       ;
-;      - divider:dut|quotient_out[2]~1           ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[0]~5           ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[1]~9           ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[3]~13          ; 1                 ; 0       ;
-;      - divider:dut|quotient_out[6]~17          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[5]~21          ; 0                 ; 0       ;
-;      - divider:dut|quotient_out[4]~25          ; 1                 ; 0       ;
-;      - divider:dut|quotient_out[7]~29          ; 0                 ; 0       ;
-;      - divider:dut|shift_position[2]~1         ; 1                 ; 0       ;
-;      - divider:dut|shift_position[0]~5         ; 0                 ; 0       ;
-;      - divider:dut|shift_position[1]~9         ; 0                 ; 0       ;
-;      - divider:dut|shift_position[3]~13        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[6]~17        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[5]~21        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[4]~25        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[7]~29        ; 1                 ; 0       ;
-;      - divider:dut|shift_position[8]~33        ; 1                 ; 0       ;
-; clk                                            ;                   ;         ;
-; divisor[2]                                     ;                   ;         ;
-;      - divider:dut|LessThan0~7                 ; 0                 ; 6       ;
-;      - divider:dut|Equal0~0                    ; 0                 ; 6       ;
-;      - divider:dut|zext_divisor~76             ; 0                 ; 6       ;
-; divisor[1]                                     ;                   ;         ;
-;      - divider:dut|LessThan0~2                 ; 0                 ; 6       ;
-;      - divider:dut|Equal0~0                    ; 0                 ; 6       ;
-;      - divider:dut|zext_divisor~77             ; 0                 ; 6       ;
-; divisor[0]                                     ;                   ;         ;
-;      - divider:dut|LessThan0~2                 ; 0                 ; 6       ;
-;      - divider:dut|Equal0~0                    ; 0                 ; 6       ;
-;      - divider:dut|zext_divisor~78             ; 0                 ; 6       ;
-; divisor[3]                                     ;                   ;         ;
-;      - divider:dut|LessThan0~5                 ; 1                 ; 6       ;
-;      - divider:dut|LessThan0~6                 ; 1                 ; 6       ;
-;      - divider:dut|Equal0~0                    ; 1                 ; 6       ;
-;      - divider:dut|zext_divisor~75             ; 1                 ; 6       ;
-; dividend[2]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~72            ; 0                 ; 6       ;
-; dividend[1]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~73            ; 1                 ; 6       ;
-; dividend[0]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~74            ; 0                 ; 6       ;
-; dividend[7]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~79            ; 1                 ; 6       ;
-; dividend[6]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~80            ; 1                 ; 6       ;
-; dividend[5]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~81            ; 0                 ; 6       ;
-; dividend[4]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~82            ; 0                 ; 6       ;
-; dividend[3]                                    ;                   ;         ;
-;      - divider:dut|zext_dividend~83            ; 0                 ; 6       ;
-+------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                 ;
++--------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
++--------------------------------------------------+-------------------+---------+
+; dividend[7]                                      ;                   ;         ;
+;      - divider:dut|Add0~14                       ; 0                 ; 6       ;
+;      - divider:dut|remainder~0                   ; 0                 ; 6       ;
+;      - divider:dut|remainder~1                   ; 0                 ; 6       ;
+;      - divider:dut|remainder~2                   ; 0                 ; 6       ;
+;      - divider:dut|Add7~0                        ; 0                 ; 6       ;
+;      - divider:dut|output_and_next_state_logic~0 ; 0                 ; 6       ;
+;      - divider:dut|Add6~7                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~9                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~13                       ; 0                 ; 6       ;
+;      - divider:dut|Add6~21                       ; 0                 ; 6       ;
+;      - divider:dut|Selector51~0                  ; 0                 ; 6       ;
+;      - divider:dut|Add6~25                       ; 0                 ; 6       ;
+;      - divider:dut|Add6~27                       ; 0                 ; 6       ;
+; divisor[3]                                       ;                   ;         ;
+;      - divider:dut|Add7~0                        ; 0                 ; 6       ;
+;      - divider:dut|output_and_next_state_logic~0 ; 0                 ; 6       ;
+;      - divider:dut|b~0                           ; 0                 ; 6       ;
+;      - divider:dut|b~1                           ; 0                 ; 6       ;
+;      - divider:dut|b~2                           ; 0                 ; 6       ;
+; dividend[0]                                      ;                   ;         ;
+;      - divider:dut|Add0~1                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~2                        ; 0                 ; 6       ;
+; clk                                              ;                   ;         ;
+; start                                            ;                   ;         ;
+;      - divider:dut|state.idle                    ; 1                 ; 6       ;
+;      - divider:dut|state.div_by_1                ; 1                 ; 6       ;
+;      - divider:dut|state.loop_state              ; 1                 ; 6       ;
+;      - divider:dut|state.done                    ; 1                 ; 6       ;
+;      - divider:dut|state.init                    ; 1                 ; 6       ;
+; dividend[2]                                      ;                   ;         ;
+;      - divider:dut|Add0~4                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~7                        ; 0                 ; 6       ;
+; dividend[1]                                      ;                   ;         ;
+;      - divider:dut|Add0~2                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~9                        ; 0                 ; 6       ;
+; dividend[3]                                      ;                   ;         ;
+;      - divider:dut|Add0~6                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~13                       ; 0                 ; 6       ;
+; divisor[1]                                       ;                   ;         ;
+;      - divider:dut|b~0                           ; 0                 ; 6       ;
+;      - divider:dut|b~1                           ; 0                 ; 6       ;
+;      - divider:dut|b~2                           ; 0                 ; 6       ;
+; divisor[0]                                       ;                   ;         ;
+;      - divider:dut|b~0                           ; 1                 ; 6       ;
+;      - divider:dut|b~1                           ; 1                 ; 6       ;
+;      - divider:dut|b~2                           ; 1                 ; 6       ;
+;      - divider:dut|b[0]                          ; 1                 ; 6       ;
+; divisor[2]                                       ;                   ;         ;
+;      - divider:dut|b~1                           ; 0                 ; 6       ;
+;      - divider:dut|b~2                           ; 0                 ; 6       ;
+; dividend[6]                                      ;                   ;         ;
+;      - divider:dut|Add0~12                       ; 1                 ; 6       ;
+;      - divider:dut|Add6~21                       ; 1                 ; 6       ;
+; dividend[5]                                      ;                   ;         ;
+;      - divider:dut|Add0~10                       ; 1                 ; 6       ;
+;      - divider:dut|Add6~27                       ; 1                 ; 6       ;
+; dividend[4]                                      ;                   ;         ;
+;      - divider:dut|Add0~8                        ; 0                 ; 6       ;
+;      - divider:dut|Add6~25                       ; 0                 ; 6       ;
++--------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                        ;
-+----------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                       ; Location            ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; clk                        ; PIN_Y2              ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk                        ; PIN_Y2              ; 45      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; divider:dut|done~2         ; LCCOMB_X113_Y18_N30 ; 45      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; divider:dut|quotient[7]~1  ; LCCOMB_X113_Y18_N16 ; 8       ; Latch enable               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; divider:dut|remainder[3]~0 ; LCCOMB_X112_Y17_N12 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; start                      ; PIN_Y23             ; 131     ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-+----------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                        ;
++--------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                     ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clk                      ; PIN_Y2              ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                      ; PIN_Y2              ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; divider:dut|Selector12~0 ; LCCOMB_X112_Y15_N20 ; 32      ; Latch enable ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; divider:dut|Selector4~0  ; LCCOMB_X111_Y15_N6  ; 8       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; divider:dut|Selector4~0  ; LCCOMB_X111_Y15_N6  ; 9       ; Latch enable ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; divider:dut|state.done   ; FF_X111_Y15_N21     ; 13      ; Latch enable ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; divider:dut|state.init   ; FF_X112_Y15_N19     ; 8       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; start                    ; PIN_Y23             ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
++--------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                            ;
-+---------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                      ; Location            ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                       ; PIN_Y2              ; 45      ; 3                                    ; Global Clock         ; GCLK4            ; --                        ;
-; divider:dut|quotient[7]~1 ; LCCOMB_X113_Y18_N16 ; 8       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-+---------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                           ;
++--------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                     ; Location            ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk                      ; PIN_Y2              ; 3       ; 2                                    ; Global Clock         ; GCLK4            ; --                        ;
+; divider:dut|Selector12~0 ; LCCOMB_X112_Y15_N20 ; 32      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; divider:dut|Selector4~0  ; LCCOMB_X111_Y15_N6  ; 9       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; divider:dut|state.done   ; FF_X111_Y15_N21     ; 13      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
++--------------------------+---------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -1513,49 +1415,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 429 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 35 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 466 / 209,544 ( < 1 % ) ;
-; Direct links          ; 50 / 342,891 ( < 1 % )  ;
-; Global clocks         ; 2 / 20 ( 10 % )         ;
-; Local interconnects   ; 152 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 38 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 383 / 289,782 ( < 1 % ) ;
+; Block interconnects   ; 471 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 50 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 385 / 209,544 ( < 1 % ) ;
+; Direct links          ; 69 / 342,891 ( < 1 % )  ;
+; Global clocks         ; 4 / 20 ( 20 % )         ;
+; Local interconnects   ; 132 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 29 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 413 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.05) ; Number of LABs  (Total = 19) ;
+; Number of Logic Elements  (Average = 12.11) ; Number of LABs  (Total = 27) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 2                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 2                            ;
 ; 15                                          ; 1                            ;
-; 16                                          ; 12                           ;
+; 16                                          ; 15                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.68) ; Number of LABs  (Total = 19) ;
+; LAB-wide Signals  (Average = 0.15) ; Number of LABs  (Total = 27) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 14                           ;
-; 1 Clock enable                     ; 11                           ;
+; 1 Async. clear                     ; 2                            ;
+; 1 Clock                            ; 1                            ;
 ; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -1563,89 +1464,85 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.89) ; Number of LABs  (Total = 19) ;
+; Number of Signals Sourced  (Average = 12.22) ; Number of LABs  (Total = 27) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 1                            ;
+; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 13                           ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 6                            ;
-; 21                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.84) ; Number of LABs  (Total = 19) ;
+; Number of Signals Sourced Out  (Average = 7.52) ; Number of LABs  (Total = 27) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 5                            ;
+; 1                                               ; 4                            ;
+; 2                                               ; 0                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 1                            ;
 ; 5                                               ; 1                            ;
 ; 6                                               ; 2                            ;
 ; 7                                               ; 3                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 0                            ;
+; 8                                               ; 6                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 1                            ;
 ; 11                                              ; 0                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 1                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 3                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.42) ; Number of LABs  (Total = 19) ;
+; Number of Distinct Inputs  (Average = 12.48) ; Number of LABs  (Total = 27) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 3                            ;
-; 5                                            ; 3                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 2                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 5                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 0                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 5                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 5                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 22                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1701,52 +1598,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 36        ; 0            ; 36        ; 0            ; 0            ; 36        ; 36        ; 0            ; 36        ; 36        ; 0            ; 22           ; 0            ; 0            ; 14           ; 0            ; 22           ; 14           ; 0            ; 0            ; 0            ; 22           ; 0            ; 0            ; 0            ; 0            ; 0            ; 36        ; 0            ; 0            ;
-; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 36           ; 0         ; 36           ; 36           ; 0         ; 0         ; 36           ; 0         ; 0         ; 36           ; 14           ; 36           ; 36           ; 22           ; 36           ; 14           ; 22           ; 36           ; 36           ; 36           ; 14           ; 36           ; 36           ; 36           ; 36           ; 36           ; 0         ; 36           ; 36           ;
-; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; overflow           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[0]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[1]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[2]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[3]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[4]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[5]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[6]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[7]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[8]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[9]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[10] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[11] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[12] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[13] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[14] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[15] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[16] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[17] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[18] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[19] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; output_display[20] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; start              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; divisor[2]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; divisor[1]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; divisor[0]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; divisor[3]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[2]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[1]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[0]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[7]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[6]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[5]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[4]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dividend[3]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Total Pass         ; 36           ; 0            ; 36           ; 0            ; 0            ; 37        ; 36           ; 0            ; 37        ; 37        ; 0            ; 23           ; 0            ; 0            ; 14           ; 0            ; 23           ; 14           ; 0            ; 0            ; 0            ; 23           ; 0            ; 0            ; 0            ; 0            ; 0            ; 37        ; 0            ; 0            ;
+; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; Total Inapplicable ; 1            ; 37           ; 1            ; 37           ; 37           ; 0         ; 1            ; 37           ; 0         ; 0         ; 37           ; 14           ; 37           ; 37           ; 23           ; 37           ; 14           ; 23           ; 37           ; 37           ; 37           ; 14           ; 37           ; 37           ; 37           ; 37           ; 37           ; 0         ; 37           ; 37           ;
+; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; overflow           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[0]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[1]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[2]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[3]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[4]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[5]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[6]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[7]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[8]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[9]  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[10] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[11] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[12] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[13] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[14] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[15] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[16] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[17] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[18] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[19] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; output_display[20] ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sign               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[7]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; divisor[3]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[0]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clk                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; start              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[2]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[1]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[3]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; divisor[1]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; divisor[0]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; divisor[2]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[6]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[5]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dividend[4]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
++--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -1785,137 +1683,118 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; start,clk,I/O   ; clk                  ; 190.8             ;
-; start,clk,I/O   ; start                ; 65.6              ;
-; I/O             ; clk                  ; 45.4              ;
-; I/O             ; start,clk            ; 37.8              ;
-; I/O             ; start                ; 16.1              ;
-; start           ; clk                  ; 11.3              ;
-+-----------------+----------------------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                           ;
++--------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
+; Source Clock(s)                                                    ; Destination Clock(s)                                           ; Delay Added in ns ;
++--------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
+; divider:dut|a[0],divider:dut|state.init,divider:dut|state.done     ; divider:dut|a[0],divider:dut|state.init                        ; 59.2              ;
+; divider:dut|a[0],clk,divider:dut|state.init,divider:dut|state.done ; divider:dut|a[0],divider:dut|state.init                        ; 27.4              ;
+; divider:dut|state.init                                             ; divider:dut|a[0],divider:dut|state.init,divider:dut|state.done ; 27.2              ;
+; divider:dut|a[0],divider:dut|state.done                            ; divider:dut|a[0],divider:dut|state.done                        ; 24.0              ;
+; divider:dut|a[0],divider:dut|state.done                            ; divider:dut|a[0],divider:dut|state.init                        ; 15.4              ;
+; divider:dut|state.init                                             ; clk                                                            ; 14.1              ;
+; clk                                                                ; clk                                                            ; 10.5              ;
+; divider:dut|state.done                                             ; divider:dut|state.done                                         ; 10.0              ;
+; divider:dut|a[0],divider:dut|state.init,divider:dut|state.done     ; clk                                                            ; 8.2               ;
+; divider:dut|state.init                                             ; divider:dut|a[0],divider:dut|state.init                        ; 8.2               ;
+; clk                                                                ; divider:dut|a[0],divider:dut|state.done                        ; 6.5               ;
+; divider:dut|a[0],clk,divider:dut|state.init,divider:dut|state.done ; divider:dut|a[0],divider:dut|state.done                        ; 6.2               ;
+; divider:dut|a[0],divider:dut|state.done,I/O                        ; divider:dut|state.done                                         ; 5.7               ;
+; divider:dut|state.done                                             ; divider:dut|a[0],divider:dut|state.init                        ; 5.4               ;
+; divider:dut|a[0],divider:dut|state.done                            ; divider:dut|state.done                                         ; 4.4               ;
+; divider:dut|state.done                                             ; divider:dut|a[0],divider:dut|state.done                        ; 4.2               ;
+; clk,divider:dut|state.init                                         ; clk                                                            ; 2.9               ;
+; divider:dut|a[0],divider:dut|state.init,divider:dut|state.done     ; divider:dut|a[0],divider:dut|state.done                        ; 2.4               ;
++--------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                         ;
-+-----------------------------------------+-----------------------------------------+-------------------+
-; Source Register                         ; Destination Register                    ; Delay Added in ns ;
-+-----------------------------------------+-----------------------------------------+-------------------+
-; start                                   ; divider:dut|quotient[6]                 ; 6.040             ;
-; divider:dut|overflow                    ; divider:dut|quotient[4]                 ; 5.296             ;
-; divider:dut|done~_emulated              ; divider:dut|quotient[4]                 ; 5.296             ;
-; divisor[3]                              ; divider:dut|quotient[4]                 ; 5.296             ;
-; divisor[2]                              ; divider:dut|quotient[4]                 ; 5.296             ;
-; divisor[1]                              ; divider:dut|quotient[4]                 ; 5.296             ;
-; divisor[0]                              ; divider:dut|quotient[4]                 ; 5.296             ;
-; divider:dut|quotient_out[6]~17          ; divider:dut|quotient[6]                 ; 4.041             ;
-; divider:dut|quotient_out[5]~21          ; divider:dut|quotient[5]                 ; 4.038             ;
-; divider:dut|quotient_out[5]~_emulated   ; divider:dut|quotient[5]                 ; 4.013             ;
-; divider:dut|quotient_out[6]~_emulated   ; divider:dut|quotient[6]                 ; 3.989             ;
-; divider:dut|quotient_out[1]~9           ; divider:dut|quotient[1]                 ; 3.968             ;
-; divider:dut|quotient_out[2]~1           ; divider:dut|quotient[2]                 ; 3.968             ;
-; divider:dut|quotient_out[7]~29          ; divider:dut|quotient[7]                 ; 3.934             ;
-; divider:dut|quotient_out[0]~5           ; divider:dut|quotient[0]                 ; 3.934             ;
-; divider:dut|quotient_out[2]~_emulated   ; divider:dut|quotient[2]                 ; 3.909             ;
-; divider:dut|quotient_out[1]~_emulated   ; divider:dut|quotient[1]                 ; 3.909             ;
-; divider:dut|quotient_out[7]~_emulated   ; divider:dut|quotient[7]                 ; 3.887             ;
-; divider:dut|quotient_out[0]~_emulated   ; divider:dut|quotient[0]                 ; 3.887             ;
-; divider:dut|quotient_out[4]~25          ; divider:dut|quotient[4]                 ; 3.722             ;
-; divider:dut|quotient_out[3]~13          ; divider:dut|quotient[3]                 ; 3.722             ;
-; divider:dut|quotient_out[4]~_emulated   ; divider:dut|quotient[4]                 ; 3.655             ;
-; divider:dut|quotient_out[3]~_emulated   ; divider:dut|quotient[3]                 ; 3.655             ;
-; divider:dut|shift_position[3]~_emulated ; divider:dut|quotient_out[3]~_emulated   ; 2.788             ;
-; divider:dut|shift_position[3]~13        ; divider:dut|quotient_out[3]~_emulated   ; 2.788             ;
-; divider:dut|zext_dividend[0]~9          ; divider:dut|zext_dividend[0]~_emulated  ; 2.777             ;
-; divider:dut|zext_dividend[0]~_emulated  ; divider:dut|zext_dividend[0]~_emulated  ; 2.777             ;
-; dividend[0]                             ; divider:dut|zext_dividend[0]~_emulated  ; 2.777             ;
-; divider:dut|zext_dividend[7]~_emulated  ; divider:dut|zext_dividend[7]~_emulated  ; 2.757             ;
-; dividend[7]                             ; divider:dut|zext_dividend[7]~_emulated  ; 2.757             ;
-; divider:dut|zext_dividend[7]~29         ; divider:dut|zext_dividend[7]~_emulated  ; 2.757             ;
-; divider:dut|zext_dividend[8]~_emulated  ; divider:dut|zext_dividend[8]~_emulated  ; 2.749             ;
-; divider:dut|zext_dividend[8]~25         ; divider:dut|zext_dividend[8]~_emulated  ; 2.749             ;
-; divider:dut|zext_dividend[2]~1          ; divider:dut|zext_dividend[2]~_emulated  ; 2.739             ;
-; divider:dut|zext_dividend[2]~_emulated  ; divider:dut|zext_dividend[2]~_emulated  ; 2.739             ;
-; dividend[2]                             ; divider:dut|zext_dividend[2]~_emulated  ; 2.739             ;
-; divider:dut|zext_dividend[3]~_emulated  ; divider:dut|zext_dividend[3]~_emulated  ; 2.735             ;
-; dividend[3]                             ; divider:dut|zext_dividend[3]~_emulated  ; 2.735             ;
-; divider:dut|zext_dividend[3]~45         ; divider:dut|zext_dividend[3]~_emulated  ; 2.735             ;
-; divider:dut|zext_dividend[5]~_emulated  ; divider:dut|zext_dividend[5]~_emulated  ; 2.725             ;
-; dividend[5]                             ; divider:dut|zext_dividend[5]~_emulated  ; 2.725             ;
-; divider:dut|zext_dividend[5]~37         ; divider:dut|zext_dividend[5]~_emulated  ; 2.725             ;
-; divider:dut|zext_dividend[1]~_emulated  ; divider:dut|zext_dividend[1]~_emulated  ; 2.723             ;
-; dividend[1]                             ; divider:dut|zext_dividend[1]~_emulated  ; 2.723             ;
-; divider:dut|zext_dividend[1]~5          ; divider:dut|zext_dividend[1]~_emulated  ; 2.723             ;
-; divider:dut|zext_dividend[9]~21         ; divider:dut|zext_dividend[9]~_emulated  ; 2.715             ;
-; divider:dut|zext_dividend[9]~_emulated  ; divider:dut|zext_dividend[9]~_emulated  ; 2.715             ;
-; divider:dut|zext_dividend[10]~_emulated ; divider:dut|zext_dividend[10]~_emulated ; 2.707             ;
-; divider:dut|zext_dividend[10]~17        ; divider:dut|zext_dividend[10]~_emulated ; 2.707             ;
-; divider:dut|zext_dividend[4]~_emulated  ; divider:dut|zext_dividend[4]~_emulated  ; 2.653             ;
-; dividend[4]                             ; divider:dut|zext_dividend[4]~_emulated  ; 2.653             ;
-; divider:dut|zext_dividend[4]~41         ; divider:dut|zext_dividend[4]~_emulated  ; 2.653             ;
-; divider:dut|zext_dividend[6]~_emulated  ; divider:dut|zext_dividend[6]~_emulated  ; 2.597             ;
-; dividend[6]                             ; divider:dut|zext_dividend[6]~_emulated  ; 2.597             ;
-; divider:dut|zext_dividend[6]~33         ; divider:dut|zext_dividend[6]~_emulated  ; 2.597             ;
-; divider:dut|zext_dividend[11]~_emulated ; divider:dut|zext_dividend[11]~_emulated ; 2.515             ;
-; divider:dut|zext_dividend[11]~13        ; divider:dut|zext_dividend[11]~_emulated ; 2.515             ;
-; divider:dut|zext_divisor[1]~5           ; divider:dut|zext_divisor[0]~_emulated   ; 2.492             ;
-; divider:dut|zext_divisor[1]~_emulated   ; divider:dut|zext_divisor[0]~_emulated   ; 2.492             ;
-; divider:dut|zext_divisor[2]~1           ; divider:dut|zext_divisor[1]~_emulated   ; 2.474             ;
-; divider:dut|zext_divisor[2]~_emulated   ; divider:dut|zext_divisor[1]~_emulated   ; 2.474             ;
-; divider:dut|zext_divisor[3]~45          ; divider:dut|zext_divisor[2]~_emulated   ; 2.462             ;
-; divider:dut|zext_divisor[3]~_emulated   ; divider:dut|zext_divisor[2]~_emulated   ; 2.462             ;
-; divider:dut|shift_position[1]~_emulated ; divider:dut|quotient_out[1]~_emulated   ; 2.456             ;
-; divider:dut|shift_position[1]~9         ; divider:dut|quotient_out[1]~_emulated   ; 2.456             ;
-; divider:dut|shift_position[8]~_emulated ; divider:dut|shift_position[7]~_emulated ; 2.284             ;
-; divider:dut|shift_position[8]~33        ; divider:dut|shift_position[7]~_emulated ; 2.284             ;
-; divider:dut|shift_position[7]~_emulated ; divider:dut|shift_position[6]~_emulated ; 2.278             ;
-; divider:dut|shift_position[7]~29        ; divider:dut|shift_position[6]~_emulated ; 2.278             ;
-; divider:dut|zext_divisor[11]~_emulated  ; divider:dut|zext_divisor[10]~_emulated  ; 2.272             ;
-; divider:dut|zext_divisor[11]~13         ; divider:dut|zext_divisor[10]~_emulated  ; 2.272             ;
-; divider:dut|zext_divisor[5]~37          ; divider:dut|zext_divisor[4]~_emulated   ; 2.268             ;
-; divider:dut|zext_divisor[5]~_emulated   ; divider:dut|zext_divisor[4]~_emulated   ; 2.268             ;
-; divider:dut|zext_divisor[10]~_emulated  ; divider:dut|zext_divisor[9]~_emulated   ; 2.266             ;
-; divider:dut|zext_divisor[9]~_emulated   ; divider:dut|zext_divisor[8]~_emulated   ; 2.266             ;
-; divider:dut|zext_divisor[10]~17         ; divider:dut|zext_divisor[9]~_emulated   ; 2.266             ;
-; divider:dut|zext_divisor[9]~21          ; divider:dut|zext_divisor[8]~_emulated   ; 2.266             ;
-; divider:dut|zext_divisor[6]~33          ; divider:dut|zext_divisor[5]~_emulated   ; 2.252             ;
-; divider:dut|zext_divisor[6]~_emulated   ; divider:dut|zext_divisor[5]~_emulated   ; 2.252             ;
-; divider:dut|zext_divisor[7]~29          ; divider:dut|zext_divisor[6]~_emulated   ; 2.248             ;
-; divider:dut|zext_divisor[7]~_emulated   ; divider:dut|zext_divisor[6]~_emulated   ; 2.248             ;
-; divider:dut|zext_divisor[8]~25          ; divider:dut|zext_divisor[7]~_emulated   ; 2.011             ;
-; divider:dut|zext_divisor[8]~_emulated   ; divider:dut|zext_divisor[7]~_emulated   ; 2.011             ;
-; divider:dut|shift_position[6]~_emulated ; divider:dut|quotient_out[6]~_emulated   ; 2.005             ;
-; divider:dut|shift_position[6]~17        ; divider:dut|quotient_out[6]~_emulated   ; 2.005             ;
-; divider:dut|shift_position[2]~_emulated ; divider:dut|quotient_out[2]~_emulated   ; 1.990             ;
-; divider:dut|shift_position[2]~1         ; divider:dut|quotient_out[2]~_emulated   ; 1.990             ;
-; divider:dut|shift_position[4]~_emulated ; divider:dut|quotient_out[4]~_emulated   ; 1.956             ;
-; divider:dut|shift_position[4]~25        ; divider:dut|quotient_out[4]~_emulated   ; 1.956             ;
-; divider:dut|zext_divisor[4]~41          ; divider:dut|zext_divisor[3]~_emulated   ; 1.810             ;
-; divider:dut|zext_divisor[4]~_emulated   ; divider:dut|zext_divisor[3]~_emulated   ; 1.810             ;
-; divider:dut|shift_position[5]~_emulated ; divider:dut|quotient_out[5]~_emulated   ; 1.807             ;
-; divider:dut|shift_position[5]~21        ; divider:dut|quotient_out[5]~_emulated   ; 1.807             ;
-; divider:dut|shift_position[0]~_emulated ; divider:dut|quotient_out[0]~_emulated   ; 1.693             ;
-; divider:dut|shift_position[0]~5         ; divider:dut|quotient_out[0]~_emulated   ; 1.693             ;
-; divider:dut|zext_divisor[0]~9           ; divider:dut|remainder[2]                ; 1.443             ;
-; divider:dut|zext_divisor[0]~_emulated   ; divider:dut|remainder[2]                ; 1.443             ;
-+-----------------------------------------+-----------------------------------------+-------------------+
-Note: This table only shows the top 97 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                   ;
++------------------------------+------------------------------+-------------------+
+; Source Register              ; Destination Register         ; Delay Added in ns ;
++------------------------------+------------------------------+-------------------+
+; divider:dut|b[0]             ; divider:dut|a[0]             ; 6.306             ;
+; divider:dut|b[1]             ; divider:dut|a[0]             ; 6.197             ;
+; divider:dut|b[3]             ; divider:dut|a[0]             ; 5.507             ;
+; divider:dut|a[0]             ; divider:dut|p[0]             ; 5.503             ;
+; divider:dut|b[2]             ; divider:dut|p[2]             ; 5.485             ;
+; divider:dut|state.done       ; divider:dut|state.idle       ; 5.169             ;
+; divider:dut|state.idle       ; divider:dut|state.idle       ; 5.169             ;
+; divider:dut|state.init       ; divider:dut|state.loop_state ; 4.862             ;
+; divider:dut|a[5]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[3]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[1]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[2]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[4]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[7]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|a[6]             ; divider:dut|state.loop_state ; 4.728             ;
+; divider:dut|p[22]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[21]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[20]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[19]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[18]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[17]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[16]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[15]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[14]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[13]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[12]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[11]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[10]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[9]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[8]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[7]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[6]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[5]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[4]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[3]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[2]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[23]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[24]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[25]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[26]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[27]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[28]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[29]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[30]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[31]            ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[0]             ; divider:dut|a[0]             ; 4.334             ;
+; divider:dut|p[1]             ; divider:dut|a[0]             ; 4.334             ;
+; dividend[7]                  ; divider:dut|remainder[2]     ; 2.194             ;
+; divider:dut|state.loop_state ; divider:dut|a[0]             ; 1.984             ;
+; dividend[0]                  ; divider:dut|a[0]             ; 1.984             ;
+; divider:dut|state.div_by_1   ; divider:dut|a[0]             ; 1.984             ;
+; dividend[6]                  ; divider:dut|a[7]             ; 1.642             ;
+; dividend[4]                  ; divider:dut|a[7]             ; 1.642             ;
+; dividend[3]                  ; divider:dut|a[7]             ; 1.642             ;
+; dividend[2]                  ; divider:dut|a[7]             ; 1.642             ;
+; dividend[1]                  ; divider:dut|a[7]             ; 1.642             ;
+; dividend[5]                  ; divider:dut|a[7]             ; 1.642             ;
+; divider:dut|q[0]             ; divider:dut|q[0]             ; 1.351             ;
+; divider:dut|q[1]             ; divider:dut|q[1]             ; 0.954             ;
+; divider:dut|q[2]             ; divider:dut|q[2]             ; 0.869             ;
+; divider:dut|q[5]             ; divider:dut|q[6]             ; 0.724             ;
+; divider:dut|q[6]             ; divider:dut|q[6]             ; 0.724             ;
+; divider:dut|q[4]             ; divider:dut|q[6]             ; 0.724             ;
+; divider:dut|q[3]             ; divider:dut|q[6]             ; 0.724             ;
+; divider:dut|q[7]             ; divider:dut|q[7]             ; 0.565             ;
++------------------------------+------------------------------+-------------------+
+Note: This table only shows the top 65 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (119006): Selected device EP4CE115F29C7 for design "display_divider"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP4CE40F29C7 is compatible
     Info (176445): Device EP4CE40F29I7 is compatible
@@ -1933,258 +1812,81 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location N7
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location P28
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Warning (335093): The Timing Analyzer is analyzing 50 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 37 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Warning (335093): The Timing Analyzer is analyzing 65 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'display_divider.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~62|combout"
-    Warning (332126): Node "dut|shift_position[8]~34|datad"
-    Warning (332126): Node "dut|shift_position[8]~34|combout"
-    Warning (332126): Node "dut|shift_position~62|dataa"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~60|combout"
-    Warning (332126): Node "dut|shift_position[7]~30|datad"
-    Warning (332126): Node "dut|shift_position[7]~30|combout"
-    Warning (332126): Node "dut|shift_position~60|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~58|combout"
-    Warning (332126): Node "dut|shift_position[4]~26|datad"
-    Warning (332126): Node "dut|shift_position[4]~26|combout"
-    Warning (332126): Node "dut|shift_position~58|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~57|combout"
-    Warning (332126): Node "dut|shift_position[5]~22|datad"
-    Warning (332126): Node "dut|shift_position[5]~22|combout"
-    Warning (332126): Node "dut|shift_position~57|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~56|combout"
-    Warning (332126): Node "dut|shift_position[6]~18|datad"
-    Warning (332126): Node "dut|shift_position[6]~18|combout"
-    Warning (332126): Node "dut|shift_position~56|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~55|combout"
-    Warning (332126): Node "dut|shift_position[3]~14|datad"
-    Warning (332126): Node "dut|shift_position[3]~14|combout"
-    Warning (332126): Node "dut|shift_position~55|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~54|combout"
-    Warning (332126): Node "dut|shift_position[1]~10|datad"
-    Warning (332126): Node "dut|shift_position[1]~10|combout"
-    Warning (332126): Node "dut|shift_position~54|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~53|combout"
-    Warning (332126): Node "dut|shift_position[0]~6|datad"
-    Warning (332126): Node "dut|shift_position[0]~6|combout"
-    Warning (332126): Node "dut|shift_position~53|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 145
-    Warning (332126): Node "dut|shift_position~52|combout"
-    Warning (332126): Node "dut|shift_position[2]~2|datad"
-    Warning (332126): Node "dut|shift_position[2]~2|combout"
-    Warning (332126): Node "dut|shift_position~52|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~56|combout"
-    Warning (332126): Node "dut|quotient_out[7]~30|datad"
-    Warning (332126): Node "dut|quotient_out[7]~30|combout"
-    Warning (332126): Node "dut|quotient_out~56|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~55|combout"
-    Warning (332126): Node "dut|quotient_out[4]~26|datad"
-    Warning (332126): Node "dut|quotient_out[4]~26|combout"
-    Warning (332126): Node "dut|quotient_out~55|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~54|combout"
-    Warning (332126): Node "dut|quotient_out[5]~22|datad"
-    Warning (332126): Node "dut|quotient_out[5]~22|combout"
-    Warning (332126): Node "dut|quotient_out~54|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~53|combout"
-    Warning (332126): Node "dut|quotient_out[6]~18|datad"
-    Warning (332126): Node "dut|quotient_out[6]~18|combout"
-    Warning (332126): Node "dut|quotient_out~53|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~52|combout"
-    Warning (332126): Node "dut|quotient_out[3]~14|datad"
-    Warning (332126): Node "dut|quotient_out[3]~14|combout"
-    Warning (332126): Node "dut|quotient_out~52|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 143
-    Warning (332126): Node "dut|quotient_out~51|combout"
-    Warning (332126): Node "dut|quotient_out[1]~10|datad"
-    Warning (332126): Node "dut|quotient_out[1]~10|combout"
-    Warning (332126): Node "dut|quotient_out~51|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[1]~6|combout"
-    Warning (332126): Node "dut|zext_dividend~73|dataa"
-    Warning (332126): Node "dut|zext_dividend~73|combout"
-    Warning (332126): Node "dut|zext_dividend[1]~6|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[2]~2|combout"
-    Warning (332126): Node "dut|zext_divisor~72|datab"
-    Warning (332126): Node "dut|zext_divisor~72|combout"
-    Warning (332126): Node "dut|zext_divisor[2]~2|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[2]~2|combout"
-    Warning (332126): Node "dut|zext_dividend~72|dataa"
-    Warning (332126): Node "dut|zext_dividend~72|combout"
-    Warning (332126): Node "dut|zext_dividend[2]~2|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[3]~46|combout"
-    Warning (332126): Node "dut|zext_divisor~83|datab"
-    Warning (332126): Node "dut|zext_divisor~83|combout"
-    Warning (332126): Node "dut|zext_divisor[3]~46|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[3]~46|combout"
-    Warning (332126): Node "dut|zext_dividend~83|dataa"
-    Warning (332126): Node "dut|zext_dividend~83|combout"
-    Warning (332126): Node "dut|zext_dividend[3]~46|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[4]~42|combout"
-    Warning (332126): Node "dut|zext_divisor~82|datab"
-    Warning (332126): Node "dut|zext_divisor~82|combout"
-    Warning (332126): Node "dut|zext_divisor[4]~42|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[4]~42|combout"
-    Warning (332126): Node "dut|zext_dividend~82|dataa"
-    Warning (332126): Node "dut|zext_dividend~82|combout"
-    Warning (332126): Node "dut|zext_dividend[4]~42|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[5]~38|combout"
-    Warning (332126): Node "dut|zext_divisor~81|datab"
-    Warning (332126): Node "dut|zext_divisor~81|combout"
-    Warning (332126): Node "dut|zext_divisor[5]~38|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[5]~38|combout"
-    Warning (332126): Node "dut|zext_dividend~81|dataa"
-    Warning (332126): Node "dut|zext_dividend~81|combout"
-    Warning (332126): Node "dut|zext_dividend[5]~38|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[6]~34|combout"
-    Warning (332126): Node "dut|zext_divisor~80|datab"
-    Warning (332126): Node "dut|zext_divisor~80|combout"
-    Warning (332126): Node "dut|zext_divisor[6]~34|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[6]~34|combout"
-    Warning (332126): Node "dut|zext_dividend~80|dataa"
-    Warning (332126): Node "dut|zext_dividend~80|combout"
-    Warning (332126): Node "dut|zext_dividend[6]~34|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[7]~30|combout"
-    Warning (332126): Node "dut|zext_divisor~79|datab"
-    Warning (332126): Node "dut|zext_divisor~79|combout"
-    Warning (332126): Node "dut|zext_divisor[7]~30|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[7]~30|combout"
-    Warning (332126): Node "dut|zext_dividend~79|dataa"
-    Warning (332126): Node "dut|zext_dividend~79|combout"
-    Warning (332126): Node "dut|zext_dividend[7]~30|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[8]~26|combout"
-    Warning (332126): Node "dut|zext_divisor~78|dataa"
-    Warning (332126): Node "dut|zext_divisor~78|combout"
-    Warning (332126): Node "dut|zext_divisor[8]~26|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[8]~26|combout"
-    Warning (332126): Node "dut|zext_dividend~78|datab"
-    Warning (332126): Node "dut|zext_dividend~78|combout"
-    Warning (332126): Node "dut|zext_dividend[8]~26|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[9]~22|combout"
-    Warning (332126): Node "dut|zext_divisor~77|dataa"
-    Warning (332126): Node "dut|zext_divisor~77|combout"
-    Warning (332126): Node "dut|zext_divisor[9]~22|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[9]~22|combout"
-    Warning (332126): Node "dut|zext_dividend~77|datab"
-    Warning (332126): Node "dut|zext_dividend~77|combout"
-    Warning (332126): Node "dut|zext_dividend[9]~22|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[10]~18|combout"
-    Warning (332126): Node "dut|zext_divisor~76|dataa"
-    Warning (332126): Node "dut|zext_divisor~76|combout"
-    Warning (332126): Node "dut|zext_divisor[10]~18|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[10]~18|combout"
-    Warning (332126): Node "dut|zext_dividend~76|datab"
-    Warning (332126): Node "dut|zext_dividend~76|combout"
-    Warning (332126): Node "dut|zext_dividend[10]~18|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|quotient_out[0]~6|combout"
-    Warning (332126): Node "dut|quotient_out~50|datab"
-    Warning (332126): Node "dut|quotient_out~50|combout"
-    Warning (332126): Node "dut|quotient_out[0]~6|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|quotient_out[2]~2|combout"
-    Warning (332126): Node "dut|quotient_out~49|datab"
-    Warning (332126): Node "dut|quotient_out~49|combout"
-    Warning (332126): Node "dut|quotient_out[2]~2|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[1]~6|combout"
-    Warning (332126): Node "dut|zext_divisor~73|datab"
-    Warning (332126): Node "dut|zext_divisor~73|combout"
-    Warning (332126): Node "dut|zext_divisor[1]~6|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 139
-    Warning (332126): Node "dut|zext_divisor~75|combout"
-    Warning (332126): Node "dut|zext_divisor[11]~14|datad"
-    Warning (332126): Node "dut|zext_divisor[11]~14|combout"
-    Warning (332126): Node "dut|zext_divisor~75|dataa"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 140
-    Warning (332126): Node "dut|zext_dividend~75|combout"
-    Warning (332126): Node "dut|zext_dividend[11]~14|datad"
-    Warning (332126): Node "dut|zext_dividend[11]~14|combout"
-    Warning (332126): Node "dut|zext_dividend~75|datab"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_dividend[0]~10|combout"
-    Warning (332126): Node "dut|zext_dividend~74|dataa"
-    Warning (332126): Node "dut|zext_dividend~74|combout"
-    Warning (332126): Node "dut|zext_dividend[0]~10|datad"
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 169
-    Warning (332126): Node "dut|zext_divisor[0]~10|combout"
-    Warning (332126): Node "dut|zext_divisor~74|datab"
-    Warning (332126): Node "dut|zext_divisor~74|combout"
-    Warning (332126): Node "dut|zext_divisor[0]~10|datad"
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: dut|done~2  from: datac  to: combout
+Warning (332191): Clock target divider:dut|a[0] of clock divider:dut|a[0] is fed by another target of the same clock.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/display_divider.vhd Line: 10
+Info (176353): Automatically promoted node clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node divider:dut|done~_emulated File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 149
-Info (176353): Automatically promoted node divider:dut|quotient[7]~1  File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/divider.vhd Line: 167
+        Info (176357): Destination node divider:dut|state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
+        Info (176357): Destination node divider:dut|state.loop_state File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
+Info (176353): Automatically promoted node divider:dut|Selector12~0  File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node divider:dut|state.done  File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 271
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node divider:dut|next_state.idle File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 272
+Info (176353): Automatically promoted node divider:dut|Selector4~0  File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 293
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node divider:dut|a[2] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[1] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[3] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[6] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[7] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[4] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
+        Info (176357): Destination node divider:dut|a[5] File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd Line: 288
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 1 (unused VREF, 2.5V VCCIO, 0 input, 1 output, 0 bidirectional)
+        Info (176212): I/O standards used: 2.5 V.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  52 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  62 pins available
+        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  73 pins available
+        Info (176213): I/O bank number 4 does not use VREF pins and has 2.5V VCCIO pins. 5 total pin(s) used --  66 pins available
+        Info (176213): I/O bank number 5 does not use VREF pins and has 2.5V VCCIO pins. 21 total pin(s) used --  44 pins available
+        Info (176213): I/O bank number 6 does not use VREF pins and has 2.5V VCCIO pins. 6 total pin(s) used --  52 pins available
+        Info (176213): I/O bank number 7 does not use VREF pins and has 2.5V VCCIO pins. 4 total pin(s) used --  68 pins available
+        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.61 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/output_files/display_divider.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 209 warnings
-    Info: Peak virtual memory: 5868 megabytes
-    Info: Processing ended: Fri Nov  1 15:10:35 2024
+Info (144001): Generated suppressed messages file C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/output_files/display_divider.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 6698 megabytes
+    Info: Processing ended: Tue Nov 12 20:42:52 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab3-ce355/lab3-ce355/output_files/display_divider.fit.smsg.
+The suppressed messages can be found in C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/output_files/display_divider.fit.smsg.
 
 

@@ -1,0 +1,400 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Ecomparator
+Z0 w1731094788
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 46
+Z4 dC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355
+Z5 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator.vhd
+Z6 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator.vhd
+l0
+L5 1
+V8BLV>a7o9iaOKkdh@PkI=2
+!s100 D?JUW`CT]nG]]M]?9X3PL1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1731466035
+!i10b 1
+Z9 !s108 1731466035.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator.vhd|
+Z11 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 10 comparator 0 22 8BLV>a7o9iaOKkdh@PkI=2
+!i122 46
+l18
+L17 22
+V=6mki`^PFCMG340bXIch33
+!s100 ^iAnmNB1<jk]98_Z?Yo]73
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecomparator_tb
+R0
+R1
+R2
+R3
+!i122 47
+R4
+Z14 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator_tb.vhd
+Z15 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator_tb.vhd
+l0
+L5 1
+V@4Bc>VaclI@Un?z0E1b@Y3
+!s100 fzFMhXRkWF2e=7b;]BHcW1
+R7
+32
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator_tb.vhd|
+Z17 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/comparator_tb.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R1
+R2
+R3
+DEx4 work 13 comparator_tb 0 22 @4Bc>VaclI@Un?z0E1b@Y3
+!i122 47
+l28
+L8 78
+VOY24G3;UhHYAnCBQL4F5H2
+!s100 SOaiQ8We0SLlEO95bDEDg2
+R7
+32
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Pdecoder
+R2
+R3
+!i122 48
+R0
+R4
+Z18 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/decoder.vhd
+Z19 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/decoder.vhd
+l0
+L4 1
+V7c^?U`<Xg`z7Qgg6T6bd=2
+!s100 3ONfSbB1b^ZVMB>1@121;1
+R7
+32
+R8
+!i10b 1
+R9
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/decoder.vhd|
+Z21 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/decoder.vhd|
+!i113 1
+R12
+R13
+Bbody
+Z22 DPx4 work 7 decoder 0 22 7c^?U`<Xg`z7Qgg6T6bd=2
+R2
+R3
+!i122 48
+l0
+L16 1
+VD7e=_k9TDTM<4W9L@8^Y12
+!s100 PUnG=GSgPzf]m[H_4IeBB1
+R7
+32
+R8
+!i10b 1
+R9
+R20
+R21
+!i113 1
+R12
+R13
+Edisplay_divider
+Z23 w1731458011
+Z24 DPx4 work 13 divider_const 0 22 dmVWGN:C?:zjE1a1LCIPj1
+R22
+R2
+R3
+!i122 49
+R4
+Z25 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd
+Z26 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd
+l0
+L7 1
+V4am4>[om?eCbIKACa;1Z@0
+!s100 S=E_C4lh9RR`cLcJ]HQW;2
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd|
+Z28 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/display_divider.vhd|
+!i113 1
+R12
+R13
+Astructural
+R24
+R22
+R2
+R3
+DEx4 work 15 display_divider 0 22 4am4>[om?eCbIKACa;1Z@0
+!i122 49
+l61
+L22 80
+VEj0C_AT3Y?CIm^a@;4G1m3
+!s100 F`;;W?G0nJlF<NXj>_k?i3
+R7
+32
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Edivider
+Z29 w1731465721
+R24
+R1
+R2
+R3
+!i122 50
+R4
+Z30 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd
+Z31 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd
+l0
+L6 1
+VKg;XC4mNCXilIOnKhf2kk3
+!s100 ?kkHPUg[=jjXn;@A=76I70
+R7
+32
+Z32 !s110 1731466036
+!i10b 1
+Z33 !s108 1731466036.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd|
+Z35 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider.vhd|
+!i113 1
+R12
+R13
+Afsm_behavioral
+R24
+R1
+R2
+R3
+Z36 DEx4 work 7 divider 0 22 Kg;XC4mNCXilIOnKhf2kk3
+!i122 50
+l274
+L227 120
+Vg@dPOAMJQG67[YlPgzGI23
+!s100 I4k_U:l95BgoV:5n9:TDM0
+R7
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R12
+R13
+Abehavioral_sequential
+R24
+R1
+R2
+R3
+R36
+!i122 50
+l153
+L126 100
+VUdEI<icMYRF2lO0lXEncB0
+!s100 f0gTCVe?dR20VfV?2XMEH3
+R7
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R12
+R13
+Astructural_combinational
+R24
+R1
+R2
+R3
+R36
+!i122 50
+l43
+L22 103
+VJQL^PGiCJNLYc8PcI@T`>2
+!s100 7m7ch@VZU8eeM^35U2=ke0
+R7
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R12
+R13
+Pdivider_const
+R2
+R3
+!i122 51
+R0
+R4
+Z37 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_const.vhd
+Z38 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_const.vhd
+l0
+L5 1
+VdmVWGN:C?:zjE1a1LCIPj1
+!s100 bk95HAP_GHzLPdG71nF?I2
+R7
+32
+R32
+!i10b 1
+R33
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_const.vhd|
+Z40 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_const.vhd|
+!i113 1
+R12
+R13
+Bbody
+R24
+R2
+R3
+!i122 51
+l0
+L14 1
+VJ8ZKlRG2^UEB6Dajm<8n13
+!s100 9^=lbEeVfAI8PU;ZiQ81f3
+R7
+32
+R32
+!i10b 1
+R33
+R39
+R40
+!i113 1
+R12
+R13
+Edivider_tb
+Z41 w1731461607
+R24
+R1
+Z42 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R2
+R3
+!i122 52
+R4
+Z43 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+Z44 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+l0
+L8 1
+Vb4^1ihImPfETCb]]^0Hi42
+!s100 S?GKH9_0aC6NfF6LO>dRH2
+R7
+32
+R32
+!i10b 1
+R33
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd|
+Z46 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R36
+R24
+R1
+R42
+R2
+R3
+DEx4 work 10 divider_tb 0 22 b4^1ihImPfETCb]]^0Hi42
+!i122 52
+l41
+L11 114
+Vg_]ROcUYQ0TbH6g1?E16:1
+!s100 CNh=`IQoM^E:7cPcmCzgV1
+R7
+32
+R32
+!i10b 1
+R33
+R45
+R46
+!i113 1
+R12
+R13
+Eleddcd
+R0
+R2
+R3
+!i122 53
+R4
+Z47 8C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/leddcd.vhd
+Z48 FC:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/leddcd.vhd
+l0
+L4 1
+V13?7=ZoRjQ4zJP<H4ndZG2
+!s100 2O<nODC8SZA<@eDIn?QI51
+R7
+32
+R32
+!i10b 1
+R33
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/leddcd.vhd|
+Z50 !s107 C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/leddcd.vhd|
+!i113 1
+R12
+R13
+Adata_flow
+R2
+R3
+Z51 DEx4 work 6 leddcd 0 22 13?7=ZoRjQ4zJP<H4ndZG2
+!i122 53
+l12
+Z52 L10 20
+Z53 VOLoRMzzNXZcXgXH^OnWWV0
+Z54 !s100 X4MhSaeE8M@WmzdN99bP[0
+R7
+32
+R32
+!i10b 1
+R33
+R49
+R50
+!i113 1
+R12
+R13

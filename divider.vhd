@@ -226,17 +226,46 @@ end architecture behavioral_sequential;
 
 architecture fsm_behavioral of divider is
 
-	function get_msb_pos(vec_in: std_logic_vector) return unsigned is
-		variable msb: unsigned;
+--	function get_msb_pos(vec_in: std_logic_vector) return integer is
+--		variable left_pos, right_pos, mid: integer;
+--		variable result: integer;
+--	begin
+--		left_pos := vec_in'left;
+--		right_pos := vec_in'right;
+--		
+--		while left_pos >= right_pos loop
+--			mid := (left_pos + right_pos) / 2;
+--			if (unsigned(std_logic_vector(vec_in(left_pos downto mid + 1))) > 0) then
+--				right_pos := mid + 1;
+--			else
+--				left_pos := mid;
+--			end if;
+--			if (vec_in(left_pos) = '1') then
+--				result := left_pos;
+--				exit;
+--			end if;
+--		end loop;
+--		return result;
+--	end function get_msb_pos;
+
+	function get_msb_pos(vec_in: std_logic_vector) return integer is
+	  variable result: integer;
 	begin
-		
+	  result := vec_in'left;
+	  for i in vec_in'left downto vec_in'right loop
+		 if vec_in(i) = '1' then
+			result := i;
+			exit;
+		 end if;
+	  end loop;
+	  return result;
 	end function get_msb_pos;
 	
-	signal N :	unsigned;
-	signal a	:	signed;
-	signal b	:	signed;
-	signal p :	unsigned;
-	signal q :	unsigned;
+	signal N :	unsigned(31 downto 0);
+	signal a	:	unsigned(DIVIDEND_WIDTH - 1 downto 0);
+	signal b	:	unsigned(DIVISOR_WIDTH - 1 downto 0);
+	signal p :	integer;
+	signal q :	unsigned(DIVIDEND_WIDTH - 1 downto 0);
 	
 	type states is (idle, init, div_by_1, loop_state, done);
 	signal state	:	states;
@@ -249,7 +278,7 @@ begin
 		-- Clocked process for state updates
 		if(start = '1') then
 			-- Reset logic
-			state <= idle;
+			state <= init;
 		elsif (rising_edge(clk)) then
 			-- Start and continue logic
 			state <= next_state;
@@ -263,11 +292,19 @@ begin
 		-- State logic
 		case (state) is
 			when init =>
-				N <= DIVIDEND_WIDTH;
-				a <= signed(dividend);
-				b <= signed(divisor);
+				N <= to_unsigned(DIVIDEND_WIDTH, 32);
+				if (signed(dividend) < 0) then
+					a <= (unsigned(not dividend) + 1);
+				else
+					a <= unsigned(dividend);
+				end if;
+				if (signed(divisor) < 0) then
+					b <= (unsigned(not divisor) + 1);
+				else
+					b <= unsigned(divisor);
+				end if;
 				p <= 0;
-				q <= 0;
+				q <= (others => '0');
 				if (b = 1) then
 					next_state <= div_by_1;
 				else
@@ -275,34 +312,39 @@ begin
 				end if;
 			when div_by_1 =>
 				q <= a;
-				a <= 0;
+				a <= (others => '0');
 				next_state <= done;
 			when loop_state =>
 				if (b /= 0 AND b < a) then
-					p <= get_msb_pos(a) - get_msb_pos(b);
+					p <= get_msb_pos(std_logic_vector(a)) - get_msb_pos(std_logic_vector(b));
 					if ((b SLL p) > a ) then
 						p <= p - 1;
 					end if;
-					q <= q + (1 SLL p);
-					a <= a - ( b SLL p);
+					q <= q + (to_unsigned(1, DIVIDEND_WIDTH) SLL p);
+					a <= a - (b SLL p);
 					next_state <= loop_state;
 				else
 					next_state <= done;
 				end if;
 			when done =>
-				sign <= (dividend SRL (N-1)) XOR (divisor SRL (N-1));
-				if (sign = 1) then
-					quotient <= -q;
+				sign <= dividend(dividend'left) XOR divisor(divisor'left);
+				if (dividend(dividend'left) XOR divisor(divisor'left)) = '1' then
+					quotient <= std_logic_vector(unsigned(not q) + 1);
 				else
-					quotient <= q;
+					quotient <= std_logic_vector(q);
 				end if;
-				if (dividend SRL (N-1) = 1) then
-					remainder <= -a;
+				if ((unsigned(dividend) SRL to_integer(N-1)) = 1) then
+					remainder <= std_logic_vector(resize((unsigned(not a) + 1), DIVISOR_WIDTH));
 				else
-					remainder <= a;
+					remainder <= std_logic_vector(resize(a, DIVISOR_WIDTH));
 				end if;
 				next_state <= idle;
 			when others =>
+				N <= (others => '0');
+				a <= (others => '0');
+				b <= (others => '0');
+				p <= 0;
+				q <= (others => '0');
 				next_state <= idle;
 		end case;
 	end process;

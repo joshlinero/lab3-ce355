@@ -1,0 +1,367 @@
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd failed with 3 errors.
+# Compile of divider.vhd failed with 3 errors.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd failed with 4 errors.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 3 failed with 10 errors.
+# Errors: 0, Warnings: 0
+# Compile of comparator.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of comparator_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of decoder.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of display_divider.vhd was successful.
+# Errors: 0, Warnings: 1
+# Compile of divider.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_const.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of leddcd.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 19:22:15 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# ** Warning: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# ** Fatal: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /divider_tb/line__67 File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Fatal error in Process line__67 at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process line__67
+# 
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# ** Warning: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Loading work.divider(fsm_behavioral)
+run -all
+# ** Fatal: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /divider_tb/read_process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Fatal error in Process read_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+run
+# ** Fatal: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /divider_tb/read_process File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Fatal error in Process read_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 77 Process read_process
+# 
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 55 Process clock_process
+# 
+# Break key hit
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd 55 Process clock_process
+# 
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# ** Warning: (vsim-7) Failed to open VHDL file "divider32.in" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /divider_tb File: C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd
+# Loading work.divider(fsm_behavioral)
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -r sim:/divider_tb/*
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -continue
+run -continue
+run
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
