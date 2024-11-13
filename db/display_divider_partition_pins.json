@@ -348,10 +348,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "divisor[0]",
-					"strict" : false
-				},
-				{
 					"name" : "divisor[1]",
 					"strict" : false
 				},
@@ -409,6 +405,10 @@
 				},
 				{
 					"name" : "divisor[15]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[0]",
 					"strict" : false
 				},
 				{

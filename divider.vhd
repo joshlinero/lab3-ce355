@@ -329,7 +329,6 @@ begin
 					end if;
 				when div_by_1 =>
 					q := a;
-					a := (others => '0');
 					next_state <= done;
 				when loop_state =>
 					if (b /= to_unsigned(0, DIVISOR_WIDTH) AND b <= a) then
@@ -359,6 +358,9 @@ begin
 						temp_remainder := std_logic_vector(resize((unsigned(not a) + 1), DIVISOR_WIDTH));
 					else
 						temp_remainder := std_logic_vector(resize(a, DIVISOR_WIDTH));
+					end if;
+					if (to_integer(unsigned(divisor)) = 1) then
+						temp_remainder := (others => '0');
 					end if;
 					next_state <= idle;
 					temp_quotient := std_logic_vector(q);

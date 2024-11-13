@@ -623,3 +623,135 @@ run -all
 # 
 # Break key hit
 # Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd failed with 4 errors.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 1 failed with 4 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# ** Error: (vsim-13) Recompile work.divider because work.divider_const has changed.
+# ** Error (suppressible): (vsim-12) Recompile work.divider(fsm_behavioral) after work.divider is recompiled.
+# ** Error: (vsim-13) Recompile work.divider(fsm_behavioral) because work.divider_const has changed.
+# Load interrupted
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+# Errors: 0, Warnings: 0
+# Compile of comparator.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of comparator_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of decoder.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of display_divider.vhd was successful.
+# Errors: 0, Warnings: 1
+# Compile of divider.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_const.vhd was successful.
+# Errors: 4, Warnings: 0
+# Errors: 0, Warnings: 0
+# Compile of leddcd.vhd was successful.
+# Errors: 4, Warnings: 0
+# Errors: 4, Warnings: 0
+# Compile of divider_tb.vhd failed.
+# Errors: 0, Warnings: 0
+# Compile of comparator.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of comparator_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of decoder.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of display_divider.vhd was successful.
+# Errors: 0, Warnings: 1
+# Compile of divider.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_const.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of leddcd.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_tb.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+# Break key hit
+# Break key hit
+# Break key hit
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 01:54:39 on Nov 13,2024
+# Error loading design
+# End time: 02:29:04 on Nov 13,2024, Elapsed time: 0:34:25
+# Errors: 3, Warnings: 4
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 02:29:18 on Nov 13,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
