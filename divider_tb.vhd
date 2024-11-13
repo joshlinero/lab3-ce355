@@ -82,7 +82,7 @@ begin
             read(inline, dividend_int);  -- Read integer
 
             -- Convert integer to std_logic_vector
-            dividend_var := std_logic_vector(to_unsigned(dividend_int, DIVIDEND_WIDTH));
+            dividend_var := std_logic_vector(to_signed(dividend_int, DIVIDEND_WIDTH));
             dividend <= dividend_var;
 
             -- Read the divisor (integer from file)
@@ -90,7 +90,7 @@ begin
             read(inline, divisor_int);  -- Read integer
 
             -- Convert integer to std_logic_vector
-            divisor_var := std_logic_vector(to_unsigned(divisor_int, DIVISOR_WIDTH));
+            divisor_var := std_logic_vector(to_signed(divisor_int, DIVISOR_WIDTH));
             divisor <= divisor_var;
 
             -- Apply the test case
@@ -102,8 +102,8 @@ begin
 				
 				wait until clk = '1' and clk'event;
 				
-				quotient_int := to_integer(unsigned(quotient));
-				remainder_int:= to_integer(unsigned(remainder));
+				quotient_int := to_integer(signed(quotient));
+				remainder_int:= to_integer(signed(remainder));
 
             -- Write results to output file
             write(outline, dividend_int);
@@ -113,8 +113,8 @@ begin
             write(outline, quotient_int);
             write(outline, string'(" -- "));
             write(outline, remainder_int);
-				--write(outline, string'("sign: "));
-				--write(outline, sign);
+				write(outline, string'("sign: "));
+				write(outline, sign);
             writeline(outfile, outline);  -- Output result
 
         end loop;

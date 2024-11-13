@@ -2,148 +2,40 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'divider:dut|state.init'
-Slack : -16.829
-TNS   : -532.187
-
-Type  : Slow 1200mV 85C Model Setup 'divider:dut|a[0]'
-Slack : -15.126
-TNS   : -625.321
-
-Type  : Slow 1200mV 85C Model Setup 'divider:dut|state.done'
-Slack : -12.134
-TNS   : -249.971
-
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -8.787
-TNS   : -23.518
-
-Type  : Slow 1200mV 85C Model Hold 'divider:dut|state.done'
-Slack : -4.113
-TNS   : -62.724
-
-Type  : Slow 1200mV 85C Model Hold 'divider:dut|a[0]'
-Slack : -0.419
-TNS   : -1.517
+Slack : -21.155
+TNS   : -1399.160
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.440
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'divider:dut|state.init'
-Slack : 2.240
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -9.425
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider:dut|state.init'
-Slack : 0.403
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider:dut|state.done'
-Slack : 0.411
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider:dut|a[0]'
-Slack : 0.442
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'divider:dut|state.init'
-Slack : -15.377
-TNS   : -485.970
-
-Type  : Slow 1200mV 0C Model Setup 'divider:dut|a[0]'
-Slack : -13.596
-TNS   : -568.628
-
-Type  : Slow 1200mV 0C Model Setup 'divider:dut|state.done'
-Slack : -10.753
-TNS   : -225.274
+TNS   : -185.470
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -8.110
-TNS   : -21.691
-
-Type  : Slow 1200mV 0C Model Hold 'divider:dut|state.done'
-Slack : -3.859
-TNS   : -58.735
-
-Type  : Slow 1200mV 0C Model Hold 'divider:dut|a[0]'
-Slack : -0.353
-TNS   : -1.353
+Slack : -19.053
+TNS   : -1258.966
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.387
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'divider:dut|state.init'
-Slack : 2.185
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -9.425
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider:dut|state.done'
-Slack : 0.277
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider:dut|a[0]'
-Slack : 0.291
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider:dut|state.init'
-Slack : 0.328
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'divider:dut|state.init'
-Slack : -8.072
-TNS   : -255.556
-
-Type  : Fast 1200mV 0C Model Setup 'divider:dut|a[0]'
-Slack : -7.061
-TNS   : -285.185
-
-Type  : Fast 1200mV 0C Model Setup 'divider:dut|state.done'
-Slack : -5.888
-TNS   : -116.427
+TNS   : -185.470
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.895
-TNS   : -10.210
-
-Type  : Fast 1200mV 0C Model Hold 'divider:dut|state.done'
-Slack : -2.228
-TNS   : -33.323
-
-Type  : Fast 1200mV 0C Model Hold 'divider:dut|a[0]'
-Slack : -0.236
-TNS   : -1.127
+Slack : -10.115
+TNS   : -633.290
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.010
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'divider:dut|state.init'
-Slack : 0.773
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -8.230
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider:dut|state.done'
-Slack : 0.100
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider:dut|a[0]'
-Slack : 0.241
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider:dut|state.init'
-Slack : 0.405
-TNS   : 0.000
+TNS   : -153.767
 
 ------------------------------------------------------------

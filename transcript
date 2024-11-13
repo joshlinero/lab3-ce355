@@ -9,7 +9,7 @@
 # 8 compiles, 0 failed with no errors.
 vsim -gui work.divider_tb
 # vsim -gui work.divider_tb 
-# Start time: 21:47:40 on Nov 12,2024
+# Start time: 22:13:43 on Nov 12,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -18,6 +18,8 @@ vsim -gui work.divider_tb
 # Loading work.divider_const(body)
 # Loading work.divider_tb(behavior)
 # Loading work.divider(fsm_behavioral)
+# Load canceled
+add wave sim:/divider_tb/uut/*
 run -all
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
@@ -137,134 +139,467 @@ run -all
 #    Time: 1082 ns  Iteration: 1  Instance: /divider_tb
 # Break key hit
 # Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
-# Break key hit
-run -all
-add wave sim:/divider_tb/uut/*
+run -continue
 # Break key hit
 # Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Break key hit
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 10 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 22 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 22 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 26 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 122 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 122 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 132 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 142 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 142 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 146 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 242 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 242 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 252 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 262 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 262 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 266 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 362 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 362 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 372 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 382 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 382 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 386 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 482 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 482 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 492 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 502 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 502 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 506 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 602 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 602 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 612 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 622 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 622 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 626 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
 # ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
 #    Time: 722 ns  Iteration: 1  Instance: /divider_tb
 # ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
 #    Time: 722 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 732 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 742 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 742 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 746 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
 # ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
 #    Time: 842 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 852 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 862 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 862 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 866 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
 # ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
 #    Time: 962 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 972 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-#    Time: 982 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 982 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
 #    Time: 986 ns  Iteration: 2  Instance: /divider_tb/uut
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1082 ns  Iteration: 1  Instance: /divider_tb
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1082 ns  Iteration: 1  Instance: /divider_tb
 # Break key hit
 # Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
-# End time: 21:49:56 on Nov 12,2024, Elapsed time: 0:02:16
-# Errors: 4, Warnings: 55
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+# Warning in wave window restart: (vish-4014) No objects found matching '/divider_tb/uut/temp_quotient'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/divider_tb/uut/temp_remainder'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/divider_tb/uut/temp_overflow'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/divider_tb/uut/temp_sign'. 
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 34 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 38 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 154 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 158 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 274 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 278 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 394 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 398 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 514 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 518 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 634 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 638 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 754 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 758 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 874 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 878 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 994 ns  Iteration: 1  Instance: /divider_tb/uut
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 998 ns  Iteration: 1  Instance: /divider_tb/uut
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.divider_tb
+# End time: 01:36:58 on Nov 13,2024, Elapsed time: 3:23:15
+# Errors: 4, Warnings: 20
+# vsim -gui work.divider_tb 
+# Start time: 01:36:58 on Nov 13,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd failed with 4 errors.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 1 failed with 4 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Error: (vsim-13) Recompile work.divider because work.divider_const has changed.
+# ** Error (suppressible): (vsim-12) Recompile work.divider_tb(behavior) after work.divider is recompiled.
+# ** Error: (vsim-13) Recompile work.divider_tb(behavior) because work.divider_const has changed.
+# Errors: 0, Warnings: 0
+# Compile of comparator.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of comparator_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of decoder.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of display_divider.vhd was successful.
+# Errors: 0, Warnings: 1
+# Compile of divider.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_const.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of divider_tb.vhd was successful.
+# Errors: 0, Warnings: 0
+# Compile of leddcd.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 01:36:58 on Nov 13,2024
+# Error loading design
+# End time: 01:43:45 on Nov 13,2024, Elapsed time: 0:06:47
+# Errors: 3, Warnings: 3
+vsim -gui work.divider_tb
+# vsim -gui work.divider_tb 
+# Start time: 01:44:03 on Nov 13,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 722 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -12 is not in bounds of subtype NATURAL.
+#    Time: 842 ns  Iteration: 1  Instance: /divider_tb
+# ** Error: (vsim-86) Argument value -4 is not in bounds of subtype NATURAL.
+#    Time: 962 ns  Iteration: 1  Instance: /divider_tb
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65
+# Compile of comparator.vhd was successful.
+# Compile of comparator_tb.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of display_divider.vhd was successful.
+# Compile of divider.vhd was successful with warnings.
+# Compile of divider_const.vhd was successful.
+# Compile of divider_tb.vhd was successful.
+# Compile of leddcd.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.divider_tb
+# End time: 01:54:39 on Nov 13,2024, Elapsed time: 0:10:36
+# Errors: 4, Warnings: 3
+# vsim -gui work.divider_tb 
+# Start time: 01:54:39 on Nov 13,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divider_const(body)
+# Loading work.divider_tb(behavior)
+# Loading work.divider(fsm_behavioral)
+add wave sim:/divider_tb/uut/*
+run -all
+# Break key hit
+# Break in Process clock_process at C:/Users/antb2/Desktop/School/CE 355/Lab 5 Behavioral Division/lab3-ce355/divider_tb.vhd line 65

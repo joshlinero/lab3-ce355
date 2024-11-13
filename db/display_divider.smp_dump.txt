@@ -1,4 +1,12 @@
 
+State Machine - |display_divider|divider:dut|next_state
+Name next_state.done next_state.loop_state next_state.div_by_1 next_state.init next_state.idle 
+next_state.idle 0 0 0 0 0 
+next_state.init 0 0 0 1 1 
+next_state.div_by_1 0 0 1 0 1 
+next_state.loop_state 0 1 0 0 1 
+next_state.done 1 0 0 0 1 
+
 State Machine - |display_divider|divider:dut|state
 Name state.done state.loop_state state.div_by_1 state.idle state.init 
 state.init 0 0 0 0 0 
